@@ -36,7 +36,9 @@ export function loadBookMetadata(
 
     for (const book of books) {
       byId.set(book._id, book);
-      byOrder.set(book.order.protestant, book);
+      if (book.order?.protestant) {
+        byOrder.set(book.order.protestant, book);
+      }
     }
 
     return { books, byId, byOrder };
