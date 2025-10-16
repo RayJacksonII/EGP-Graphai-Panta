@@ -1,6 +1,6 @@
 # EGP Graphai
 
-Initially created by [Equip God’s People](https://www.equipgodspeople.com), “Graphai” (γραφή) is the Koine Greek word for “writings” or “scriptures,” reflecting the project’s focus on providing access to sacred texts and related resources through modern data formats.
+Initially created by [Equip God’s People](https://www.equipgodspeople.com), “Graphai” (γραφαὶ) is the Koine Greek word for “writings” or “scriptures,” reflecting the project’s focus on providing access to sacred texts and related resources through modern data formats.
 
 Its purpose is to provide a comprehensive, verbose JSON standard for Bible resources. This project provides structured Bible data with rich metadata, including various Bible versions, lexical information, and conversion tools for working with other common formats.
 
