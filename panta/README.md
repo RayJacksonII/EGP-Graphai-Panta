@@ -24,6 +24,7 @@ panta/
 │   ├── nodesToBBMarkup.ts   # Convert structured nodes to BB markup
 │   └── convertVerseToBB.ts # Transform VerseSchema to BBVerse
 ├── scripts/             # Executable scripts
+│   ├── importBibleVersesBB.ts # Import and transform BB format to structured data
 │   ├── exportToBB.ts    # Main export script
 │   └── compareImportToExport.ts # Validation comparison tool
 ├── types/               # TypeScript type definitions
@@ -73,6 +74,45 @@ npx ts-node panta/scripts/exportToBB.ts --fail-fast
 ```
 
 ## Script Reference
+
+### importBibleVersesBB.ts
+
+Import script that transforms legacy BB format Bible data into structured JSON format.
+
+**Usage:**
+
+```bash
+npx ts-node panta/scripts/importBibleVersesBB.ts
+```
+
+**Description:**
+
+This script reads Bible verses from the BibleDB.bibleVerses format (located in `./imports/bb/`) and transforms them into the structured VerseSchema format used by the main project. It performs the following operations:
+
+- **Format Transformation**: Converts BB markup to structured Node arrays
+- **Paragraph Detection**: Processes paragraph markers and chapter breaks
+- **Book Organization**: Groups verses by book and saves to individual book files
+- **Schema Validation**: Validates each verse against the JSON schema
+- **Footnote Processing**: Handles footnotes and Strong's numbers
+
+**Input:**
+
+- Source files: `./imports/bb/BibleDB.bibleVerses-{version}.json`
+- Book metadata: `./bible-books/bible-books.json`
+- Version list: `./bible-versions/bible-versions.json`
+- Schema: `./bible-versions/bible-verses-schema.json`
+
+**Output:**
+
+- Destination: `./bible-versions/{version}/{book}.json`
+- Format: Array of VerseSchema objects per book
+
+**Examples:**
+
+```bash
+# Import all Bible versions from imports/bb directory
+npx ts-node panta/scripts/importBibleVersesBB.ts
+```
 
 ### exportToBB.ts
 
