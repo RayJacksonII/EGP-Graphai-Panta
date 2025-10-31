@@ -5,6 +5,8 @@ import Ajv from "ajv";
 
 const schemaPath = "./bible-books/bible-book-schema.json";
 const jsonPath = "./bible-books/bible-books.json";
+const versionsSchemaPath = "./bible-versions/bible-versions-schema.json";
+const versionsJsonPath = "./bible-versions/bible-versions.json";
 
 // First, validate against the schema
 const result = validateJsonAgainstSchema(schemaPath, jsonPath);
@@ -12,51 +14,44 @@ const result = validateJsonAgainstSchema(schemaPath, jsonPath);
 console.log("Schema validation result:", result);
 
 if (result.valid) {
-  // Additional validation: Check order field integrity for each canon
-  const booksContent = fs.readFileSync(jsonPath, "utf-8");
-  const books = JSON.parse(booksContent);
+  // Additional validation: Check books array integrity for each version
+  const versionsContent = fs.readFileSync(versionsJsonPath, "utf-8");
+  const versions = JSON.parse(versionsContent);
 
-  const canons = ["protestant", "catholic", "orthodox", "lxx", "hebrew"];
-  let orderValidationPassed = true;
+  let booksValidationPassed = true;
 
-  for (const canon of canons) {
-    // Collect all order values for this canon
-    const orderValues = books
-      .map((book: any, index: number) => ({
-        bookId: book._id,
-        bookIndex: index,
-        order: book.order?.[canon],
-      }))
-      .filter((item: any) => item.order !== undefined);
-
-    if (orderValues.length === 0) {
-      continue; // This canon is not used
+  for (const version of versions) {
+    const books = version.books || [];
+    if (books.length === 0) {
+      console.log(`✅ ${version._id}: no books specified`);
+      continue;
     }
 
-    const orders = orderValues.map((item: any) => item.order);
-    const sortedOrders = _.sortBy(orders);
+    // Collect order values
+    const orderValues = books.map((item: any) => item.order);
+    const sortedOrders = _.sortBy(orderValues);
 
     // Check for duplicates
     const duplicates = _.filter(
-      _.groupBy(orderValues, "order"),
+      _.groupBy(books, "order"),
       (group) => group.length > 1
     );
 
     if (duplicates.length > 0) {
-      console.error(`\n❌ ${canon} canon has duplicate order numbers:`);
+      console.error(`\n❌ ${version._id} has duplicate order numbers:`);
       duplicates.forEach((group) => {
-        const bookIds = group.map((item: any) => item.bookId).join(", ");
+        const bookIds = group.map((item: any) => item._id).join(", ");
         console.error(`  Order ${group[0].order}: ${bookIds}`);
       });
-      orderValidationPassed = false;
+      booksValidationPassed = false;
     }
 
     // Check if starts at 1
     if (sortedOrders[0] !== 1) {
       console.error(
-        `\n❌ ${canon} canon does not start at 1 (starts at ${sortedOrders[0]})`
+        `\n❌ ${version._id} does not start at 1 (starts at ${sortedOrders[0]})`
       );
-      orderValidationPassed = false;
+      booksValidationPassed = false;
     }
 
     // Check for gaps in sequence
@@ -66,11 +61,11 @@ if (result.valid) {
       const missing = _.difference(allExpected, sortedOrders);
       if (missing.length > 0) {
         console.error(
-          `\n❌ ${canon} canon has gaps in numbering. Missing: ${missing.join(
+          `\n❌ ${version._id} has gaps in numbering. Missing: ${missing.join(
             ", "
           )}`
         );
-        orderValidationPassed = false;
+        booksValidationPassed = false;
       }
     }
 
@@ -81,13 +76,13 @@ if (result.valid) {
       duplicates.length === 0
     ) {
       console.log(
-        `✅ ${canon} canon: ${sortedOrders.length} books, numbered 1–${expectedCount}`
+        `✅ ${version._id}: ${sortedOrders.length} books, numbered 1–${expectedCount}`
       );
     }
   }
 
-  if (!orderValidationPassed) {
-    console.error("\n❌ Order validation failed!");
+  if (!booksValidationPassed) {
+    console.error("\n❌ Books validation failed!");
     process.exit(1);
   } else {
     console.log("\n✅ All order validations passed!");
@@ -97,9 +92,6 @@ if (result.valid) {
 }
 
 // Now, validate bible-versions
-const versionsSchemaPath = "./bible-versions/bible-versions-schema.json";
-const versionsJsonPath = "./bible-versions/bible-versions.json";
-
 const versionsResult = validateJsonAgainstSchema(
   versionsSchemaPath,
   versionsJsonPath
@@ -131,6 +123,10 @@ let verseValidationPassed = true;
 const books = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
 const validBookIds = new Set(books.map((book: any) => book._id));
 
+// Load versions for book list validation
+const versions = JSON.parse(fs.readFileSync(versionsJsonPath, "utf-8"));
+const versionMap = new Map(versions.map((v: any) => [v._id, v]));
+
 // Load and compile the verse schema once
 const verseSchemaContent = fs.readFileSync(verseSchemaPath, "utf-8");
 const verseSchema = JSON.parse(verseSchemaContent);
@@ -145,9 +141,41 @@ for (const version of versionDirs) {
 
   console.log(`\n📖 Checking version: ${version}`);
 
+  // Get expected book IDs from version's books array
+  const versionObj = versionMap.get(version) as any;
+  const expectedBookIds = new Set(
+    (versionObj?.books || []).map((b: any) => b._id as string)
+  );
+  const expectedFiles = new Set(
+    (versionObj?.books || []).map(
+      (b: any) => `${b.order.toString().padStart(2, "0")}-${b._id}.json`
+    )
+  );
+  const actualFiles = new Set(verseFiles);
+
+  // Check for missing files
+  for (const expectedFile of expectedFiles as Set<string>) {
+    if (!actualFiles.has(expectedFile)) {
+      const bookId = expectedFile.split("-")[1].replace(".json", "");
+      console.error(`❌ Missing file for book ${bookId} in version ${version}`);
+      verseValidationPassed = false;
+    }
+  }
+
+  // Check for extra files
+  for (const actualFile of actualFiles as Set<string>) {
+    if (!expectedFiles.has(actualFile)) {
+      const bookId = actualFile.split("-")[1].replace(".json", "");
+      console.error(
+        `❌ Extra file ${actualFile} in version ${version} (not in books array)`
+      );
+      verseValidationPassed = false;
+    }
+  }
+
   for (const file of verseFiles) {
     const filePath = `${versionPath}/${file}`;
-    const bookIdFromFilename = file.replace(".json", "");
+    const bookIdFromFilename = file.split("-")[1].replace(".json", "");
 
     // Check if filename matches a valid book ID
     if (!validBookIds.has(bookIdFromFilename)) {

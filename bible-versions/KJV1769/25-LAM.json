@@ -1,0 +1,6973 @@
+[
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 1,
+    "content": [
+      {
+        "type": "p"
+      },
+      {
+        "text": "How doth the city",
+        "strong": "H5892"
+      },
+      {
+        "text": "sit",
+        "strong": "H3427",
+        "morph": "8804"
+      },
+      {
+        "text": "solitary",
+        "strong": "H0910"
+      },
+      {
+        "text": ", [that was] full",
+        "strong": "H7227"
+      },
+      {
+        "text": "of people",
+        "strong": "H5971"
+      },
+      {
+        "text": "! [how] is she become as a widow",
+        "strong": "H0490"
+      },
+      {
+        "text": "! she [that was] great",
+        "strong": "H7227"
+      },
+      {
+        "text": "among the nations",
+        "strong": "H1471"
+      },
+      {
+        "text": ", [and] princess",
+        "strong": "H8282"
+      },
+      {
+        "text": "among the provinces",
+        "strong": "H4082"
+      },
+      {
+        "text": ", [how] is she become tributary",
+        "strong": "H4522"
+      },
+      {
+        "text": "!"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 2,
+    "content": [
+      {
+        "text": "She weepeth",
+        "strong": "H1058",
+        "morph": "8799"
+      },
+      {
+        "text": "sore",
+        "strong": "H1058",
+        "morph": "8800"
+      },
+      {
+        "text": "in the night",
+        "strong": "H3915"
+      },
+      {
+        "text": ", and her tears",
+        "strong": "H1832"
+      },
+      {
+        "text": "[are] on her cheeks",
+        "strong": "H3895"
+      },
+      {
+        "text": ": among all her lovers",
+        "strong": "H0157",
+        "morph": "8802"
+      },
+      {
+        "text": "she hath none to comfort",
+        "strong": "H5162",
+        "morph": "8764"
+      },
+      {
+        "text": "[her]: all her friends",
+        "strong": "H7453"
+      },
+      {
+        "text": "have dealt treacherously",
+        "strong": "H0898",
+        "morph": "8804"
+      },
+      {
+        "text": "with her, they are become her enemies",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 3,
+    "content": [
+      {
+        "text": "Judah",
+        "strong": "H3063"
+      },
+      {
+        "text": "is gone into captivity",
+        "strong": "H1540",
+        "morph": "8804"
+      },
+      {
+        "text": "because of affliction",
+        "strong": "H6040"
+      },
+      {
+        "text": ", and because of great",
+        "strong": "H7230"
+      },
+      {
+        "text": "servitude",
+        "strong": "H5656"
+      },
+      {
+        "text": ": she dwelleth",
+        "strong": "H3427",
+        "morph": "8804"
+      },
+      {
+        "text": "among the heathen",
+        "strong": "H1471"
+      },
+      {
+        "text": ", she findeth",
+        "strong": "H4672",
+        "morph": "8804"
+      },
+      {
+        "text": "no rest",
+        "strong": "H4494"
+      },
+      {
+        "text": ": all her persecutors",
+        "strong": "H7291",
+        "morph": "8802"
+      },
+      {
+        "text": "overtook",
+        "strong": "H5381",
+        "morph": "8689"
+      },
+      {
+        "text": "her between the straits",
+        "strong": "H4712"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 4,
+    "content": [
+      {
+        "text": "The ways",
+        "strong": "H1870"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": "do mourn",
+        "strong": "H0057"
+      },
+      {
+        "text": ", because none come",
+        "strong": "H0935",
+        "morph": "8802"
+      },
+      {
+        "text": "to the solemn feasts",
+        "strong": "H4150"
+      },
+      {
+        "text": ": all her gates",
+        "strong": "H8179"
+      },
+      {
+        "text": "are desolate",
+        "strong": "H8074",
+        "morph": "8802"
+      },
+      {
+        "text": ": her priests",
+        "strong": "H3548"
+      },
+      {
+        "text": "sigh",
+        "strong": "H0584",
+        "morph": "8737"
+      },
+      {
+        "text": ", her virgins",
+        "strong": "H1330"
+      },
+      {
+        "text": "are afflicted",
+        "strong": "H3013",
+        "morph": "8737"
+      },
+      {
+        "text": ", and she [is] in bitterness",
+        "strong": "H4843",
+        "morph": "8804"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 5,
+    "content": [
+      {
+        "text": "Her adversaries",
+        "strong": "H6862"
+      },
+      {
+        "text": "are the chief",
+        "strong": "H7218"
+      },
+      {
+        "text": ", her enemies",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "prosper",
+        "strong": "H7951",
+        "morph": "8804"
+      },
+      {
+        "text": "; for the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "hath afflicted",
+        "strong": "H3013",
+        "morph": "8689"
+      },
+      {
+        "text": "her for the multitude",
+        "strong": "H7230"
+      },
+      {
+        "text": "of her transgressions",
+        "strong": "H6588"
+      },
+      {
+        "text": ": her children",
+        "strong": "H5768"
+      },
+      {
+        "text": "are gone",
+        "strong": "H1980",
+        "morph": "8804"
+      },
+      {
+        "text": "into captivity",
+        "strong": "H7628"
+      },
+      {
+        "text": "before",
+        "strong": "H6440"
+      },
+      {
+        "text": "the enemy",
+        "strong": "H6862"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 6,
+    "content": [
+      {
+        "text": "And from the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": "all her beauty",
+        "strong": "H1926"
+      },
+      {
+        "text": "is departed",
+        "strong": "H3318",
+        "morph": "8799"
+      },
+      {
+        "text": ": her princes",
+        "strong": "H8269"
+      },
+      {
+        "text": "are become like harts",
+        "strong": "H0354"
+      },
+      {
+        "text": "[that] find",
+        "strong": "H4672",
+        "morph": "8804"
+      },
+      {
+        "text": "no pasture",
+        "strong": "H4829"
+      },
+      {
+        "text": ", and they are gone",
+        "strong": "H3212",
+        "morph": "8799"
+      },
+      {
+        "text": "without strength",
+        "strong": "H3581"
+      },
+      {
+        "text": "before",
+        "strong": "H6440"
+      },
+      {
+        "text": "the pursuer",
+        "strong": "H7291",
+        "morph": "8802"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 7,
+    "content": [
+      {
+        "text": "Jerusalem",
+        "strong": "H3389"
+      },
+      {
+        "text": "remembered",
+        "strong": "H2142",
+        "morph": "8804"
+      },
+      {
+        "text": "in the days",
+        "strong": "H3117"
+      },
+      {
+        "text": "of her affliction",
+        "strong": "H6040"
+      },
+      {
+        "text": "and of her miseries",
+        "strong": "H4788"
+      },
+      {
+        "text": "all her pleasant things",
+        "strong": "H4262"
+      },
+      {
+        "text": "that she had in the days",
+        "strong": "H3117"
+      },
+      {
+        "text": "of old",
+        "strong": "H6924"
+      },
+      {
+        "text": ", when her people",
+        "strong": "H5971"
+      },
+      {
+        "text": "fell",
+        "strong": "H5307",
+        "morph": "8800"
+      },
+      {
+        "text": "into the hand",
+        "strong": "H3027"
+      },
+      {
+        "text": "of the enemy",
+        "strong": "H6862"
+      },
+      {
+        "text": ", and none did help",
+        "strong": "H5826",
+        "morph": "8802"
+      },
+      {
+        "text": "her: the adversaries",
+        "strong": "H6862"
+      },
+      {
+        "text": "saw",
+        "strong": "H7200",
+        "morph": "8804"
+      },
+      {
+        "text": "her, [and] did mock",
+        "strong": "H7832",
+        "morph": "8804"
+      },
+      {
+        "text": "at her sabbaths",
+        "strong": "H4868"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 8,
+    "content": [
+      {
+        "text": "Jerusalem",
+        "strong": "H3389"
+      },
+      {
+        "text": "hath grievously",
+        "strong": "H2399"
+      },
+      {
+        "text": "sinned",
+        "strong": "H2398",
+        "morph": "8804"
+      },
+      {
+        "text": "; therefore she is removed",
+        "strong": "H5206"
+      },
+      {
+        "text": ": all that honoured",
+        "strong": "H3513",
+        "morph": "8764"
+      },
+      {
+        "text": "her despise",
+        "strong": "H2107",
+        "morph": "8689"
+      },
+      {
+        "text": "her, because they have seen",
+        "strong": "H7200",
+        "morph": "8804"
+      },
+      {
+        "text": "her nakedness",
+        "strong": "H6172"
+      },
+      {
+        "text": ": yea, she sigheth",
+        "strong": "H0584",
+        "morph": "8738"
+      },
+      {
+        "text": ", and turneth",
+        "strong": "H7725",
+        "morph": "8799"
+      },
+      {
+        "text": "backward",
+        "strong": "H0268"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 9,
+    "content": [
+      {
+        "text": "Her filthiness",
+        "strong": "H2932"
+      },
+      {
+        "text": "[is] in her skirts",
+        "strong": "H7757"
+      },
+      {
+        "text": "; she remembereth",
+        "strong": "H2142",
+        "morph": "8804"
+      },
+      {
+        "text": "not her last end",
+        "strong": "H0319"
+      },
+      {
+        "text": "; therefore she came down",
+        "strong": "H3381",
+        "morph": "8799"
+      },
+      {
+        "text": "wonderfully",
+        "strong": "H6382"
+      },
+      {
+        "text": ": she had no comforter",
+        "strong": "H5162",
+        "morph": "8764"
+      },
+      {
+        "text": ". O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", behold",
+        "strong": "H7200",
+        "morph": "8798"
+      },
+      {
+        "text": "my affliction",
+        "strong": "H6040"
+      },
+      {
+        "text": ": for the enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "hath magnified",
+        "strong": "H1431",
+        "morph": "8689"
+      },
+      {
+        "text": "[himself]."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 10,
+    "content": [
+      {
+        "text": "The adversary",
+        "strong": "H6862"
+      },
+      {
+        "text": "hath spread out",
+        "strong": "H6566",
+        "morph": "8804"
+      },
+      {
+        "text": "his hand",
+        "strong": "H3027"
+      },
+      {
+        "text": "upon all her pleasant things",
+        "strong": "H4261"
+      },
+      {
+        "text": ": for she hath seen",
+        "strong": "H7200",
+        "morph": "8804"
+      },
+      {
+        "text": "[that] the heathen",
+        "strong": "H1471"
+      },
+      {
+        "text": "entered",
+        "strong": "H0935",
+        "morph": "8804"
+      },
+      {
+        "text": "into her sanctuary",
+        "strong": "H4720"
+      },
+      {
+        "text": ", whom thou didst command",
+        "strong": "H6680",
+        "morph": "8765"
+      },
+      {
+        "text": "[that] they should not enter",
+        "strong": "H0935",
+        "morph": "8799"
+      },
+      {
+        "text": "into thy congregation",
+        "strong": "H6951"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 11,
+    "content": [
+      {
+        "text": "All her people",
+        "strong": "H5971"
+      },
+      {
+        "text": "sigh",
+        "strong": "H0584",
+        "morph": "8737"
+      },
+      {
+        "text": ", they seek",
+        "strong": "H1245",
+        "morph": "8764"
+      },
+      {
+        "text": "bread",
+        "strong": "H3899"
+      },
+      {
+        "text": "; they have given",
+        "strong": "H5414",
+        "morph": "8804"
+      },
+      {
+        "text": "their pleasant things",
+        "strong": "H4261",
+        "morph": "8675"
+      },
+      {
+        "strong": "H4262"
+      },
+      {
+        "text": "for meat",
+        "strong": "H0400"
+      },
+      {
+        "text": "to relieve",
+        "strong": "H7725",
+        "morph": "8687"
+      },
+      {
+        "text": "the soul",
+        "strong": "H5315"
+      },
+      {
+        "text": ": see",
+        "strong": "H7200",
+        "morph": "8798"
+      },
+      {
+        "text": ", O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", and consider",
+        "strong": "H5027",
+        "morph": "8685"
+      },
+      {
+        "text": "; for I am become vile",
+        "strong": "H2151",
+        "morph": "8802"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 12,
+    "content": [
+      {
+        "text": "[Is it] nothing to you, all ye that pass",
+        "strong": "H5674",
+        "morph": "8802"
+      },
+      {
+        "text": "by",
+        "strong": "H1870"
+      },
+      {
+        "text": "? behold",
+        "strong": "H5027",
+        "morph": "8685"
+      },
+      {
+        "text": ", and see",
+        "strong": "H7200",
+        "morph": "8798"
+      },
+      {
+        "text": "if there be",
+        "strong": "H3426"
+      },
+      {
+        "text": "any sorrow",
+        "strong": "H4341"
+      },
+      {
+        "text": "like unto my sorrow",
+        "strong": "H4341"
+      },
+      {
+        "text": ", which is done",
+        "strong": "H5953",
+        "morph": "8776"
+      },
+      {
+        "text": "unto me, wherewith the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "hath afflicted",
+        "strong": "H3013",
+        "morph": "8689"
+      },
+      {
+        "text": "[me] in the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "of his fierce",
+        "strong": "H2740"
+      },
+      {
+        "text": "anger",
+        "strong": "H0639"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 13,
+    "content": [
+      {
+        "text": "From above",
+        "strong": "H4791"
+      },
+      {
+        "text": "hath he sent",
+        "strong": "H7971",
+        "morph": "8804"
+      },
+      {
+        "text": "fire",
+        "strong": "H0784"
+      },
+      {
+        "text": "into my bones",
+        "strong": "H6106"
+      },
+      {
+        "text": ", and it prevaileth",
+        "strong": "H7287",
+        "morph": "8799"
+      },
+      {
+        "text": "against them: he hath spread",
+        "strong": "H6566",
+        "morph": "8804"
+      },
+      {
+        "text": "a net",
+        "strong": "H7568"
+      },
+      {
+        "text": "for my feet",
+        "strong": "H7272"
+      },
+      {
+        "text": ", he hath turned",
+        "strong": "H7725",
+        "morph": "8689"
+      },
+      {
+        "text": "me back",
+        "strong": "H0268"
+      },
+      {
+        "text": ": he hath made",
+        "strong": "H5414",
+        "morph": "8804"
+      },
+      {
+        "text": "me desolate",
+        "strong": "H8074",
+        "morph": "8802"
+      },
+      {
+        "text": "[and] faint",
+        "strong": "H1739"
+      },
+      {
+        "text": "all the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 14,
+    "content": [
+      {
+        "text": "The yoke",
+        "strong": "H5923"
+      },
+      {
+        "text": "of my transgressions",
+        "strong": "H6588"
+      },
+      {
+        "text": "is bound",
+        "strong": "H8244",
+        "morph": "8738"
+      },
+      {
+        "text": "by his hand",
+        "strong": "H3027"
+      },
+      {
+        "text": ": they are wreathed",
+        "strong": "H8276",
+        "morph": "8691"
+      },
+      {
+        "text": ", [and] come up",
+        "strong": "H5927",
+        "morph": "8804"
+      },
+      {
+        "text": "upon my neck",
+        "strong": "H6677"
+      },
+      {
+        "text": ": he hath made my strength",
+        "strong": "H3581"
+      },
+      {
+        "text": "to fall",
+        "strong": "H3782",
+        "morph": "8689"
+      },
+      {
+        "text": ", the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "hath delivered",
+        "strong": "H5414",
+        "morph": "8804"
+      },
+      {
+        "text": "me into [their] hands",
+        "strong": "H3027"
+      },
+      {
+        "text": ", [from whom] I am not able",
+        "strong": "H3201",
+        "morph": "8799"
+      },
+      {
+        "text": "to rise up",
+        "strong": "H6965",
+        "morph": "8800"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 15,
+    "content": [
+      {
+        "text": "The Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "hath trodden under foot",
+        "strong": "H5541",
+        "morph": "8765"
+      },
+      {
+        "text": "all my mighty",
+        "strong": "H0047"
+      },
+      {
+        "text": "[men] in the midst",
+        "strong": "H7130"
+      },
+      {
+        "text": "of me: he hath called",
+        "strong": "H7121",
+        "morph": "8804"
+      },
+      {
+        "text": "an assembly",
+        "strong": "H4150"
+      },
+      {
+        "text": "against me to crush",
+        "strong": "H7665",
+        "morph": "8800"
+      },
+      {
+        "text": "my young men",
+        "strong": "H0970"
+      },
+      {
+        "text": ": the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "hath trodden",
+        "strong": "H1869",
+        "morph": "8804"
+      },
+      {
+        "text": "the virgin",
+        "strong": "H1330"
+      },
+      {
+        "text": ", the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Judah",
+        "strong": "H3063"
+      },
+      {
+        "text": ", [as] in a winepress",
+        "strong": "H1660"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 16,
+    "content": [
+      {
+        "text": "For these [things] I weep",
+        "strong": "H1058",
+        "morph": "8802"
+      },
+      {
+        "text": "; mine eye",
+        "strong": "H5869"
+      },
+      {
+        "text": ", mine eye",
+        "strong": "H5869"
+      },
+      {
+        "text": "runneth down",
+        "strong": "H3381",
+        "morph": "8802"
+      },
+      {
+        "text": "with water",
+        "strong": "H4325"
+      },
+      {
+        "text": ", because the comforter",
+        "strong": "H5162",
+        "morph": "8764"
+      },
+      {
+        "text": "that should relieve",
+        "strong": "H7725",
+        "morph": "8688"
+      },
+      {
+        "text": "my soul",
+        "strong": "H5315"
+      },
+      {
+        "text": "is far",
+        "strong": "H7368",
+        "morph": "8804"
+      },
+      {
+        "text": "from me: my children",
+        "strong": "H1121"
+      },
+      {
+        "text": "are desolate",
+        "strong": "H8074",
+        "morph": "8802"
+      },
+      {
+        "text": ", because the enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "prevailed",
+        "strong": "H1396",
+        "morph": "8804"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 17,
+    "content": [
+      {
+        "text": "Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": "spreadeth forth",
+        "strong": "H6566",
+        "morph": "8765"
+      },
+      {
+        "text": "her hands",
+        "strong": "H3027"
+      },
+      {
+        "text": ", [and there is] none to comfort",
+        "strong": "H5162",
+        "morph": "8764"
+      },
+      {
+        "text": "her: the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "hath commanded",
+        "strong": "H6680",
+        "morph": "8765"
+      },
+      {
+        "text": "concerning Jacob",
+        "strong": "H3290"
+      },
+      {
+        "text": ", [that] his adversaries",
+        "strong": "H6862"
+      },
+      {
+        "text": "[should be] round about",
+        "strong": "H5439"
+      },
+      {
+        "text": "him: Jerusalem",
+        "strong": "H3389"
+      },
+      {
+        "text": "is as a menstruous woman",
+        "strong": "H5079"
+      },
+      {
+        "text": "among them."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 18,
+    "content": [
+      {
+        "text": "The LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "is righteous",
+        "strong": "H6662"
+      },
+      {
+        "text": "; for I have rebelled",
+        "strong": "H4784",
+        "morph": "8804"
+      },
+      {
+        "text": "against his commandment",
+        "strong": "H6310"
+      },
+      {
+        "text": ": hear",
+        "strong": "H8085",
+        "morph": "8798"
+      },
+      {
+        "text": ", I pray you, all people",
+        "strong": "H5971"
+      },
+      {
+        "text": ", and behold",
+        "strong": "H7200",
+        "morph": "8798"
+      },
+      {
+        "text": "my sorrow",
+        "strong": "H4341"
+      },
+      {
+        "text": ": my virgins",
+        "strong": "H1330"
+      },
+      {
+        "text": "and my young men",
+        "strong": "H0970"
+      },
+      {
+        "text": "are gone",
+        "strong": "H1980",
+        "morph": "8804"
+      },
+      {
+        "text": "into captivity",
+        "strong": "H7628"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 19,
+    "content": [
+      {
+        "text": "I called",
+        "strong": "H7121",
+        "morph": "8804"
+      },
+      {
+        "text": "for my lovers",
+        "strong": "H0157",
+        "morph": "8764"
+      },
+      {
+        "text": ", [but] they deceived",
+        "strong": "H7411",
+        "morph": "8765"
+      },
+      {
+        "text": "me: my priests",
+        "strong": "H3548"
+      },
+      {
+        "text": "and mine elders",
+        "strong": "H2205"
+      },
+      {
+        "text": "gave up the ghost",
+        "strong": "H1478",
+        "morph": "8804"
+      },
+      {
+        "text": "in the city",
+        "strong": "H5892"
+      },
+      {
+        "text": ", while they sought",
+        "strong": "H1245",
+        "morph": "8765"
+      },
+      {
+        "text": "their meat",
+        "strong": "H0400"
+      },
+      {
+        "text": "to relieve",
+        "strong": "H7725",
+        "morph": "8686"
+      },
+      {
+        "text": "their souls",
+        "strong": "H5315"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 20,
+    "content": [
+      {
+        "text": "Behold",
+        "strong": "H7200",
+        "morph": "8798"
+      },
+      {
+        "text": ", O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "; for I [am] in distress",
+        "strong": "H6887",
+        "morph": "8804"
+      },
+      {
+        "text": ": my bowels",
+        "strong": "H4578"
+      },
+      {
+        "text": "are troubled",
+        "strong": "H2560",
+        "morph": "8777"
+      },
+      {
+        "text": "; mine heart",
+        "strong": "H3820"
+      },
+      {
+        "text": "is turned",
+        "strong": "H2015",
+        "morph": "8738"
+      },
+      {
+        "text": "within",
+        "strong": "H7130"
+      },
+      {
+        "text": "me; for I have grievously",
+        "strong": "H4784",
+        "morph": "8800"
+      },
+      {
+        "text": "rebelled",
+        "strong": "H4784",
+        "morph": "8804"
+      },
+      {
+        "text": ": abroad",
+        "strong": "H2351"
+      },
+      {
+        "text": "the sword",
+        "strong": "H2719"
+      },
+      {
+        "text": "bereaveth",
+        "strong": "H7921",
+        "morph": "8765"
+      },
+      {
+        "text": ", at home",
+        "strong": "H1004"
+      },
+      {
+        "text": "[there is] as death",
+        "strong": "H4194"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 21,
+    "content": [
+      {
+        "text": "They have heard",
+        "strong": "H8085",
+        "morph": "8804"
+      },
+      {
+        "text": "that I sigh",
+        "strong": "H0584",
+        "morph": "8737"
+      },
+      {
+        "text": ": [there is] none to comfort",
+        "strong": "H5162",
+        "morph": "8764"
+      },
+      {
+        "text": "me: all mine enemies",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "have heard",
+        "strong": "H8085",
+        "morph": "8804"
+      },
+      {
+        "text": "of my trouble",
+        "strong": "H7451"
+      },
+      {
+        "text": "; they are glad",
+        "strong": "H7797",
+        "morph": "8804"
+      },
+      {
+        "text": "that thou hast done",
+        "strong": "H6213",
+        "morph": "8804"
+      },
+      {
+        "text": "[it]: thou wilt bring",
+        "strong": "H0935",
+        "morph": "8689"
+      },
+      {
+        "text": "the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "[that] thou hast called",
+        "strong": "H7121",
+        "morph": "8804"
+      },
+      {
+        "text": ", and they shall be like",
+        "strong": "H3644"
+      },
+      {
+        "text": "unto me."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 1,
+    "verse": 22,
+    "content": [
+      {
+        "text": "Let all their wickedness",
+        "strong": "H7451"
+      },
+      {
+        "text": "come",
+        "strong": "H0935",
+        "morph": "8799"
+      },
+      {
+        "text": "before",
+        "strong": "H6440"
+      },
+      {
+        "text": "thee; and do",
+        "strong": "H5953",
+        "morph": "8778"
+      },
+      {
+        "text": "unto them, as thou hast done",
+        "strong": "H5953",
+        "morph": "8782"
+      },
+      {
+        "text": "unto me for all my transgressions",
+        "strong": "H6588"
+      },
+      {
+        "text": ": for my sighs",
+        "strong": "H0585"
+      },
+      {
+        "text": "[are] many",
+        "strong": "H7227"
+      },
+      {
+        "text": ", and my heart",
+        "strong": "H3820"
+      },
+      {
+        "text": "[is] faint",
+        "strong": "H1742"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 1,
+    "content": [
+      {
+        "type": "p"
+      },
+      {
+        "text": "How hath the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "covered",
+        "strong": "H5743"
+      },
+      {
+        "text": "the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": "with a cloud",
+        "strong": "H5743",
+        "morph": "8686"
+      },
+      {
+        "text": "in his anger",
+        "strong": "H0639"
+      },
+      {
+        "text": ", [and] cast down",
+        "strong": "H7993",
+        "morph": "8689"
+      },
+      {
+        "text": "from heaven",
+        "strong": "H8064"
+      },
+      {
+        "text": "unto the earth",
+        "strong": "H0776"
+      },
+      {
+        "text": "the beauty",
+        "strong": "H8597"
+      },
+      {
+        "text": "of Israel",
+        "strong": "H3478"
+      },
+      {
+        "text": ", and remembered",
+        "strong": "H2142",
+        "morph": "8804"
+      },
+      {
+        "text": "not his footstool",
+        "strong": "H1916"
+      },
+      {
+        "strong": "H7272"
+      },
+      {
+        "text": "in the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "of his anger",
+        "strong": "H0639"
+      },
+      {
+        "text": "!"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 2,
+    "content": [
+      {
+        "text": "The Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "hath swallowed up",
+        "strong": "H1104",
+        "morph": "8765"
+      },
+      {
+        "text": "all the habitations",
+        "strong": "H4999"
+      },
+      {
+        "text": "of Jacob",
+        "strong": "H3290"
+      },
+      {
+        "text": ", and hath not pitied",
+        "strong": "H2550",
+        "morph": "8804"
+      },
+      {
+        "text": ": he hath thrown down",
+        "strong": "H2040",
+        "morph": "8804"
+      },
+      {
+        "text": "in his wrath",
+        "strong": "H5678"
+      },
+      {
+        "text": "the strong holds",
+        "strong": "H4013"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Judah",
+        "strong": "H3063"
+      },
+      {
+        "text": "; he hath brought [them] down",
+        "strong": "H5060",
+        "morph": "8689"
+      },
+      {
+        "text": "to the ground",
+        "strong": "H0776"
+      },
+      {
+        "text": ": he hath polluted",
+        "strong": "H2490",
+        "morph": "8765"
+      },
+      {
+        "text": "the kingdom",
+        "strong": "H4467"
+      },
+      {
+        "text": "and the princes",
+        "strong": "H8269"
+      },
+      {
+        "text": "thereof."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 3,
+    "content": [
+      {
+        "text": "He hath cut off",
+        "strong": "H1438",
+        "morph": "8804"
+      },
+      {
+        "text": "in [his] fierce",
+        "strong": "H2750"
+      },
+      {
+        "text": "anger",
+        "strong": "H0639"
+      },
+      {
+        "text": "all the horn",
+        "strong": "H7161"
+      },
+      {
+        "text": "of Israel",
+        "strong": "H3478"
+      },
+      {
+        "text": ": he hath drawn",
+        "strong": "H7725",
+        "morph": "8689"
+      },
+      {
+        "text": "back",
+        "strong": "H0268"
+      },
+      {
+        "text": "his right hand",
+        "strong": "H3225"
+      },
+      {
+        "text": "from before",
+        "strong": "H6440"
+      },
+      {
+        "text": "the enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": ", and he burned",
+        "strong": "H1197",
+        "morph": "8799"
+      },
+      {
+        "text": "against Jacob",
+        "strong": "H3290"
+      },
+      {
+        "text": "like a flaming",
+        "strong": "H3852"
+      },
+      {
+        "text": "fire",
+        "strong": "H0784"
+      },
+      {
+        "text": ", [which] devoureth",
+        "strong": "H0398",
+        "morph": "8804"
+      },
+      {
+        "text": "round about",
+        "strong": "H5439"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 4,
+    "content": [
+      {
+        "text": "He hath bent",
+        "strong": "H1869",
+        "morph": "8804"
+      },
+      {
+        "text": "his bow",
+        "strong": "H7198"
+      },
+      {
+        "text": "like an enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": ": he stood",
+        "strong": "H5324",
+        "morph": "8737"
+      },
+      {
+        "text": "with his right hand",
+        "strong": "H3225"
+      },
+      {
+        "text": "as an adversary",
+        "strong": "H6862"
+      },
+      {
+        "text": ", and slew",
+        "strong": "H2026",
+        "morph": "8799"
+      },
+      {
+        "text": "all [that were] pleasant",
+        "strong": "H4261"
+      },
+      {
+        "text": "to the eye",
+        "strong": "H5869"
+      },
+      {
+        "text": "in the tabernacle",
+        "strong": "H0168"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": ": he poured out",
+        "strong": "H8210",
+        "morph": "8804"
+      },
+      {
+        "text": "his fury",
+        "strong": "H2534"
+      },
+      {
+        "text": "like fire",
+        "strong": "H0784"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 5,
+    "content": [
+      {
+        "text": "The Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "was as an enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": ": he hath swallowed up",
+        "strong": "H1104",
+        "morph": "8765"
+      },
+      {
+        "text": "Israel",
+        "strong": "H3478"
+      },
+      {
+        "text": ", he hath swallowed up",
+        "strong": "H1104",
+        "morph": "8765"
+      },
+      {
+        "text": "all her palaces",
+        "strong": "H0759"
+      },
+      {
+        "text": ": he hath destroyed",
+        "strong": "H7843",
+        "morph": "8765"
+      },
+      {
+        "text": "his strong holds",
+        "strong": "H4013"
+      },
+      {
+        "text": ", and hath increased",
+        "strong": "H7235",
+        "morph": "8686"
+      },
+      {
+        "text": "in the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Judah",
+        "strong": "H3063"
+      },
+      {
+        "text": "mourning",
+        "strong": "H8386"
+      },
+      {
+        "text": "and lamentation",
+        "strong": "H0592"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 6,
+    "content": [
+      {
+        "text": "And he hath violently taken away",
+        "strong": "H2554",
+        "morph": "8799"
+      },
+      {
+        "text": "his tabernacle",
+        "strong": "H7900"
+      },
+      {
+        "text": ", as [if it were of] a garden",
+        "strong": "H1588"
+      },
+      {
+        "text": ": he hath destroyed",
+        "strong": "H7843",
+        "morph": "8765"
+      },
+      {
+        "text": "his places of the assembly",
+        "strong": "H4150"
+      },
+      {
+        "text": ": the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "hath caused the solemn feasts",
+        "strong": "H4150"
+      },
+      {
+        "text": "and sabbaths",
+        "strong": "H7676"
+      },
+      {
+        "text": "to be forgotten",
+        "strong": "H7911",
+        "morph": "8765"
+      },
+      {
+        "text": "in Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": ", and hath despised",
+        "strong": "H5006",
+        "morph": "8799"
+      },
+      {
+        "text": "in the indignation",
+        "strong": "H2195"
+      },
+      {
+        "text": "of his anger",
+        "strong": "H0639"
+      },
+      {
+        "text": "the king",
+        "strong": "H4428"
+      },
+      {
+        "text": "and the priest",
+        "strong": "H3548"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 7,
+    "content": [
+      {
+        "text": "The Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "hath cast off",
+        "strong": "H2186",
+        "morph": "8804"
+      },
+      {
+        "text": "his altar",
+        "strong": "H4196"
+      },
+      {
+        "text": ", he hath abhorred",
+        "strong": "H5010",
+        "morph": "8765"
+      },
+      {
+        "text": "his sanctuary",
+        "strong": "H4720"
+      },
+      {
+        "text": ", he hath given up",
+        "strong": "H5462",
+        "morph": "8689"
+      },
+      {
+        "text": "into the hand",
+        "strong": "H3027"
+      },
+      {
+        "text": "of the enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "the walls",
+        "strong": "H2346"
+      },
+      {
+        "text": "of her palaces",
+        "strong": "H0759"
+      },
+      {
+        "text": "; they have made",
+        "strong": "H5414",
+        "morph": "8804"
+      },
+      {
+        "text": "a noise",
+        "strong": "H6963"
+      },
+      {
+        "text": "in the house",
+        "strong": "H1004"
+      },
+      {
+        "text": "of the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", as in the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "of a solemn feast",
+        "strong": "H4150"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 8,
+    "content": [
+      {
+        "text": "The LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "hath purposed",
+        "strong": "H2803",
+        "morph": "8804"
+      },
+      {
+        "text": "to destroy",
+        "strong": "H7843",
+        "morph": "8687"
+      },
+      {
+        "text": "the wall",
+        "strong": "H2346"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": ": he hath stretched out",
+        "strong": "H5186",
+        "morph": "8804"
+      },
+      {
+        "text": "a line",
+        "strong": "H6957"
+      },
+      {
+        "text": ", he hath not withdrawn",
+        "strong": "H7725",
+        "morph": "8689"
+      },
+      {
+        "text": "his hand",
+        "strong": "H3027"
+      },
+      {
+        "text": "from destroying",
+        "strong": "H1104",
+        "morph": "8763"
+      },
+      {
+        "text": ": therefore he made the rampart",
+        "strong": "H2426"
+      },
+      {
+        "text": "and the wall",
+        "strong": "H2346"
+      },
+      {
+        "text": "to lament",
+        "strong": "H0056",
+        "morph": "8686"
+      },
+      {
+        "text": "; they languished",
+        "strong": "H0535",
+        "morph": "8797"
+      },
+      {
+        "text": "together",
+        "strong": "H3162"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 9,
+    "content": [
+      {
+        "text": "Her gates",
+        "strong": "H8179"
+      },
+      {
+        "text": "are sunk",
+        "strong": "H2883",
+        "morph": "8804"
+      },
+      {
+        "text": "into the ground",
+        "strong": "H0776"
+      },
+      {
+        "text": "; he hath destroyed",
+        "strong": "H0006",
+        "morph": "8765"
+      },
+      {
+        "text": "and broken",
+        "strong": "H7665",
+        "morph": "8765"
+      },
+      {
+        "text": "her bars",
+        "strong": "H1280"
+      },
+      {
+        "text": ": her king",
+        "strong": "H4428"
+      },
+      {
+        "text": "and her princes",
+        "strong": "H8269"
+      },
+      {
+        "text": "[are] among the Gentiles",
+        "strong": "H1471"
+      },
+      {
+        "text": ": the law",
+        "strong": "H8451"
+      },
+      {
+        "text": "[is] no [more]; her prophets",
+        "strong": "H5030"
+      },
+      {
+        "text": "also find",
+        "strong": "H4672",
+        "morph": "8804"
+      },
+      {
+        "text": "no vision",
+        "strong": "H2377"
+      },
+      {
+        "text": "from the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 10,
+    "content": [
+      {
+        "text": "The elders",
+        "strong": "H2205"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": "sit",
+        "strong": "H3427",
+        "morph": "8799"
+      },
+      {
+        "text": "upon the ground",
+        "strong": "H0776"
+      },
+      {
+        "text": ", [and] keep silence",
+        "strong": "H1826",
+        "morph": "8799"
+      },
+      {
+        "text": ": they have cast up",
+        "strong": "H5927",
+        "morph": "8689"
+      },
+      {
+        "text": "dust",
+        "strong": "H6083"
+      },
+      {
+        "text": "upon their heads",
+        "strong": "H7218"
+      },
+      {
+        "text": "; they have girded",
+        "strong": "H2296",
+        "morph": "8804"
+      },
+      {
+        "text": "themselves with sackcloth",
+        "strong": "H8242"
+      },
+      {
+        "text": ": the virgins",
+        "strong": "H1330"
+      },
+      {
+        "text": "of Jerusalem",
+        "strong": "H3389"
+      },
+      {
+        "text": "hang down",
+        "strong": "H3381",
+        "morph": "8689"
+      },
+      {
+        "text": "their heads",
+        "strong": "H7218"
+      },
+      {
+        "text": "to the ground",
+        "strong": "H0776"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 11,
+    "content": [
+      {
+        "text": "Mine eyes",
+        "strong": "H5869"
+      },
+      {
+        "text": "do fail",
+        "strong": "H3615",
+        "morph": "8804"
+      },
+      {
+        "text": "with tears",
+        "strong": "H1832"
+      },
+      {
+        "text": ", my bowels",
+        "strong": "H4578"
+      },
+      {
+        "text": "are troubled",
+        "strong": "H2560",
+        "morph": "8777"
+      },
+      {
+        "text": ", my liver",
+        "strong": "H3516"
+      },
+      {
+        "text": "is poured",
+        "strong": "H8210",
+        "morph": "8738"
+      },
+      {
+        "text": "upon the earth",
+        "strong": "H0776"
+      },
+      {
+        "text": ", for the destruction",
+        "strong": "H7667"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of my people",
+        "strong": "H5971"
+      },
+      {
+        "text": "; because the children",
+        "strong": "H5768"
+      },
+      {
+        "text": "and the sucklings",
+        "strong": "H3243",
+        "morph": "8802"
+      },
+      {
+        "text": "swoon",
+        "strong": "H5848",
+        "morph": "8736"
+      },
+      {
+        "text": "in the streets",
+        "strong": "H7339"
+      },
+      {
+        "text": "of the city",
+        "strong": "H7151"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 12,
+    "content": [
+      {
+        "text": "They say",
+        "strong": "H0559",
+        "morph": "8799"
+      },
+      {
+        "text": "to their mothers",
+        "strong": "H0517"
+      },
+      {
+        "text": ", Where [is] corn",
+        "strong": "H1715"
+      },
+      {
+        "text": "and wine",
+        "strong": "H3196"
+      },
+      {
+        "text": "? when they swooned",
+        "strong": "H5848",
+        "morph": "8692"
+      },
+      {
+        "text": "as the wounded",
+        "strong": "H2491"
+      },
+      {
+        "text": "in the streets",
+        "strong": "H7339"
+      },
+      {
+        "text": "of the city",
+        "strong": "H5892"
+      },
+      {
+        "text": ", when their soul",
+        "strong": "H5315"
+      },
+      {
+        "text": "was poured out",
+        "strong": "H8210",
+        "morph": "8692"
+      },
+      {
+        "text": "into their mothers",
+        "strong": "H0517"
+      },
+      {
+        "text": "’ bosom",
+        "strong": "H2436"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 13,
+    "content": [
+      {
+        "text": "What thing shall I take to witness",
+        "strong": "H5749",
+        "morph": "8686"
+      },
+      {
+        "text": "(8675)",
+        "strong": "H5749",
+        "morph": "8799"
+      },
+      {
+        "text": "for thee? what thing",
+        "strong": "H4100"
+      },
+      {
+        "text": "shall I liken",
+        "strong": "H1819",
+        "morph": "8762"
+      },
+      {
+        "text": "to thee, O daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Jerusalem",
+        "strong": "H3389"
+      },
+      {
+        "text": "? what shall I equal",
+        "strong": "H7737",
+        "morph": "8686"
+      },
+      {
+        "text": "to thee, that I may comfort",
+        "strong": "H5162",
+        "morph": "8762"
+      },
+      {
+        "text": "thee, O virgin",
+        "strong": "H1330"
+      },
+      {
+        "text": "daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": "? for thy breach",
+        "strong": "H7667"
+      },
+      {
+        "text": "[is] great",
+        "strong": "H1419"
+      },
+      {
+        "text": "like the sea",
+        "strong": "H3220"
+      },
+      {
+        "text": ": who can heal",
+        "strong": "H7495",
+        "morph": "8799"
+      },
+      {
+        "text": "thee?"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 14,
+    "content": [
+      {
+        "text": "Thy prophets",
+        "strong": "H5030"
+      },
+      {
+        "text": "have seen",
+        "strong": "H2372",
+        "morph": "8804"
+      },
+      {
+        "text": "vain",
+        "strong": "H7723"
+      },
+      {
+        "text": "and foolish things",
+        "strong": "H8602"
+      },
+      {
+        "text": "for thee: and they have not discovered",
+        "strong": "H1540",
+        "morph": "8765"
+      },
+      {
+        "text": "thine iniquity",
+        "strong": "H5771"
+      },
+      {
+        "text": ", to turn away",
+        "strong": "H7725",
+        "morph": "8687"
+      },
+      {
+        "text": "thy captivity",
+        "strong": "H7622",
+        "morph": "8675"
+      },
+      {
+        "strong": "H7622"
+      },
+      {
+        "text": "; but have seen",
+        "strong": "H2372",
+        "morph": "8799"
+      },
+      {
+        "text": "for thee false",
+        "strong": "H7723"
+      },
+      {
+        "text": "burdens",
+        "strong": "H4864"
+      },
+      {
+        "text": "and causes of banishment",
+        "strong": "H4065"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 15,
+    "content": [
+      {
+        "text": "All that pass",
+        "strong": "H5674",
+        "morph": "8802"
+      },
+      {
+        "text": "by clap",
+        "strong": "H5606",
+        "morph": "8804"
+      },
+      {
+        "text": "[their] hands",
+        "strong": "H3709"
+      },
+      {
+        "text": "at thee",
+        "strong": "H1870"
+      },
+      {
+        "text": "; they hiss",
+        "strong": "H8319",
+        "morph": "8804"
+      },
+      {
+        "text": "and wag",
+        "strong": "H5128",
+        "morph": "8686"
+      },
+      {
+        "text": "their head",
+        "strong": "H7218"
+      },
+      {
+        "text": "at the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Jerusalem",
+        "strong": "H3389"
+      },
+      {
+        "text": ", [saying, Is] this the city",
+        "strong": "H5892"
+      },
+      {
+        "text": "that [men] call",
+        "strong": "H0559",
+        "morph": "8799"
+      },
+      {
+        "text": "The perfection",
+        "strong": "H3632"
+      },
+      {
+        "text": "of beauty",
+        "strong": "H3308"
+      },
+      {
+        "text": ", The joy",
+        "strong": "H4885"
+      },
+      {
+        "text": "of the whole earth",
+        "strong": "H0776"
+      },
+      {
+        "text": "?"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 16,
+    "content": [
+      {
+        "text": "All thine enemies",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "have opened",
+        "strong": "H6475",
+        "morph": "8804"
+      },
+      {
+        "text": "their mouth",
+        "strong": "H6310"
+      },
+      {
+        "text": "against thee: they hiss",
+        "strong": "H8319",
+        "morph": "8804"
+      },
+      {
+        "text": "and gnash",
+        "strong": "H2786",
+        "morph": "8799"
+      },
+      {
+        "text": "the teeth",
+        "strong": "H8127"
+      },
+      {
+        "text": ": they say",
+        "strong": "H0559",
+        "morph": "8804"
+      },
+      {
+        "text": ", We have swallowed [her] up",
+        "strong": "H1104",
+        "morph": "8765"
+      },
+      {
+        "text": ": certainly",
+        "strong": "H0389"
+      },
+      {
+        "text": "this [is] the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "that we looked for",
+        "strong": "H6960",
+        "morph": "8765"
+      },
+      {
+        "text": "; we have found",
+        "strong": "H4672",
+        "morph": "8804"
+      },
+      {
+        "text": ", we have seen",
+        "strong": "H7200",
+        "morph": "8804"
+      },
+      {
+        "text": "[it]."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 17,
+    "content": [
+      {
+        "text": "The LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "hath done",
+        "strong": "H6213",
+        "morph": "8804"
+      },
+      {
+        "text": "[that] which he had devised",
+        "strong": "H2161",
+        "morph": "8804"
+      },
+      {
+        "text": "; he hath fulfilled",
+        "strong": "H1214",
+        "morph": "8765"
+      },
+      {
+        "text": "his word",
+        "strong": "H0565"
+      },
+      {
+        "text": "that he had commanded",
+        "strong": "H6680",
+        "morph": "8765"
+      },
+      {
+        "text": "in the days",
+        "strong": "H3117"
+      },
+      {
+        "text": "of old",
+        "strong": "H6924"
+      },
+      {
+        "text": ": he hath thrown down",
+        "strong": "H2040",
+        "morph": "8804"
+      },
+      {
+        "text": ", and hath not pitied",
+        "strong": "H2550",
+        "morph": "8804"
+      },
+      {
+        "text": ": and he hath caused [thine] enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "to rejoice",
+        "strong": "H8055",
+        "morph": "8762"
+      },
+      {
+        "text": "over thee, he hath set up",
+        "strong": "H7311",
+        "morph": "8689"
+      },
+      {
+        "text": "the horn",
+        "strong": "H7161"
+      },
+      {
+        "text": "of thine adversaries",
+        "strong": "H6862"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 18,
+    "content": [
+      {
+        "text": "Their heart",
+        "strong": "H3820"
+      },
+      {
+        "text": "cried",
+        "strong": "H6817",
+        "morph": "8804"
+      },
+      {
+        "text": "unto the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": ", O wall",
+        "strong": "H2346"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": ", let tears",
+        "strong": "H1832"
+      },
+      {
+        "text": "run down",
+        "strong": "H3381",
+        "morph": "8685"
+      },
+      {
+        "text": "like a river",
+        "strong": "H5158"
+      },
+      {
+        "text": "day",
+        "strong": "H3119"
+      },
+      {
+        "text": "and night",
+        "strong": "H3915"
+      },
+      {
+        "text": ": give",
+        "strong": "H5414",
+        "morph": "8799"
+      },
+      {
+        "text": "thyself no rest",
+        "strong": "H6314"
+      },
+      {
+        "text": "; let not the apple",
+        "strong": "H1323"
+      },
+      {
+        "text": "of thine eye",
+        "strong": "H5869"
+      },
+      {
+        "text": "cease",
+        "strong": "H1826",
+        "morph": "8799"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 19,
+    "content": [
+      {
+        "text": "Arise",
+        "strong": "H6965",
+        "morph": "8798"
+      },
+      {
+        "text": ", cry out",
+        "strong": "H7442",
+        "morph": "8798"
+      },
+      {
+        "text": "in the night",
+        "strong": "H3915"
+      },
+      {
+        "text": ": in the beginning",
+        "strong": "H7218"
+      },
+      {
+        "text": "of the watches",
+        "strong": "H0821"
+      },
+      {
+        "text": "pour out",
+        "strong": "H8210",
+        "morph": "8798"
+      },
+      {
+        "text": "thine heart",
+        "strong": "H3820"
+      },
+      {
+        "text": "like water",
+        "strong": "H4325"
+      },
+      {
+        "text": "before",
+        "strong": "H5227"
+      },
+      {
+        "text": "the face",
+        "strong": "H6440"
+      },
+      {
+        "text": "of the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": ": lift up",
+        "strong": "H5375",
+        "morph": "8798"
+      },
+      {
+        "text": "thy hands",
+        "strong": "H3709"
+      },
+      {
+        "text": "toward him for the life",
+        "strong": "H5315"
+      },
+      {
+        "text": "of thy young children",
+        "strong": "H5768"
+      },
+      {
+        "text": ", that faint",
+        "strong": "H5848",
+        "morph": "8803"
+      },
+      {
+        "text": "for hunger",
+        "strong": "H7458"
+      },
+      {
+        "text": "in the top",
+        "strong": "H7218"
+      },
+      {
+        "text": "of every street",
+        "strong": "H2351"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 20,
+    "content": [
+      {
+        "text": "Behold",
+        "strong": "H7200",
+        "morph": "8798"
+      },
+      {
+        "text": ", O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", and consider",
+        "strong": "H5027",
+        "morph": "8685"
+      },
+      {
+        "text": "to whom thou hast done",
+        "strong": "H5953",
+        "morph": "8782"
+      },
+      {
+        "text": "this",
+        "strong": "H3541"
+      },
+      {
+        "text": ". Shall the women",
+        "strong": "H0802"
+      },
+      {
+        "text": "eat",
+        "strong": "H0398",
+        "morph": "8799"
+      },
+      {
+        "text": "their fruit",
+        "strong": "H6529"
+      },
+      {
+        "text": ", [and] children",
+        "strong": "H5768"
+      },
+      {
+        "text": "of a span long",
+        "strong": "H2949"
+      },
+      {
+        "text": "? shall the priest",
+        "strong": "H3548"
+      },
+      {
+        "text": "and the prophet",
+        "strong": "H5030"
+      },
+      {
+        "text": "be slain",
+        "strong": "H2026",
+        "morph": "8735"
+      },
+      {
+        "text": "in the sanctuary",
+        "strong": "H4720"
+      },
+      {
+        "text": "of the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "?"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 21,
+    "content": [
+      {
+        "text": "The young",
+        "strong": "H5288"
+      },
+      {
+        "text": "and the old",
+        "strong": "H2205"
+      },
+      {
+        "text": "lie",
+        "strong": "H7901",
+        "morph": "8804"
+      },
+      {
+        "text": "on the ground",
+        "strong": "H0776"
+      },
+      {
+        "text": "in the streets",
+        "strong": "H2351"
+      },
+      {
+        "text": ": my virgins",
+        "strong": "H1330"
+      },
+      {
+        "text": "and my young men",
+        "strong": "H0970"
+      },
+      {
+        "text": "are fallen",
+        "strong": "H5307",
+        "morph": "8804"
+      },
+      {
+        "text": "by the sword",
+        "strong": "H2719"
+      },
+      {
+        "text": "; thou hast slain",
+        "strong": "H2026",
+        "morph": "8804"
+      },
+      {
+        "text": "[them] in the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "of thine anger",
+        "strong": "H0639"
+      },
+      {
+        "text": "; thou hast killed",
+        "strong": "H2873",
+        "morph": "8804"
+      },
+      {
+        "text": ", [and] not pitied",
+        "strong": "H2550",
+        "morph": "8804"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 2,
+    "verse": 22,
+    "content": [
+      {
+        "text": "Thou hast called",
+        "strong": "H7121",
+        "morph": "8799"
+      },
+      {
+        "text": "as in a solemn",
+        "strong": "H4150"
+      },
+      {
+        "text": "day",
+        "strong": "H3117"
+      },
+      {
+        "text": "my terrors",
+        "strong": "H4032"
+      },
+      {
+        "text": "round about",
+        "strong": "H5439"
+      },
+      {
+        "text": ", so that in the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "of the LORD’S",
+        "strong": "H3068"
+      },
+      {
+        "text": "anger",
+        "strong": "H0639"
+      },
+      {
+        "text": "none escaped",
+        "strong": "H6412"
+      },
+      {
+        "text": "nor remained",
+        "strong": "H8300"
+      },
+      {
+        "text": ": those that I have swaddled",
+        "strong": "H2946",
+        "morph": "8765"
+      },
+      {
+        "text": "and brought up",
+        "strong": "H7235",
+        "morph": "8765"
+      },
+      {
+        "text": "hath mine enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "consumed",
+        "strong": "H3615",
+        "morph": "8765"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 1,
+    "content": [
+      {
+        "type": "p"
+      },
+      {
+        "text": "I [am] the man",
+        "strong": "H1397"
+      },
+      {
+        "text": "[that] hath seen",
+        "strong": "H7200",
+        "morph": "8804"
+      },
+      {
+        "text": "affliction",
+        "strong": "H6040"
+      },
+      {
+        "text": "by the rod",
+        "strong": "H7626"
+      },
+      {
+        "text": "of his wrath",
+        "strong": "H5678"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 2,
+    "content": [
+      {
+        "text": "He hath led",
+        "strong": "H5090",
+        "morph": "8804"
+      },
+      {
+        "text": "me, and brought",
+        "strong": "H3212",
+        "morph": "8686"
+      },
+      {
+        "text": "[me into] darkness",
+        "strong": "H2822"
+      },
+      {
+        "text": ", but not [into] light",
+        "strong": "H0216"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 3,
+    "content": [
+      {
+        "text": "Surely against me is he turned",
+        "strong": "H7725",
+        "morph": "8799"
+      },
+      {
+        "text": "; he turneth",
+        "strong": "H2015",
+        "morph": "8799"
+      },
+      {
+        "text": "his hand",
+        "strong": "H3027"
+      },
+      {
+        "text": "[against me] all the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 4,
+    "content": [
+      {
+        "text": "My flesh",
+        "strong": "H1320"
+      },
+      {
+        "text": "and my skin",
+        "strong": "H5785"
+      },
+      {
+        "text": "hath he made old",
+        "strong": "H1086",
+        "morph": "8765"
+      },
+      {
+        "text": "; he hath broken",
+        "strong": "H7665",
+        "morph": "8765"
+      },
+      {
+        "text": "my bones",
+        "strong": "H6106"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 5,
+    "content": [
+      {
+        "text": "He hath builded against",
+        "strong": "H1129",
+        "morph": "8804"
+      },
+      {
+        "text": "me, and compassed",
+        "strong": "H5362",
+        "morph": "8686"
+      },
+      {
+        "text": "[me] with gall",
+        "strong": "H7219"
+      },
+      {
+        "text": "and travail",
+        "strong": "H8513"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 6,
+    "content": [
+      {
+        "text": "He hath set",
+        "strong": "H3427",
+        "morph": "8689"
+      },
+      {
+        "text": "me in dark places",
+        "strong": "H4285"
+      },
+      {
+        "text": ", as [they that be] dead",
+        "strong": "H4191",
+        "morph": "8801"
+      },
+      {
+        "text": "of old",
+        "strong": "H5769"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 7,
+    "content": [
+      {
+        "text": "He hath hedged",
+        "strong": "H1443",
+        "morph": "8804"
+      },
+      {
+        "text": "me about, that I cannot get out",
+        "strong": "H3318",
+        "morph": "8799"
+      },
+      {
+        "text": ": he hath made my chain",
+        "strong": "H5178"
+      },
+      {
+        "text": "heavy",
+        "strong": "H3513",
+        "morph": "8689"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 8,
+    "content": [
+      {
+        "text": "Also when I cry",
+        "strong": "H2199",
+        "morph": "8799"
+      },
+      {
+        "text": "and shout",
+        "strong": "H7768",
+        "morph": "8762"
+      },
+      {
+        "text": ", he shutteth out",
+        "strong": "H5640",
+        "morph": "8804"
+      },
+      {
+        "text": "my prayer",
+        "strong": "H8605"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 9,
+    "content": [
+      {
+        "text": "He hath inclosed",
+        "strong": "H1443",
+        "morph": "8804"
+      },
+      {
+        "text": "my ways",
+        "strong": "H1870"
+      },
+      {
+        "text": "with hewn stone",
+        "strong": "H1496"
+      },
+      {
+        "text": ", he hath made my paths",
+        "strong": "H5410"
+      },
+      {
+        "text": "crooked",
+        "strong": "H5753",
+        "morph": "8765"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 10,
+    "content": [
+      {
+        "text": "He [was] unto me [as] a bear",
+        "strong": "H1677"
+      },
+      {
+        "text": "lying in wait",
+        "strong": "H0693",
+        "morph": "8802"
+      },
+      {
+        "text": ", [and as] a lion",
+        "strong": "H0738"
+      },
+      {
+        "text": "in secret places",
+        "strong": "H4565"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 11,
+    "content": [
+      {
+        "text": "He hath turned aside",
+        "strong": "H5493",
+        "morph": "8790"
+      },
+      {
+        "text": "my ways",
+        "strong": "H1870"
+      },
+      {
+        "text": ", and pulled me in pieces",
+        "strong": "H6582",
+        "morph": "8762"
+      },
+      {
+        "text": ": he hath made",
+        "strong": "H7760",
+        "morph": "8804"
+      },
+      {
+        "text": "me desolate",
+        "strong": "H8074",
+        "morph": "8802"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 12,
+    "content": [
+      {
+        "text": "He hath bent",
+        "strong": "H1869",
+        "morph": "8804"
+      },
+      {
+        "text": "his bow",
+        "strong": "H7198"
+      },
+      {
+        "text": ", and set",
+        "strong": "H5324",
+        "morph": "8686"
+      },
+      {
+        "text": "me as a mark",
+        "strong": "H4307"
+      },
+      {
+        "text": "for the arrow",
+        "strong": "H2671"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 13,
+    "content": [
+      {
+        "text": "He hath caused the arrows",
+        "strong": "H1121"
+      },
+      {
+        "text": "of his quiver",
+        "strong": "H0827"
+      },
+      {
+        "text": "to enter",
+        "strong": "H0935",
+        "morph": "8689"
+      },
+      {
+        "text": "into my reins",
+        "strong": "H3629"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 14,
+    "content": [
+      {
+        "text": "I was a derision",
+        "strong": "H7814"
+      },
+      {
+        "text": "to all my people",
+        "strong": "H5971"
+      },
+      {
+        "text": "; [and] their song",
+        "strong": "H5058"
+      },
+      {
+        "text": "all the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 15,
+    "content": [
+      {
+        "text": "He hath filled",
+        "strong": "H7646",
+        "morph": "8689"
+      },
+      {
+        "text": "me with bitterness",
+        "strong": "H4844"
+      },
+      {
+        "text": ", he hath made me drunken",
+        "strong": "H7301",
+        "morph": "8689"
+      },
+      {
+        "text": "with wormwood",
+        "strong": "H3939"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 16,
+    "content": [
+      {
+        "text": "He hath also broken",
+        "strong": "H1638",
+        "morph": "8686"
+      },
+      {
+        "text": "my teeth",
+        "strong": "H8127"
+      },
+      {
+        "text": "with gravel stones",
+        "strong": "H2687"
+      },
+      {
+        "text": ", he hath covered",
+        "strong": "H3728",
+        "morph": "8689"
+      },
+      {
+        "text": "me with ashes",
+        "strong": "H0665"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 17,
+    "content": [
+      {
+        "text": "And thou hast removed",
+        "strong": "H2186"
+      },
+      {
+        "text": "my soul",
+        "strong": "H5315"
+      },
+      {
+        "text": "far off",
+        "strong": "H2186",
+        "morph": "8799"
+      },
+      {
+        "text": "from peace",
+        "strong": "H7965"
+      },
+      {
+        "text": ": I forgat",
+        "strong": "H5382",
+        "morph": "8804"
+      },
+      {
+        "text": "prosperity",
+        "strong": "H2896"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 18,
+    "content": [
+      {
+        "text": "And I said",
+        "strong": "H0559",
+        "morph": "8799"
+      },
+      {
+        "text": ", My strength",
+        "strong": "H5331"
+      },
+      {
+        "text": "and my hope",
+        "strong": "H8431"
+      },
+      {
+        "text": "is perished",
+        "strong": "H0006",
+        "morph": "8804"
+      },
+      {
+        "text": "from the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ":"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 19,
+    "content": [
+      {
+        "text": "Remembering",
+        "strong": "H2142",
+        "morph": "8798"
+      },
+      {
+        "text": "mine affliction",
+        "strong": "H6040"
+      },
+      {
+        "text": "and my misery",
+        "strong": "H4788"
+      },
+      {
+        "text": ", the wormwood",
+        "strong": "H3939"
+      },
+      {
+        "text": "and the gall",
+        "strong": "H7219"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 20,
+    "content": [
+      {
+        "text": "My soul",
+        "strong": "H5315"
+      },
+      {
+        "text": "hath [them] still",
+        "strong": "H2142",
+        "morph": "8800"
+      },
+      {
+        "text": "in remembrance",
+        "strong": "H2142",
+        "morph": "8799"
+      },
+      {
+        "text": ", and is humbled",
+        "strong": "H7743",
+        "morph": "8686"
+      },
+      {
+        "text": "in me."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 21,
+    "content": [
+      {
+        "text": "This I recall",
+        "strong": "H7725",
+        "morph": "8686"
+      },
+      {
+        "text": "to my mind",
+        "strong": "H3820"
+      },
+      {
+        "text": ", therefore have I hope",
+        "strong": "H3176",
+        "morph": "8686"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 22,
+    "content": [
+      {
+        "text": "[It is of] the LORD’S",
+        "strong": "H3068"
+      },
+      {
+        "text": "mercies",
+        "strong": "H2617"
+      },
+      {
+        "text": "that we are not consumed",
+        "strong": "H8552",
+        "morph": "8804"
+      },
+      {
+        "text": ", because his compassions",
+        "strong": "H7356"
+      },
+      {
+        "text": "fail",
+        "strong": "H3615",
+        "morph": "8804"
+      },
+      {
+        "text": "not."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 23,
+    "content": [
+      {
+        "text": "[They are] new",
+        "strong": "H2319"
+      },
+      {
+        "text": "every morning",
+        "strong": "H1242"
+      },
+      {
+        "text": ": great",
+        "strong": "H7227"
+      },
+      {
+        "text": "[is] thy faithfulness",
+        "strong": "H0530"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 24,
+    "content": [
+      {
+        "text": "The LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "[is] my portion",
+        "strong": "H2506"
+      },
+      {
+        "text": ", saith",
+        "strong": "H0559",
+        "morph": "8804"
+      },
+      {
+        "text": "my soul",
+        "strong": "H5315"
+      },
+      {
+        "text": "; therefore will I hope",
+        "strong": "H3176",
+        "morph": "8686"
+      },
+      {
+        "text": "in him."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 25,
+    "content": [
+      {
+        "text": "The LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "[is] good",
+        "strong": "H2896"
+      },
+      {
+        "text": "unto them that wait",
+        "strong": "H6960",
+        "morph": "8802"
+      },
+      {
+        "text": "for him, to the soul",
+        "strong": "H5315"
+      },
+      {
+        "text": "[that] seeketh",
+        "strong": "H1875",
+        "morph": "8799"
+      },
+      {
+        "text": "him."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 26,
+    "content": [
+      {
+        "text": "[It is] good",
+        "strong": "H2896"
+      },
+      {
+        "text": "that [a man] should both hope",
+        "strong": "H3175",
+        "morph": "8675"
+      },
+      {
+        "strong": "H2342",
+        "morph": "8799"
+      },
+      {
+        "text": "and quietly wait",
+        "strong": "H1748"
+      },
+      {
+        "text": "for the salvation",
+        "strong": "H8668"
+      },
+      {
+        "text": "of the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 27,
+    "content": [
+      {
+        "text": "[It is] good",
+        "strong": "H2896"
+      },
+      {
+        "text": "for a man",
+        "strong": "H1397"
+      },
+      {
+        "text": "that he bear",
+        "strong": "H5375",
+        "morph": "8799"
+      },
+      {
+        "text": "the yoke",
+        "strong": "H5923"
+      },
+      {
+        "text": "in his youth",
+        "strong": "H5271"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 28,
+    "content": [
+      {
+        "text": "He sitteth",
+        "strong": "H3427",
+        "morph": "8799"
+      },
+      {
+        "text": "alone",
+        "strong": "H0910"
+      },
+      {
+        "text": "and keepeth silence",
+        "strong": "H1826",
+        "morph": "8799"
+      },
+      {
+        "text": ", because he hath borne",
+        "strong": "H5190",
+        "morph": "8804"
+      },
+      {
+        "text": "[it] upon him."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 29,
+    "content": [
+      {
+        "text": "He putteth",
+        "strong": "H5414",
+        "morph": "8799"
+      },
+      {
+        "text": "his mouth",
+        "strong": "H6310"
+      },
+      {
+        "text": "in the dust",
+        "strong": "H6083"
+      },
+      {
+        "text": "; if so be there may be",
+        "strong": "H3426"
+      },
+      {
+        "text": "hope",
+        "strong": "H8615"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 30,
+    "content": [
+      {
+        "text": "He giveth",
+        "strong": "H5414",
+        "morph": "8799"
+      },
+      {
+        "text": "[his] cheek",
+        "strong": "H3895"
+      },
+      {
+        "text": "to him that smiteth",
+        "strong": "H5221",
+        "morph": "8688"
+      },
+      {
+        "text": "him: he is filled full",
+        "strong": "H7646",
+        "morph": "8799"
+      },
+      {
+        "text": "with reproach",
+        "strong": "H2781"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 31,
+    "content": [
+      {
+        "text": "For the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "will not cast off",
+        "strong": "H2186",
+        "morph": "8799"
+      },
+      {
+        "text": "for ever",
+        "strong": "H5769"
+      },
+      {
+        "text": ":"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 32,
+    "content": [
+      {
+        "text": "But though he cause grief",
+        "strong": "H3013",
+        "morph": "8689"
+      },
+      {
+        "text": ", yet will he have compassion",
+        "strong": "H7355",
+        "morph": "8765"
+      },
+      {
+        "text": "according to the multitude",
+        "strong": "H7230"
+      },
+      {
+        "text": "of his mercies",
+        "strong": "H2617"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 33,
+    "content": [
+      {
+        "text": "For he doth not afflict",
+        "strong": "H6031",
+        "morph": "8765"
+      },
+      {
+        "text": "willingly",
+        "strong": "H3820"
+      },
+      {
+        "text": "nor grieve",
+        "strong": "H3013",
+        "morph": "8762"
+      },
+      {
+        "text": "the children",
+        "strong": "H1121"
+      },
+      {
+        "text": "of men",
+        "strong": "H0376"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 34,
+    "content": [
+      {
+        "text": "To crush",
+        "strong": "H1792",
+        "morph": "8763"
+      },
+      {
+        "text": "under his feet",
+        "strong": "H7272"
+      },
+      {
+        "text": "all the prisoners",
+        "strong": "H0615"
+      },
+      {
+        "text": "of the earth",
+        "strong": "H0776"
+      },
+      {
+        "text": ","
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 35,
+    "content": [
+      {
+        "text": "To turn aside",
+        "strong": "H5186",
+        "morph": "8687"
+      },
+      {
+        "text": "the right",
+        "strong": "H4941"
+      },
+      {
+        "text": "of a man",
+        "strong": "H1397"
+      },
+      {
+        "text": "before the face",
+        "strong": "H6440"
+      },
+      {
+        "text": "of the most High",
+        "strong": "H5945"
+      },
+      {
+        "text": ","
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 36,
+    "content": [
+      {
+        "text": "To subvert",
+        "strong": "H5791",
+        "morph": "8763"
+      },
+      {
+        "text": "a man",
+        "strong": "H0120"
+      },
+      {
+        "text": "in his cause",
+        "strong": "H7379"
+      },
+      {
+        "text": ", the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "approveth",
+        "strong": "H7200",
+        "morph": "8804"
+      },
+      {
+        "text": "not."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 37,
+    "content": [
+      {
+        "text": "Who [is] he [that] saith",
+        "strong": "H0559",
+        "morph": "8804"
+      },
+      {
+        "text": ", and it cometh to pass, [when] the Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": "commandeth",
+        "strong": "H6680",
+        "morph": "8765"
+      },
+      {
+        "text": "[it] not?"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 38,
+    "content": [
+      {
+        "text": "Out of the mouth",
+        "strong": "H6310"
+      },
+      {
+        "text": "of the most High",
+        "strong": "H5945"
+      },
+      {
+        "text": "proceedeth",
+        "strong": "H3318",
+        "morph": "8799"
+      },
+      {
+        "text": "not evil",
+        "strong": "H7451"
+      },
+      {
+        "text": "and good",
+        "strong": "H2896"
+      },
+      {
+        "text": "?"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 39,
+    "content": [
+      {
+        "text": "Wherefore doth a living",
+        "strong": "H2416"
+      },
+      {
+        "text": "man",
+        "strong": "H0120"
+      },
+      {
+        "text": "complain",
+        "strong": "H0596",
+        "morph": "8691"
+      },
+      {
+        "text": ", a man",
+        "strong": "H1397"
+      },
+      {
+        "text": "for the punishment of his sins",
+        "strong": "H2399"
+      },
+      {
+        "text": "?"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 40,
+    "content": [
+      {
+        "text": "Let us search",
+        "strong": "H2664",
+        "morph": "8799"
+      },
+      {
+        "text": "and try",
+        "strong": "H2713",
+        "morph": "8799"
+      },
+      {
+        "text": "our ways",
+        "strong": "H1870"
+      },
+      {
+        "text": ", and turn again",
+        "strong": "H7725",
+        "morph": "8799"
+      },
+      {
+        "text": "to the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 41,
+    "content": [
+      {
+        "text": "Let us lift up",
+        "strong": "H5375",
+        "morph": "8799"
+      },
+      {
+        "text": "our heart",
+        "strong": "H3824"
+      },
+      {
+        "text": "with [our] hands",
+        "strong": "H3709"
+      },
+      {
+        "text": "unto God",
+        "strong": "H0410"
+      },
+      {
+        "text": "in the heavens",
+        "strong": "H8064"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 42,
+    "content": [
+      {
+        "text": "We",
+        "strong": "H5168"
+      },
+      {
+        "text": "have transgressed",
+        "strong": "H6586",
+        "morph": "8804"
+      },
+      {
+        "text": "and have rebelled",
+        "strong": "H4784",
+        "morph": "8804"
+      },
+      {
+        "text": ": thou hast not pardoned",
+        "strong": "H5545",
+        "morph": "8804"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 43,
+    "content": [
+      {
+        "text": "Thou hast covered",
+        "strong": "H5526",
+        "morph": "8804"
+      },
+      {
+        "text": "with anger",
+        "strong": "H0639"
+      },
+      {
+        "text": ", and persecuted",
+        "strong": "H7291",
+        "morph": "8799"
+      },
+      {
+        "text": "us: thou hast slain",
+        "strong": "H2026",
+        "morph": "8804"
+      },
+      {
+        "text": ", thou hast not pitied",
+        "strong": "H2550",
+        "morph": "8804"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 44,
+    "content": [
+      {
+        "text": "Thou hast covered",
+        "strong": "H5526",
+        "morph": "8804"
+      },
+      {
+        "text": "thyself with a cloud",
+        "strong": "H6051"
+      },
+      {
+        "text": ", that [our] prayer",
+        "strong": "H8605"
+      },
+      {
+        "text": "should not pass through",
+        "strong": "H5674",
+        "morph": "8800"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 45,
+    "content": [
+      {
+        "text": "Thou hast made",
+        "strong": "H7760",
+        "morph": "8799"
+      },
+      {
+        "text": "us [as] the offscouring",
+        "strong": "H5501"
+      },
+      {
+        "text": "and refuse",
+        "strong": "H3973"
+      },
+      {
+        "text": "in the midst",
+        "strong": "H7130"
+      },
+      {
+        "text": "of the people",
+        "strong": "H5971"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 46,
+    "content": [
+      {
+        "text": "All our enemies",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "have opened",
+        "strong": "H6475",
+        "morph": "8804"
+      },
+      {
+        "text": "their mouths",
+        "strong": "H6310"
+      },
+      {
+        "text": "against us."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 47,
+    "content": [
+      {
+        "text": "Fear",
+        "strong": "H6343"
+      },
+      {
+        "text": "and a snare",
+        "strong": "H6354"
+      },
+      {
+        "text": "is come upon us, desolation",
+        "strong": "H7612"
+      },
+      {
+        "text": "and destruction",
+        "strong": "H7667"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 48,
+    "content": [
+      {
+        "text": "Mine eye",
+        "strong": "H5869"
+      },
+      {
+        "text": "runneth down",
+        "strong": "H3381",
+        "morph": "8799"
+      },
+      {
+        "text": "with rivers",
+        "strong": "H6388"
+      },
+      {
+        "text": "of water",
+        "strong": "H4325"
+      },
+      {
+        "text": "for the destruction",
+        "strong": "H7667"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of my people",
+        "strong": "H5971"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 49,
+    "content": [
+      {
+        "text": "Mine eye",
+        "strong": "H5869"
+      },
+      {
+        "text": "trickleth down",
+        "strong": "H5064",
+        "morph": "8738"
+      },
+      {
+        "text": ", and ceaseth",
+        "strong": "H1820",
+        "morph": "8799"
+      },
+      {
+        "text": "not, without any intermission",
+        "strong": "H2014"
+      },
+      {
+        "text": ","
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 50,
+    "content": [
+      {
+        "text": "Till the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "look down",
+        "strong": "H8259",
+        "morph": "8686"
+      },
+      {
+        "text": ", and behold",
+        "strong": "H7200",
+        "morph": "8799"
+      },
+      {
+        "text": "from heaven",
+        "strong": "H8064"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 51,
+    "content": [
+      {
+        "text": "Mine eye",
+        "strong": "H5869"
+      },
+      {
+        "text": "affecteth",
+        "strong": "H5953",
+        "morph": "8782"
+      },
+      {
+        "text": "mine heart",
+        "strong": "H5315"
+      },
+      {
+        "text": "because of all the daughters",
+        "strong": "H1323"
+      },
+      {
+        "text": "of my city",
+        "strong": "H5892"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 52,
+    "content": [
+      {
+        "text": "Mine enemies",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "chased",
+        "strong": "H6679",
+        "morph": "8804"
+      },
+      {
+        "text": "me sore",
+        "strong": "H6679",
+        "morph": "8800"
+      },
+      {
+        "text": ", like a bird",
+        "strong": "H6833"
+      },
+      {
+        "text": ", without cause",
+        "strong": "H2600"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 53,
+    "content": [
+      {
+        "text": "They have cut off",
+        "strong": "H6789",
+        "morph": "8804"
+      },
+      {
+        "text": "my life",
+        "strong": "H2416"
+      },
+      {
+        "text": "in the dungeon",
+        "strong": "H0953"
+      },
+      {
+        "text": ", and cast",
+        "strong": "H3034",
+        "morph": "8762"
+      },
+      {
+        "text": "a stone",
+        "strong": "H0068"
+      },
+      {
+        "text": "upon me."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 54,
+    "content": [
+      {
+        "text": "Waters",
+        "strong": "H4325"
+      },
+      {
+        "text": "flowed over",
+        "strong": "H6687",
+        "morph": "8804"
+      },
+      {
+        "text": "mine head",
+        "strong": "H7218"
+      },
+      {
+        "text": "; [then] I said",
+        "strong": "H0559",
+        "morph": "8804"
+      },
+      {
+        "text": ", I am cut off",
+        "strong": "H1504",
+        "morph": "8738"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 55,
+    "content": [
+      {
+        "text": "I called",
+        "strong": "H7121",
+        "morph": "8804"
+      },
+      {
+        "text": "upon thy name",
+        "strong": "H8034"
+      },
+      {
+        "text": ", O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", out of the low",
+        "strong": "H8482"
+      },
+      {
+        "text": "dungeon",
+        "strong": "H0953"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 56,
+    "content": [
+      {
+        "text": "Thou hast heard",
+        "strong": "H8085",
+        "morph": "8804"
+      },
+      {
+        "text": "my voice",
+        "strong": "H6963"
+      },
+      {
+        "text": ": hide",
+        "strong": "H5956",
+        "morph": "8686"
+      },
+      {
+        "text": "not thine ear",
+        "strong": "H0241"
+      },
+      {
+        "text": "at my breathing",
+        "strong": "H7309"
+      },
+      {
+        "text": ", at my cry",
+        "strong": "H7775"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 57,
+    "content": [
+      {
+        "text": "Thou drewest near",
+        "strong": "H7126",
+        "morph": "8804"
+      },
+      {
+        "text": "in the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "[that] I called",
+        "strong": "H7121",
+        "morph": "8799"
+      },
+      {
+        "text": "upon thee: thou saidst",
+        "strong": "H0559",
+        "morph": "8804"
+      },
+      {
+        "text": ", Fear",
+        "strong": "H3372",
+        "morph": "8799"
+      },
+      {
+        "text": "not."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 58,
+    "content": [
+      {
+        "text": "O Lord",
+        "strong": "H0136"
+      },
+      {
+        "text": ", thou hast pleaded",
+        "strong": "H7378",
+        "morph": "8804"
+      },
+      {
+        "text": "the causes",
+        "strong": "H7379"
+      },
+      {
+        "text": "of my soul",
+        "strong": "H5315"
+      },
+      {
+        "text": "; thou hast redeemed",
+        "strong": "H1350",
+        "morph": "8804"
+      },
+      {
+        "text": "my life",
+        "strong": "H2416"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 59,
+    "content": [
+      {
+        "text": "O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", thou hast seen",
+        "strong": "H7200",
+        "morph": "8804"
+      },
+      {
+        "text": "my wrong",
+        "strong": "H5792"
+      },
+      {
+        "text": ": judge",
+        "strong": "H8199",
+        "morph": "8798"
+      },
+      {
+        "text": "thou my cause",
+        "strong": "H4941"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 60,
+    "content": [
+      {
+        "text": "Thou hast seen",
+        "strong": "H7200",
+        "morph": "8804"
+      },
+      {
+        "text": "all their vengeance",
+        "strong": "H5360"
+      },
+      {
+        "text": "[and] all their imaginations",
+        "strong": "H4284"
+      },
+      {
+        "text": "against me."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 61,
+    "content": [
+      {
+        "text": "Thou hast heard",
+        "strong": "H8085",
+        "morph": "8804"
+      },
+      {
+        "text": "their reproach",
+        "strong": "H2781"
+      },
+      {
+        "text": ", O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", [and] all their imaginations",
+        "strong": "H4284"
+      },
+      {
+        "text": "against me;"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 62,
+    "content": [
+      {
+        "text": "The lips",
+        "strong": "H8193"
+      },
+      {
+        "text": "of those that rose up",
+        "strong": "H6965",
+        "morph": "8801"
+      },
+      {
+        "text": "against me, and their device",
+        "strong": "H1902"
+      },
+      {
+        "text": "against me all the day",
+        "strong": "H3117"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 63,
+    "content": [
+      {
+        "text": "Behold",
+        "strong": "H5027",
+        "morph": "8685"
+      },
+      {
+        "text": "their sitting down",
+        "strong": "H3427",
+        "morph": "8800"
+      },
+      {
+        "text": ", and their rising up",
+        "strong": "H7012"
+      },
+      {
+        "text": "; I [am] their musick",
+        "strong": "H4485"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 64,
+    "content": [
+      {
+        "text": "Render",
+        "strong": "H7725",
+        "morph": "8686"
+      },
+      {
+        "text": "unto them a recompence",
+        "strong": "H1576"
+      },
+      {
+        "text": ", O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", according to the work",
+        "strong": "H4639"
+      },
+      {
+        "text": "of their hands",
+        "strong": "H3027"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 65,
+    "content": [
+      {
+        "text": "Give",
+        "strong": "H5414",
+        "morph": "8799"
+      },
+      {
+        "text": "them sorrow",
+        "strong": "H4044"
+      },
+      {
+        "text": "of heart",
+        "strong": "H3820"
+      },
+      {
+        "text": ", thy curse",
+        "strong": "H8381"
+      },
+      {
+        "text": "unto them."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 3,
+    "verse": 66,
+    "content": [
+      {
+        "text": "Persecute",
+        "strong": "H7291",
+        "morph": "8799"
+      },
+      {
+        "text": "and destroy",
+        "strong": "H8045",
+        "morph": "8686"
+      },
+      {
+        "text": "them in anger",
+        "strong": "H0639"
+      },
+      {
+        "text": "from under the heavens",
+        "strong": "H8064"
+      },
+      {
+        "text": "of the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 1,
+    "content": [
+      {
+        "type": "p"
+      },
+      {
+        "text": "How is the gold",
+        "strong": "H2091"
+      },
+      {
+        "text": "become dim",
+        "strong": "H6004",
+        "morph": "8714"
+      },
+      {
+        "text": "! [how] is the most",
+        "strong": "H2896"
+      },
+      {
+        "text": "fine gold",
+        "strong": "H3800"
+      },
+      {
+        "text": "changed",
+        "strong": "H8132",
+        "morph": "8799"
+      },
+      {
+        "text": "! the stones",
+        "strong": "H0068"
+      },
+      {
+        "text": "of the sanctuary",
+        "strong": "H6944"
+      },
+      {
+        "text": "are poured out",
+        "strong": "H8210",
+        "morph": "8691"
+      },
+      {
+        "text": "in the top",
+        "strong": "H7218"
+      },
+      {
+        "text": "of every street",
+        "strong": "H2351"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 2,
+    "content": [
+      {
+        "text": "The precious",
+        "strong": "H3368"
+      },
+      {
+        "text": "sons",
+        "strong": "H1121"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": ", comparable",
+        "strong": "H5537",
+        "morph": "8794"
+      },
+      {
+        "text": "to fine gold",
+        "strong": "H6337"
+      },
+      {
+        "text": ", how are they esteemed",
+        "strong": "H2803",
+        "morph": "8738"
+      },
+      {
+        "text": "as earthen",
+        "strong": "H2789"
+      },
+      {
+        "text": "pitchers",
+        "strong": "H5035"
+      },
+      {
+        "text": ", the work",
+        "strong": "H4639"
+      },
+      {
+        "text": "of the hands",
+        "strong": "H3027"
+      },
+      {
+        "text": "of the potter",
+        "strong": "H3335",
+        "morph": "8802"
+      },
+      {
+        "text": "!"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 3,
+    "content": [
+      {
+        "text": "Even the sea monsters",
+        "strong": "H8577"
+      },
+      {
+        "text": "draw out",
+        "strong": "H2502",
+        "morph": "8804"
+      },
+      {
+        "text": "the breast",
+        "strong": "H7699"
+      },
+      {
+        "text": ", they give suck",
+        "strong": "H3243",
+        "morph": "8689"
+      },
+      {
+        "text": "to their young ones",
+        "strong": "H1482"
+      },
+      {
+        "text": ": the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of my people",
+        "strong": "H5971"
+      },
+      {
+        "text": "[is become] cruel",
+        "strong": "H0393"
+      },
+      {
+        "text": ", like the ostriches",
+        "strong": "H3283"
+      },
+      {
+        "text": "in the wilderness",
+        "strong": "H4057"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 4,
+    "content": [
+      {
+        "text": "The tongue",
+        "strong": "H3956"
+      },
+      {
+        "text": "of the sucking child",
+        "strong": "H3243",
+        "morph": "8802"
+      },
+      {
+        "text": "cleaveth",
+        "strong": "H1692",
+        "morph": "8804"
+      },
+      {
+        "text": "to the roof of his mouth",
+        "strong": "H2441"
+      },
+      {
+        "text": "for thirst",
+        "strong": "H6772"
+      },
+      {
+        "text": ": the young children",
+        "strong": "H5768"
+      },
+      {
+        "text": "ask",
+        "strong": "H7592",
+        "morph": "8804"
+      },
+      {
+        "text": "bread",
+        "strong": "H3899"
+      },
+      {
+        "text": ", [and] no man breaketh",
+        "strong": "H6566",
+        "morph": "8802"
+      },
+      {
+        "text": "[it] unto them."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 5,
+    "content": [
+      {
+        "text": "They that did feed",
+        "strong": "H0398",
+        "morph": "8802"
+      },
+      {
+        "text": "delicately",
+        "strong": "H4574"
+      },
+      {
+        "text": "are desolate",
+        "strong": "H8074",
+        "morph": "8738"
+      },
+      {
+        "text": "in the streets",
+        "strong": "H2351"
+      },
+      {
+        "text": ": they that were brought up",
+        "strong": "H0539",
+        "morph": "8803"
+      },
+      {
+        "text": "in scarlet",
+        "strong": "H8438"
+      },
+      {
+        "text": "embrace",
+        "strong": "H2263",
+        "morph": "8765"
+      },
+      {
+        "text": "dunghills",
+        "strong": "H0830"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 6,
+    "content": [
+      {
+        "text": "For the punishment of the iniquity",
+        "strong": "H5771"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of my people",
+        "strong": "H5971"
+      },
+      {
+        "text": "is greater",
+        "strong": "H1431",
+        "morph": "8799"
+      },
+      {
+        "text": "than the punishment",
+        "strong": "H2403"
+      },
+      {
+        "text": "of the sin of Sodom",
+        "strong": "H5467"
+      },
+      {
+        "text": ", that was overthrown",
+        "strong": "H2015",
+        "morph": "8803"
+      },
+      {
+        "text": "as in a moment",
+        "strong": "H7281"
+      },
+      {
+        "text": ", and no hands",
+        "strong": "H3027"
+      },
+      {
+        "text": "stayed",
+        "strong": "H2342",
+        "morph": "8804"
+      },
+      {
+        "text": "on her."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 7,
+    "content": [
+      {
+        "text": "Her Nazarites",
+        "strong": "H5139"
+      },
+      {
+        "text": "were purer",
+        "strong": "H2141",
+        "morph": "8804"
+      },
+      {
+        "text": "than snow",
+        "strong": "H7950"
+      },
+      {
+        "text": ", they were whiter",
+        "strong": "H6705",
+        "morph": "8804"
+      },
+      {
+        "text": "than milk",
+        "strong": "H2461"
+      },
+      {
+        "text": ", they were more ruddy",
+        "strong": "H0119",
+        "morph": "8804"
+      },
+      {
+        "text": "in body",
+        "strong": "H6106"
+      },
+      {
+        "text": "than rubies",
+        "strong": "H6443"
+      },
+      {
+        "text": ", their polishing",
+        "strong": "H1508"
+      },
+      {
+        "text": "[was] of sapphire",
+        "strong": "H5601"
+      },
+      {
+        "text": ":"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 8,
+    "content": [
+      {
+        "text": "Their visage",
+        "strong": "H8389"
+      },
+      {
+        "text": "is blacker",
+        "strong": "H2821",
+        "morph": "8804"
+      },
+      {
+        "text": "than a coal",
+        "strong": "H7815"
+      },
+      {
+        "text": "; they are not known",
+        "strong": "H5234",
+        "morph": "8738"
+      },
+      {
+        "text": "in the streets",
+        "strong": "H2351"
+      },
+      {
+        "text": ": their skin",
+        "strong": "H5785"
+      },
+      {
+        "text": "cleaveth",
+        "strong": "H6821",
+        "morph": "8804"
+      },
+      {
+        "text": "to their bones",
+        "strong": "H6106"
+      },
+      {
+        "text": "; it is withered",
+        "strong": "H3001",
+        "morph": "8804"
+      },
+      {
+        "text": ", it is become like a stick",
+        "strong": "H6086"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 9,
+    "content": [
+      {
+        "text": "[They that be] slain",
+        "strong": "H2491"
+      },
+      {
+        "text": "with the sword",
+        "strong": "H2719"
+      },
+      {
+        "text": "are better",
+        "strong": "H2896"
+      },
+      {
+        "text": "than [they that be] slain",
+        "strong": "H2491"
+      },
+      {
+        "text": "with hunger",
+        "strong": "H7458"
+      },
+      {
+        "text": ": for these",
+        "strong": "H1992"
+      },
+      {
+        "text": "pine away",
+        "strong": "H2100",
+        "morph": "8799"
+      },
+      {
+        "text": ", stricken",
+        "strong": "H1856",
+        "morph": "8794"
+      },
+      {
+        "text": "through for [want of] the fruits",
+        "strong": "H8570"
+      },
+      {
+        "text": "of the field",
+        "strong": "H7704"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 10,
+    "content": [
+      {
+        "text": "The hands",
+        "strong": "H3027"
+      },
+      {
+        "text": "of the pitiful",
+        "strong": "H7362"
+      },
+      {
+        "text": "women",
+        "strong": "H0802"
+      },
+      {
+        "text": "have sodden",
+        "strong": "H1310",
+        "morph": "8765"
+      },
+      {
+        "text": "their own children",
+        "strong": "H3206"
+      },
+      {
+        "text": ": they were their meat",
+        "strong": "H1262",
+        "morph": "8763"
+      },
+      {
+        "text": "in the destruction",
+        "strong": "H7667"
+      },
+      {
+        "text": "of the daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of my people",
+        "strong": "H5971"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 11,
+    "content": [
+      {
+        "text": "The LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "hath accomplished",
+        "strong": "H3615",
+        "morph": "8765"
+      },
+      {
+        "text": "his fury",
+        "strong": "H2534"
+      },
+      {
+        "text": "; he hath poured out",
+        "strong": "H8210",
+        "morph": "8804"
+      },
+      {
+        "text": "his fierce",
+        "strong": "H2740"
+      },
+      {
+        "text": "anger",
+        "strong": "H0639"
+      },
+      {
+        "text": ", and hath kindled",
+        "strong": "H3341",
+        "morph": "8686"
+      },
+      {
+        "text": "a fire",
+        "strong": "H0784"
+      },
+      {
+        "text": "in Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": ", and it hath devoured",
+        "strong": "H0398",
+        "morph": "8799"
+      },
+      {
+        "text": "the foundations",
+        "strong": "H3247"
+      },
+      {
+        "text": "thereof."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 12,
+    "content": [
+      {
+        "text": "The kings",
+        "strong": "H4428"
+      },
+      {
+        "text": "of the earth",
+        "strong": "H0776"
+      },
+      {
+        "text": ", and all the inhabitants",
+        "strong": "H3427",
+        "morph": "8802"
+      },
+      {
+        "text": "of the world",
+        "strong": "H8398"
+      },
+      {
+        "text": ", would not have believed",
+        "strong": "H0539",
+        "morph": "8689"
+      },
+      {
+        "text": "that the adversary",
+        "strong": "H6862"
+      },
+      {
+        "text": "and the enemy",
+        "strong": "H0341",
+        "morph": "8802"
+      },
+      {
+        "text": "should have entered",
+        "strong": "H0935",
+        "morph": "8799"
+      },
+      {
+        "text": "into the gates",
+        "strong": "H8179"
+      },
+      {
+        "text": "of Jerusalem",
+        "strong": "H3389"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 13,
+    "content": [
+      {
+        "text": "For the sins",
+        "strong": "H2403"
+      },
+      {
+        "text": "of her prophets",
+        "strong": "H5030"
+      },
+      {
+        "text": ", [and] the iniquities",
+        "strong": "H5771"
+      },
+      {
+        "text": "of her priests",
+        "strong": "H3548"
+      },
+      {
+        "text": ", that have shed",
+        "strong": "H8210",
+        "morph": "8802"
+      },
+      {
+        "text": "the blood",
+        "strong": "H1818"
+      },
+      {
+        "text": "of the just",
+        "strong": "H6662"
+      },
+      {
+        "text": "in the midst",
+        "strong": "H7130"
+      },
+      {
+        "text": "of her,"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 14,
+    "content": [
+      {
+        "text": "They have wandered",
+        "strong": "H5128",
+        "morph": "8804"
+      },
+      {
+        "text": "[as] blind",
+        "strong": "H5787"
+      },
+      {
+        "text": "[men] in the streets",
+        "strong": "H2351"
+      },
+      {
+        "text": ", they have polluted",
+        "strong": "H1351",
+        "morph": "8738"
+      },
+      {
+        "text": "themselves with blood",
+        "strong": "H1818"
+      },
+      {
+        "text": ", so that men could",
+        "strong": "H3201",
+        "morph": "8799"
+      },
+      {
+        "text": "not",
+        "strong": "H3808"
+      },
+      {
+        "text": "touch",
+        "strong": "H5060",
+        "morph": "8799"
+      },
+      {
+        "text": "their garments",
+        "strong": "H3830"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 15,
+    "content": [
+      {
+        "text": "They cried",
+        "strong": "H7121",
+        "morph": "8804"
+      },
+      {
+        "text": "unto them, Depart",
+        "strong": "H5493",
+        "morph": "8798"
+      },
+      {
+        "text": "ye; [it is] unclean",
+        "strong": "H2931"
+      },
+      {
+        "text": "; depart",
+        "strong": "H5493",
+        "morph": "8798"
+      },
+      {
+        "text": ", depart",
+        "strong": "H5493",
+        "morph": "8798"
+      },
+      {
+        "text": ", touch",
+        "strong": "H5060",
+        "morph": "8799"
+      },
+      {
+        "text": "not: when they fled away",
+        "strong": "H5132",
+        "morph": "8804"
+      },
+      {
+        "text": "and wandered",
+        "strong": "H5128",
+        "morph": "8804"
+      },
+      {
+        "text": ", they said",
+        "strong": "H0559",
+        "morph": "8804"
+      },
+      {
+        "text": "among the heathen",
+        "strong": "H1471"
+      },
+      {
+        "text": ", They shall no more",
+        "strong": "H3254",
+        "morph": "8686"
+      },
+      {
+        "text": "sojourn",
+        "strong": "H1481",
+        "morph": "8800"
+      },
+      {
+        "text": "[there]."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 16,
+    "content": [
+      {
+        "text": "The anger",
+        "strong": "H6440"
+      },
+      {
+        "text": "of the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": "hath divided",
+        "strong": "H2505",
+        "morph": "8765"
+      },
+      {
+        "text": "them; he will no more",
+        "strong": "H3254",
+        "morph": "8686"
+      },
+      {
+        "text": "regard",
+        "strong": "H5027",
+        "morph": "8687"
+      },
+      {
+        "text": "them: they respected",
+        "strong": "H5375",
+        "morph": "8804"
+      },
+      {
+        "text": "not the persons",
+        "strong": "H6440"
+      },
+      {
+        "text": "of the priests",
+        "strong": "H3548"
+      },
+      {
+        "text": ", they favoured",
+        "strong": "H2603",
+        "morph": "8804"
+      },
+      {
+        "text": "not the elders",
+        "strong": "H2205"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 17,
+    "content": [
+      {
+        "text": "As for us, our eyes",
+        "strong": "H5869"
+      },
+      {
+        "text": "as yet failed",
+        "strong": "H3615",
+        "morph": "8799"
+      },
+      {
+        "text": "for our vain",
+        "strong": "H1892"
+      },
+      {
+        "text": "help",
+        "strong": "H5833"
+      },
+      {
+        "text": ": in our watching",
+        "strong": "H6836"
+      },
+      {
+        "text": "we have watched",
+        "strong": "H6822",
+        "morph": "8765"
+      },
+      {
+        "text": "for a nation",
+        "strong": "H1471"
+      },
+      {
+        "text": "[that] could not save",
+        "strong": "H3467",
+        "morph": "8686"
+      },
+      {
+        "text": "[us]."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 18,
+    "content": [
+      {
+        "text": "They hunt",
+        "strong": "H6679",
+        "morph": "8804"
+      },
+      {
+        "text": "our steps",
+        "strong": "H6806"
+      },
+      {
+        "text": ", that we cannot go",
+        "strong": "H3212",
+        "morph": "8800"
+      },
+      {
+        "text": "in our streets",
+        "strong": "H7339"
+      },
+      {
+        "text": ": our end",
+        "strong": "H7093"
+      },
+      {
+        "text": "is near",
+        "strong": "H7126",
+        "morph": "8804"
+      },
+      {
+        "text": ", our days",
+        "strong": "H3117"
+      },
+      {
+        "text": "are fulfilled",
+        "strong": "H4390",
+        "morph": "8804"
+      },
+      {
+        "text": "; for our end",
+        "strong": "H7093"
+      },
+      {
+        "text": "is come",
+        "strong": "H0935",
+        "morph": "8804"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 19,
+    "content": [
+      {
+        "text": "Our persecutors",
+        "strong": "H7291",
+        "morph": "8802"
+      },
+      {
+        "text": "are swifter",
+        "strong": "H7031"
+      },
+      {
+        "text": "than the eagles",
+        "strong": "H5404"
+      },
+      {
+        "text": "of the heaven",
+        "strong": "H8064"
+      },
+      {
+        "text": ": they pursued",
+        "strong": "H1814",
+        "morph": "8804"
+      },
+      {
+        "text": "us upon the mountains",
+        "strong": "H2022"
+      },
+      {
+        "text": ", they laid wait",
+        "strong": "H0693",
+        "morph": "8804"
+      },
+      {
+        "text": "for us in the wilderness",
+        "strong": "H4057"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 20,
+    "content": [
+      {
+        "text": "The breath",
+        "strong": "H7307"
+      },
+      {
+        "text": "of our nostrils",
+        "strong": "H0639"
+      },
+      {
+        "text": ", the anointed",
+        "strong": "H4899"
+      },
+      {
+        "text": "of the LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", was taken",
+        "strong": "H3920",
+        "morph": "8738"
+      },
+      {
+        "text": "in their pits",
+        "strong": "H7825"
+      },
+      {
+        "text": ", of whom we said",
+        "strong": "H0559",
+        "morph": "8804"
+      },
+      {
+        "text": ", Under his shadow",
+        "strong": "H6738"
+      },
+      {
+        "text": "we shall live",
+        "strong": "H2421",
+        "morph": "8799"
+      },
+      {
+        "text": "among the heathen",
+        "strong": "H1471"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 21,
+    "content": [
+      {
+        "text": "Rejoice",
+        "strong": "H7797",
+        "morph": "8798"
+      },
+      {
+        "text": "and be glad",
+        "strong": "H8055",
+        "morph": "8798"
+      },
+      {
+        "text": ", O daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Edom",
+        "strong": "H0123"
+      },
+      {
+        "text": ", that dwellest",
+        "strong": "H3427",
+        "morph": "8802"
+      },
+      {
+        "text": "in the land",
+        "strong": "H0776"
+      },
+      {
+        "text": "of Uz",
+        "strong": "H5780"
+      },
+      {
+        "text": "; the cup",
+        "strong": "H3563"
+      },
+      {
+        "text": "also shall pass",
+        "strong": "H5674",
+        "morph": "8799"
+      },
+      {
+        "text": "through unto thee: thou shalt be drunken",
+        "strong": "H7937",
+        "morph": "8799"
+      },
+      {
+        "text": ", and shalt make thyself naked",
+        "strong": "H6168",
+        "morph": "8691"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 4,
+    "verse": 22,
+    "content": [
+      {
+        "text": "The punishment of thine iniquity",
+        "strong": "H5771"
+      },
+      {
+        "text": "is accomplished",
+        "strong": "H8552",
+        "morph": "8804"
+      },
+      {
+        "text": ", O daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": "; he will no more",
+        "strong": "H3254",
+        "morph": "8686"
+      },
+      {
+        "text": "carry thee away into captivity",
+        "strong": "H1540",
+        "morph": "8687"
+      },
+      {
+        "text": ": he will visit",
+        "strong": "H6485",
+        "morph": "8804"
+      },
+      {
+        "text": "thine iniquity",
+        "strong": "H5771"
+      },
+      {
+        "text": ", O daughter",
+        "strong": "H1323"
+      },
+      {
+        "text": "of Edom",
+        "strong": "H0123"
+      },
+      {
+        "text": "; he will discover",
+        "strong": "H1540",
+        "morph": "8765"
+      },
+      {
+        "text": "thy sins",
+        "strong": "H2403"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 1,
+    "content": [
+      {
+        "type": "p"
+      },
+      {
+        "text": "Remember",
+        "strong": "H2142",
+        "morph": "8798"
+      },
+      {
+        "text": ", O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", what is come upon us: consider",
+        "strong": "H5027",
+        "morph": "8685"
+      },
+      {
+        "text": ", and behold",
+        "strong": "H7200",
+        "morph": "8798"
+      },
+      {
+        "text": "our reproach",
+        "strong": "H2781"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 2,
+    "content": [
+      {
+        "text": "Our inheritance",
+        "strong": "H5159"
+      },
+      {
+        "text": "is turned",
+        "strong": "H2015",
+        "morph": "8738"
+      },
+      {
+        "text": "to strangers",
+        "strong": "H2114",
+        "morph": "8801"
+      },
+      {
+        "text": ", our houses",
+        "strong": "H1004"
+      },
+      {
+        "text": "to aliens",
+        "strong": "H5237"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 3,
+    "content": [
+      {
+        "text": "We are orphans",
+        "strong": "H3490"
+      },
+      {
+        "text": "and fatherless",
+        "strong": "H0369"
+      },
+      {
+        "strong": "H0001"
+      },
+      {
+        "text": ", our mothers",
+        "strong": "H0517"
+      },
+      {
+        "text": "[are] as widows",
+        "strong": "H0490"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 4,
+    "content": [
+      {
+        "text": "We have drunken",
+        "strong": "H8354",
+        "morph": "8804"
+      },
+      {
+        "text": "our water",
+        "strong": "H4325"
+      },
+      {
+        "text": "for money",
+        "strong": "H3701"
+      },
+      {
+        "text": "; our wood",
+        "strong": "H6086"
+      },
+      {
+        "text": "is sold",
+        "strong": "H0935",
+        "morph": "8799"
+      },
+      {
+        "strong": "H4242"
+      },
+      {
+        "text": "unto us."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 5,
+    "content": [
+      {
+        "text": "Our necks",
+        "strong": "H6677"
+      },
+      {
+        "text": "[are] under persecution",
+        "strong": "H7291",
+        "morph": "8738"
+      },
+      {
+        "text": ": we labour",
+        "strong": "H3021",
+        "morph": "8804"
+      },
+      {
+        "text": ", [and] have no rest",
+        "strong": "H5117",
+        "morph": "8717"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 6,
+    "content": [
+      {
+        "text": "We have given",
+        "strong": "H5414",
+        "morph": "8804"
+      },
+      {
+        "text": "the hand",
+        "strong": "H3027"
+      },
+      {
+        "text": "[to] the Egyptians",
+        "strong": "H4714"
+      },
+      {
+        "text": ", [and to] the Assyrians",
+        "strong": "H0804"
+      },
+      {
+        "text": ", to be satisfied",
+        "strong": "H7646",
+        "morph": "8800"
+      },
+      {
+        "text": "with bread",
+        "strong": "H3899"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 7,
+    "content": [
+      {
+        "text": "Our fathers",
+        "strong": "H0001"
+      },
+      {
+        "text": "have sinned",
+        "strong": "H2398",
+        "morph": "8804"
+      },
+      {
+        "text": ", [and are] not",
+        "strong": "H0369"
+      },
+      {
+        "text": "; and we have borne",
+        "strong": "H5445",
+        "morph": "8804"
+      },
+      {
+        "text": "their iniquities",
+        "strong": "H5771"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 8,
+    "content": [
+      {
+        "text": "Servants",
+        "strong": "H5650"
+      },
+      {
+        "text": "have ruled",
+        "strong": "H4910",
+        "morph": "8804"
+      },
+      {
+        "text": "over us: [there is] none that doth deliver",
+        "strong": "H6561",
+        "morph": "8802"
+      },
+      {
+        "text": "[us] out of their hand",
+        "strong": "H3027"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 9,
+    "content": [
+      {
+        "text": "We gat",
+        "strong": "H0935",
+        "morph": "8686"
+      },
+      {
+        "text": "our bread",
+        "strong": "H3899"
+      },
+      {
+        "text": "with [the peril of] our lives",
+        "strong": "H5315"
+      },
+      {
+        "text": "because",
+        "strong": "H6440"
+      },
+      {
+        "text": "of the sword",
+        "strong": "H2719"
+      },
+      {
+        "text": "of the wilderness",
+        "strong": "H4057"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 10,
+    "content": [
+      {
+        "text": "Our skin",
+        "strong": "H5785"
+      },
+      {
+        "text": "was black",
+        "strong": "H3648",
+        "morph": "8738"
+      },
+      {
+        "text": "like an oven",
+        "strong": "H8574"
+      },
+      {
+        "text": "because",
+        "strong": "H6440"
+      },
+      {
+        "text": "of the terrible",
+        "strong": "H2152"
+      },
+      {
+        "text": "famine",
+        "strong": "H7458"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 11,
+    "content": [
+      {
+        "text": "They ravished",
+        "strong": "H6031",
+        "morph": "8765"
+      },
+      {
+        "text": "the women",
+        "strong": "H0802"
+      },
+      {
+        "text": "in Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": ", [and] the maids",
+        "strong": "H1330"
+      },
+      {
+        "text": "in the cities",
+        "strong": "H5892"
+      },
+      {
+        "text": "of Judah",
+        "strong": "H3063"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 12,
+    "content": [
+      {
+        "text": "Princes",
+        "strong": "H8269"
+      },
+      {
+        "text": "are hanged up",
+        "strong": "H8518",
+        "morph": "8738"
+      },
+      {
+        "text": "by their hand",
+        "strong": "H3027"
+      },
+      {
+        "text": ": the faces",
+        "strong": "H6440"
+      },
+      {
+        "text": "of elders",
+        "strong": "H2205"
+      },
+      {
+        "text": "were not honoured",
+        "strong": "H1921",
+        "morph": "8738"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 13,
+    "content": [
+      {
+        "text": "They took",
+        "strong": "H5375",
+        "morph": "8804"
+      },
+      {
+        "text": "the young men",
+        "strong": "H0970"
+      },
+      {
+        "text": "to grind",
+        "strong": "H2911"
+      },
+      {
+        "text": ", and the children",
+        "strong": "H5288"
+      },
+      {
+        "text": "fell",
+        "strong": "H3782",
+        "morph": "8804"
+      },
+      {
+        "text": "under the wood",
+        "strong": "H6086"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 14,
+    "content": [
+      {
+        "text": "The elders",
+        "strong": "H2205"
+      },
+      {
+        "text": "have ceased",
+        "strong": "H7673",
+        "morph": "8804"
+      },
+      {
+        "text": "from the gate",
+        "strong": "H8179"
+      },
+      {
+        "text": ", the young men",
+        "strong": "H0970"
+      },
+      {
+        "text": "from their musick",
+        "strong": "H5058"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 15,
+    "content": [
+      {
+        "text": "The joy",
+        "strong": "H4885"
+      },
+      {
+        "text": "of our heart",
+        "strong": "H3820"
+      },
+      {
+        "text": "is ceased",
+        "strong": "H7673",
+        "morph": "8804"
+      },
+      {
+        "text": "; our dance",
+        "strong": "H4234"
+      },
+      {
+        "text": "is turned",
+        "strong": "H2015",
+        "morph": "8738"
+      },
+      {
+        "text": "into mourning",
+        "strong": "H0060"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 16,
+    "content": [
+      {
+        "text": "The crown",
+        "strong": "H5850"
+      },
+      {
+        "text": "is fallen",
+        "strong": "H5307",
+        "morph": "8804"
+      },
+      {
+        "text": "[from] our head",
+        "strong": "H7218"
+      },
+      {
+        "text": ": woe",
+        "strong": "H0188"
+      },
+      {
+        "text": "unto us, that we have sinned",
+        "strong": "H2398",
+        "morph": "8804"
+      },
+      {
+        "text": "!"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 17,
+    "content": [
+      {
+        "text": "For this our heart",
+        "strong": "H3820"
+      },
+      {
+        "text": "is faint",
+        "strong": "H1739"
+      },
+      {
+        "text": "; for these [things] our eyes",
+        "strong": "H5869"
+      },
+      {
+        "text": "are dim",
+        "strong": "H2821",
+        "morph": "8804"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 18,
+    "content": [
+      {
+        "text": "Because of the mountain",
+        "strong": "H2022"
+      },
+      {
+        "text": "of Zion",
+        "strong": "H6726"
+      },
+      {
+        "text": ", which is desolate",
+        "strong": "H8074",
+        "morph": "8804"
+      },
+      {
+        "text": ", the foxes",
+        "strong": "H7776"
+      },
+      {
+        "text": "walk",
+        "strong": "H1980",
+        "morph": "8765"
+      },
+      {
+        "text": "upon it."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 19,
+    "content": [
+      {
+        "text": "Thou, O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", remainest",
+        "strong": "H3427",
+        "morph": "8799"
+      },
+      {
+        "text": "for ever",
+        "strong": "H5769"
+      },
+      {
+        "text": "; thy throne",
+        "strong": "H3678"
+      },
+      {
+        "text": "from generation",
+        "strong": "H1755"
+      },
+      {
+        "text": "to generation",
+        "strong": "H1755"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 20,
+    "content": [
+      {
+        "text": "Wherefore dost thou forget",
+        "strong": "H7911",
+        "morph": "8799"
+      },
+      {
+        "text": "us for ever",
+        "strong": "H5331"
+      },
+      {
+        "text": ", [and] forsake",
+        "strong": "H5800",
+        "morph": "8799"
+      },
+      {
+        "text": "us so long",
+        "strong": "H0753"
+      },
+      {
+        "text": "time",
+        "strong": "H3117"
+      },
+      {
+        "text": "?"
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 21,
+    "content": [
+      {
+        "text": "Turn",
+        "strong": "H7725",
+        "morph": "8685"
+      },
+      {
+        "text": "thou us unto thee, O LORD",
+        "strong": "H3068"
+      },
+      {
+        "text": ", and we shall be turned",
+        "strong": "H7725",
+        "morph": "8799"
+      },
+      {
+        "text": "; renew",
+        "strong": "H2318",
+        "morph": "8761"
+      },
+      {
+        "text": "our days",
+        "strong": "H3117"
+      },
+      {
+        "text": "as of old",
+        "strong": "H6924"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "book": "LAM",
+    "chapter": 5,
+    "verse": 22,
+    "content": [
+      {
+        "text": "But thou hast utterly",
+        "strong": "H3988",
+        "morph": "8800"
+      },
+      {
+        "text": "rejected",
+        "strong": "H3988",
+        "morph": "8804"
+      },
+      {
+        "text": "us; thou art very",
+        "strong": "H3966"
+      },
+      {
+        "text": "wroth",
+        "strong": "H7107",
+        "morph": "8804"
+      },
+      {
+        "text": "against us."
+      }
+    ]
+  }
+]
