@@ -223,7 +223,7 @@
 <sup>13</sup> In that he says, “A new covenant”, he has made the first obsolete. But that which is becoming obsolete and grows aged is near to vanishing away.
 
 > - <sup>a</sup> 5. Exodus 25:40
-> - <sup>b</sup> 8. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>b</sup> 8. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>c</sup> 11. TR reads “neighbor” instead of “fellow citizen”
 > - <sup>d</sup> 12. Jeremiah 31:31-34
 
@@ -384,7 +384,7 @@
 
 > - <sup>a</sup> 7. or, reverence
 > - <sup>b</sup> 13. TR adds “and being convinced of”
-> - <sup>c</sup> 17. The phrase “only born” is from the Greek word “ μονογενη ”, which is sometimes translated “only begotten” or “one and only”.
+> - <sup>c</sup> 17. The phrase “only born” is from the Greek word “μονογενη”, which is sometimes translated “only begotten” or “one and only”.
 > - <sup>d</sup> 18. Genesis 21:12
 > - <sup>e</sup> 33. Daniel 6:22-23
 > - <sup>f</sup> 34. Daniel 3:1-30

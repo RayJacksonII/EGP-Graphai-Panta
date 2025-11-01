@@ -35,7 +35,7 @@
 > - <sup>a</sup> 1. Messiah (Hebrew) and Christ (Greek) both mean “Anointed One”
 > - <sup>b</sup> 6. NU omits “the king”.
 > - <sup>c</sup> 16. “Jesus” means “Salvation”.
-> - <sup>d</sup> 20. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>d</sup> 20. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>e</sup> 21. “Jesus” means “Salvation”.
 > - <sup>f</sup> 23. Isaiah 7:14
 

@@ -366,7 +366,7 @@
 > - <sup>k</sup> 28. Isaiah 10:22-23
 > - <sup>l</sup> 29. Greek: Sabaoth (for Hebrew: Tze’va’ot)
 > - <sup>m</sup> 29. Isaiah 1:9
-> - <sup>n</sup> 33. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>n</sup> 33. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>o</sup> 33. Isaiah 8:14; 28:16
 
 ## Chapter 10

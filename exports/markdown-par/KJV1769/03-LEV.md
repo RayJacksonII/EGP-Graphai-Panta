@@ -176,7 +176,7 @@
 <sup>28</sup> And the LORD spake unto Moses, saying,
 <sup>29</sup> Speak unto the children of Israel, saying, He that offereth the sacrifice of his peace offerings unto the LORD shall bring his oblation unto the LORD of the sacrifice of his peace offerings.
 <sup>30</sup> His own hands shall bring the offerings of the LORD made by fire, the fat with the breast, it shall he bring, that the breast may be waved [for] a wave offering before the LORD.
-<sup>31</sup> And the priest shall burn the fat upon the altar: but the breast shall be Aaron’s and his sons ’.
+<sup>31</sup> And the priest shall burn the fat upon the altar: but the breast shall be Aaron’s and his sons’.
 <sup>32</sup> And the right shoulder shall ye give unto the priest [for] an heave offering of the sacrifices of your peace offerings.
 <sup>33</sup> He among the sons of Aaron, that offereth the blood of the peace offerings, and the fat, shall have the right shoulder for [his] part.
 <sup>34</sup> For the wave breast and the heave shoulder have I taken of the children of Israel from off the sacrifices of their peace offerings, and have given them unto Aaron the priest and unto his sons by a statute for ever from among the children of Israel.

@@ -101,7 +101,7 @@
 <sup>80</sup> The child was growing and becoming strong in spirit, and was in the desert until the day of his public appearance to Israel.
 
 > - <sup>a</sup> 17. Malachi 4:6
-> - <sup>b</sup> 20. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>b</sup> 20. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>c</sup> 37. or, “For everything spoken by God is possible.”
 > - <sup>d</sup> 55. or, seed
 
@@ -499,7 +499,7 @@
 
 <sup>50</sup> He said to the woman, “Your faith has saved you. Go in peace.”
 
-> - <sup>a</sup> 12. The phrase “only born” is from the Greek word “ μονογενη ”, which is sometimes translated “only begotten” or “one and only”.
+> - <sup>a</sup> 12. The phrase “only born” is from the Greek word “μονογενη”, which is sometimes translated “only begotten” or “one and only”.
 > - <sup>b</sup> 27. Malachi 3:1
 
 ## Chapter 8
@@ -562,7 +562,7 @@
 <sup>43</sup> A woman who had a flow of blood for twelve years, who had spent all her living on physicians and could not be healed by any,
 <sup>44</sup> came behind him and touched the fringe<sup>e</sup> of his cloak. Immediately the flow of her blood stopped.
 
-<sup>45</sup> Jesus said, “Who touched me?” When all denied it, Peter and those with him said, “Master, the multitudes press and jostle you, and you say, ‘Who touched me?’ ”
+<sup>45</sup> Jesus said, “Who touched me?” When all denied it, Peter and those with him said, “Master, the multitudes press and jostle you, and you say, ‘Who touched me?’”
 
 <sup>46</sup> But Jesus said, “Someone did touch me, for I perceived that power has gone out of me.”
 <sup>47</sup> When the woman saw that she was not hidden, she came trembling; and falling down before him declared to him in the presence of all the people the reason why she had touched him, and how she was healed immediately.
@@ -583,7 +583,7 @@
 > - <sup>a</sup> 3. TR reads “him” instead of “them”
 > - <sup>b</sup> 10. Isaiah 6:9
 > - <sup>c</sup> 24. See Psalm 107:29
-> - <sup>d</sup> 42. The phrase “only born” is from the Greek word “ μονογενη ”, which is sometimes translated “only begotten” or “one and only”.
+> - <sup>d</sup> 42. The phrase “only born” is from the Greek word “μονογενη”, which is sometimes translated “only begotten” or “one and only”.
 > - <sup>e</sup> 44. or, tassel
 
 ## Chapter 9
@@ -680,7 +680,7 @@
 > - <sup>b</sup> 10. NU omits “a desert region of”.
 > - <sup>c</sup> 23. TR, NU add “daily”
 > - <sup>d</sup> 31. literally, “exodus”
-> - <sup>e</sup> 38. The phrase “only born” is from the Greek word “ μονογενη ”, which is sometimes translated “only begotten” or “one and only”.
+> - <sup>e</sup> 38. The phrase “only born” is from the Greek word “μονογενη”, which is sometimes translated “only begotten” or “one and only”.
 
 ## Chapter 10
 

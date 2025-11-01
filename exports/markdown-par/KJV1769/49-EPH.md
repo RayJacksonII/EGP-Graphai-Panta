@@ -52,7 +52,7 @@
 <sup>1</sup> For this cause I Paul, the prisoner of Jesus Christ for you Gentiles,
 <sup>2</sup> If ye have heard of the dispensation of the grace of God which is given me to you-ward:
 <sup>3</sup> How that by revelation he made known unto me the mystery; (as I wrote afore in few words,
-<sup>4</sup> Whereby, when ye read, ye may understand my knowledge in the mystery of Christ )
+<sup>4</sup> Whereby, when ye read, ye may understand my knowledge in the mystery of Christ)
 <sup>5</sup> Which in other ages was not made known unto the sons of men, as it is now revealed unto his holy apostles and prophets by the Spirit;
 <sup>6</sup> That the Gentiles should be fellowheirs, and of the same body, and partakers of his promise in Christ by the gospel:
 <sup>7</sup> Whereof I was made a minister, according to the gift of the grace of God given unto me by the effectual working of his power.

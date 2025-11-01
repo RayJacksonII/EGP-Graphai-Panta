@@ -141,7 +141,7 @@
 
 <sup>24</sup> Then Nebuchadnezzar the king was astonished and rose up in haste. He spoke and said to his counselors, “Didn’t we cast three men bound into the middle of the fire?” They answered the king, “True, O king.”
 
-<sup>25</sup> He answered, “Look, I see four men loose, walking in the middle of the fire, and they are unharmed. The appearance of the fourth is like a son of the gods.<sup>b</sup> ”
+<sup>25</sup> He answered, “Look, I see four men loose, walking in the middle of the fire, and they are unharmed. The appearance of the fourth is like a son of the gods.<sup>b</sup>”
 
 <sup>26</sup> Then Nebuchadnezzar came near to the mouth of the burning fiery furnace. He spoke and said, “Shadrach, Meshach, and Abednego, you servants of the Most High God, come out, and come here!” Then Shadrach, Meshach, and Abednego came out of the middle of the fire.
 <sup>27</sup> The local governors, the deputies, and the governors, and the king’s counselors, being gathered together, saw these men, that the fire had no power on their bodies. The hair of their head wasn’t singed. Their pants weren’t changed. The smell of fire wasn’t even on them.

@@ -69,7 +69,7 @@
 <sup>2</sup> Much every way: chiefly, because that unto them were committed the oracles of God.
 <sup>3</sup> For what if some did not believe? shall their unbelief make the faith of God without effect?
 <sup>4</sup> God forbid: yea, let God be true, but every man a liar; as it is written, That thou mightest be justified in thy sayings, and mightest overcome when thou art judged.
-<sup>5</sup> But if our unrighteousness commend the righteousness of God, what shall we say? [Is] God unrighteous who taketh vengeance? (I speak as a man )
+<sup>5</sup> But if our unrighteousness commend the righteousness of God, what shall we say? [Is] God unrighteous who taketh vengeance? (I speak as a man)
 <sup>6</sup> God forbid: for then how shall God judge the world?
 <sup>7</sup> For if the truth of God hath more abounded through my lie unto his glory; why yet am I also judged as a sinner?
 <sup>8</sup> And not [rather], (as we be slanderously reported, and as some affirm that we say,) Let us do evil, that good may come? whose damnation is just.
@@ -445,7 +445,7 @@
 <sup>7</sup> Salute Andronicus and Junia, my kinsmen, and my fellowprisoners, who are of note among the apostles, who also were in Christ before me.
 <sup>8</sup> Greet Amplias my beloved in the Lord.
 <sup>9</sup> Salute Urbane, our helper in Christ, and Stachys my beloved.
-<sup>10</sup> Salute Apelles approved in Christ. Salute them which are of Aristobulus ’ [household].
+<sup>10</sup> Salute Apelles approved in Christ. Salute them which are of Aristobulus’ [household].
 <sup>11</sup> Salute Herodion my kinsman. Greet them that be of the [household] of Narcissus, which are in the Lord.
 <sup>12</sup> Salute Tryphena and Tryphosa, who labour in the Lord. Salute the beloved Persis, which laboured much in the Lord.
 <sup>13</sup> Salute Rufus chosen in the Lord, and his mother and mine.

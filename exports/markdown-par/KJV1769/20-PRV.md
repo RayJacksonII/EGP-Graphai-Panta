@@ -141,7 +141,7 @@
 <sup>14</sup> I was almost in all evil in the midst of the congregation and assembly.
 <sup>15</sup> Drink waters out of thine own cistern, and running waters out of thine own well.
 <sup>16</sup> Let thy fountains be dispersed abroad, [and] rivers of waters in the streets.
-<sup>17</sup> Let them be only thine own, and not strangers ’ with thee.
+<sup>17</sup> Let them be only thine own, and not strangers’ with thee.
 <sup>18</sup> Let thy fountain be blessed: and rejoice with the wife of thy youth.
 <sup>19</sup> [Let her be as] the loving hind and pleasant roe; let her breasts satisfy thee at all times; and be thou ravished always with her love.
 <sup>20</sup> And why wilt thou, my son, be ravished with a strange woman, and embrace the bosom of a stranger?

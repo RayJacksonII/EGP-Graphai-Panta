@@ -203,4 +203,4 @@
 <sup>24</sup> Grace be with all those who love our Lord Jesus Christ with incorruptible love. Amen.
 
 > - <sup>a</sup> 3. Deuteronomy 5:16
-> - <sup>b</sup> 17. from the Greek “ ῥῆμα ” (rhema), which means “spoken word”
+> - <sup>b</sup> 17. from the Greek “ῥῆμα” (rhema), which means “spoken word”

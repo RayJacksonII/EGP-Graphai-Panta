@@ -133,28 +133,37 @@ function convertVerseToText(verse: VerseSchema): string {
     // Handle text object
     const obj = content as ContentObject;
     if (obj.text) {
-      // Build the text with formatting but without footnote
       let textPart = obj.text || "";
 
-      if (obj.strong) {
-        if (textPart.trim() === "") {
-          textPart += obj.strong;
-        } else {
+      if (obj.foot) {
+        // For words with footnotes: text° Strong's (morph) {footnote}
+        textPart += "°";
+        if (obj.strong) {
           textPart += " " + obj.strong;
         }
+        if (obj.morph) {
+          textPart += " (" + obj.morph + ")";
+        }
+        textPart += convertFootnoteToText(obj.foot).replace("° ", " "); // replace ° with space to add space before {
+      } else {
+        // For words without footnotes: text Strong's (morph)
+        if (obj.strong) {
+          if (textPart.trim() === "") {
+            textPart += obj.strong;
+          } else {
+            textPart += " " + obj.strong;
+          }
+        }
+        if (obj.morph) {
+          textPart += " (" + obj.morph + ")";
+        }
       }
-      if (obj.morph) {
-        textPart += " (" + obj.morph + ")";
-      }
+
       if (obj.paragraph) {
         textPart = "¶ " + textPart;
       }
 
       textParts.push(textPart);
-
-      if (obj.foot) {
-        textParts.push(convertFootnoteToText(obj.foot));
-      }
 
       if (obj.break) {
         textParts.push("␤");
