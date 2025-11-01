@@ -1,12 +1,12 @@
-import validateJsonAgainstSchema from "./functions/validateJsonAgainstSchema";
-import * as fs from "fs";
 import _ from "lodash";
+import * as fs from "fs";
 import Ajv from "ajv";
+import validateJsonAgainstSchema from "../functions/validateJsonAgainstSchema";
 
-const schemaPath = "./bible-books/bible-book-schema.json";
 const jsonPath = "./bible-books/bible-books.json";
-const versionsSchemaPath = "./bible-versions/bible-versions-schema.json";
+const schemaPath = "./bible-books/bible-books-schema.json";
 const versionsJsonPath = "./bible-versions/bible-versions.json";
+const versionsSchemaPath = "./bible-versions/bible-versions-schema.json";
 
 // First, validate against the schema
 const result = validateJsonAgainstSchema(schemaPath, jsonPath);
@@ -130,7 +130,13 @@ const versionMap = new Map(versions.map((v: any) => [v._id, v]));
 // Load and compile the verse schema once
 const verseSchemaContent = fs.readFileSync(verseSchemaPath, "utf-8");
 const verseSchema = JSON.parse(verseSchemaContent);
+const bookSchemaContent = fs.readFileSync(schemaPath, "utf-8");
+const bookSchema = JSON.parse(bookSchemaContent);
+const contentSchemaContent = fs.readFileSync("content-schema.json", "utf-8");
+const contentSchema = JSON.parse(contentSchemaContent);
 const ajv = new Ajv();
+ajv.addSchema(contentSchema);
+ajv.addSchema(bookSchema);
 const validateVerse = ajv.compile(verseSchema);
 
 for (const version of versionDirs) {

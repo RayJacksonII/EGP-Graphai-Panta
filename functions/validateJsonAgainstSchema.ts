@@ -13,6 +13,29 @@ export default function validateJsonAgainstSchema(
     const data = JSON.parse(jsonContent);
 
     const ajv = new Ajv();
+    // Load additional schemas
+    try {
+      const contentSchemaContent = fs.readFileSync(
+        "content-schema.json",
+        "utf-8"
+      );
+      const contentSchema = JSON.parse(contentSchemaContent);
+      ajv.addSchema(contentSchema);
+    } catch (e) {
+      // Ignore if not found
+    }
+    if (schemaPath !== "./bible-books/bible-books-schema.json") {
+      try {
+        const bookSchemaContent = fs.readFileSync(
+          "bible-books/bible-books-schema.json",
+          "utf-8"
+        );
+        const bookSchema = JSON.parse(bookSchemaContent);
+        ajv.addSchema(bookSchema);
+      } catch (e) {
+        // Ignore if not found
+      }
+    }
     const validate = ajv.compile(schema);
     const valid = validate(data);
 
