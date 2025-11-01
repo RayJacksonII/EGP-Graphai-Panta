@@ -1297,7 +1297,7 @@
 <sup>14</sup> And thou shalt prepare a meat offering for it every morning, the sixth part of an ephah, and the third part of an hin of oil, to temper with the fine flour; a meat offering continually by a perpetual ordinance unto the LORD.
 <sup>15</sup> Thus shall they prepare (8675) the lamb, and the meat offering, and the oil, every morning [for] a continual burnt offering.
 <sup>16</sup> Thus saith the Lord GOD; If the prince give a gift unto any of his sons, the inheritance thereof shall be his sons ’; it [shall be] their possession by inheritance.
-<sup>17</sup> But if he give a gift of his inheritance to one of his servants, then it shall be his to the year of liberty; after it shall return to the prince: but his inheritance shall be his sons ’ for them.
+<sup>17</sup> But if he give a gift of his inheritance to one of his servants, then it shall be his to the year of liberty; after it shall return to the prince: but his inheritance shall be his sons’ for them.
 <sup>18</sup> Moreover the prince shall not take of the people’s inheritance by oppression, to thrust them out of their possession; [but] he shall give his sons inheritance out of his own possession: that my people be not scattered every man from his possession.
 <sup>19</sup> After he brought me through the entry, which [was] at the side of the gate, into the holy chambers of the priests, which looked toward the north: and, behold, there [was] a place on the two sides westward.
 <sup>20</sup> Then said he unto me, This [is] the place where the priests shall boil the trespass offering and the sin offering, where they shall bake the meat offering; that they bear [them] not out into the utter court, to sanctify the people.

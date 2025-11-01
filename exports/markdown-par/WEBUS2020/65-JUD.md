@@ -33,5 +33,5 @@
 
 > - <sup>a</sup> 1. or, Judah
 > - <sup>b</sup> 1. “Christ” means “Anointed One”.
-> - <sup>c</sup> 14. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>c</sup> 14. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>d</sup> 24. TR and NU read “you”

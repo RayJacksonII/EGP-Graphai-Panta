@@ -64,7 +64,7 @@
 
 <sup>45</sup> But he went out, and began to proclaim it much, and to spread about the matter, so that Jesus could no more openly enter into a city, but was outside in desert places. People came to him from everywhere.
 
-> - <sup>a</sup> 2. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>a</sup> 2. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>b</sup> 2. Malachi 3:1
 > - <sup>c</sup> 3. Isaiah 40:3
 > - <sup>d</sup> 4. or, immersing

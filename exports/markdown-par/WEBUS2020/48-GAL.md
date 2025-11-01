@@ -31,7 +31,7 @@
 
 > - <sup>a</sup> 1. “Christ” means “Anointed One”.
 > - <sup>b</sup> 2. The word for “brothers” here and where context allows may also be correctly translated “brothers and sisters” or “siblings.”
-> - <sup>c</sup> 20. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>c</sup> 20. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 
 ## Chapter 2
 

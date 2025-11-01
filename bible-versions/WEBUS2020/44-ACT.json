@@ -28,9 +28,7 @@
       "Being assembled together with them, he commanded them,",
       {
         "text": " “Don’t depart from Jerusalem, but wait for the promise of the Father, which you heard from me.",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -40,9 +38,7 @@
     "verse": 5,
     "content": {
       "text": "For John indeed baptized in water, but you will be baptized in the Holy Spirit not many days from now.”",
-      "marks": [
-        "woc"
-      ]
+      "marks": ["woc"]
     }
   },
   {
@@ -65,9 +61,7 @@
       },
       {
         "text": " “It isn’t for you to know times or seasons which the Father has set within his own authority.",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -77,9 +71,7 @@
     "verse": 8,
     "content": {
       "text": "But you will receive power when the Holy Spirit has come upon you. You will be witnesses to me in Jerusalem, in all Judea and Samaria, and to the uttermost parts of the earth.”",
-      "marks": [
-        "woc"
-      ]
+      "marks": ["woc"]
     }
   },
   {
@@ -103,10 +95,10 @@
           "content": [
             "“Behold”, from “",
             {
-              "text": " ἰδοὺ",
+              "text": "ἰδοὺ",
               "script": "G"
             },
-            " ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection."
+            "”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection."
           ]
         }
       },
@@ -2458,9 +2450,7 @@
       "He fell on the earth, and heard a voice saying to him,",
       {
         "text": " “Saul, Saul, why do you persecute me?”",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -2475,9 +2465,7 @@
       },
       {
         "text": " “I am Jesus, whom you are persecuting.",
-        "marks": [
-          "woc"
-        ],
+        "marks": ["woc"],
         "foot": {
           "type": "stu",
           "content": "TR adds “It’s hard for you to kick against the cattle prods.”"
@@ -2492,9 +2480,7 @@
     "content": [
       {
         "text": "But",
-        "marks": [
-          "woc"
-        ],
+        "marks": ["woc"],
         "foot": {
           "type": "stu",
           "content": "TR omits “But”"
@@ -2502,9 +2488,7 @@
       },
       {
         "text": " rise up and enter into the city, then you will be told what you must do.”",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -2540,9 +2524,7 @@
       },
       {
         "text": " “Ananias!”",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       },
       " He said, “Behold, it’s me, Lord.”"
     ]
@@ -2558,9 +2540,7 @@
       },
       {
         "text": " “Arise and go to the street which is called Straight, and inquire in the house of Judah",
-        "marks": [
-          "woc"
-        ],
+        "marks": ["woc"],
         "foot": {
           "type": "trn",
           "content": "or, Judas"
@@ -2568,9 +2548,7 @@
       },
       {
         "text": " for one named Saul, a man of Tarsus. For behold, he is praying,",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -2580,9 +2558,7 @@
     "verse": 12,
     "content": {
       "text": "and in a vision he has seen a man named Ananias coming in and laying his hands on him, that he might receive his sight.”",
-      "marks": [
-        "woc"
-      ]
+      "marks": ["woc"]
     }
   },
   {
@@ -2611,9 +2587,7 @@
       },
       {
         "text": " “Go your way, for he is my chosen vessel to bear my name before the nations and kings, and the children of Israel.",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -2623,9 +2597,7 @@
     "verse": 16,
     "content": {
       "text": "For I will show him how many things he must suffer for my name’s sake.”",
-      "marks": [
-        "woc"
-      ]
+      "marks": ["woc"]
     }
   },
   {
@@ -2965,9 +2937,7 @@
       "A voice came to him,",
       {
         "text": " “Rise, Peter, kill and eat!”",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -2991,9 +2961,7 @@
       },
       {
         "text": " “What God has cleansed, you must not call unclean.”",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -3295,9 +3263,7 @@
       "I also heard a voice saying to me,",
       {
         "text": " ‘Rise, Peter, kill and eat!’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -3315,9 +3281,7 @@
       "But a voice answered me the second time out of heaven,",
       {
         "text": " ‘What God has cleansed, don’t you call unclean.’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -3365,9 +3329,7 @@
       "I remembered the word of the Lord, how he said,",
       {
         "text": " ‘John indeed baptized in water, but you will be baptized in the Holy Spirit.’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -5234,9 +5196,7 @@
       "The Lord said to Paul in the night by a vision,",
       {
         "text": " “Don’t be afraid, but speak and don’t be silent;",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -5246,9 +5206,7 @@
     "verse": 10,
     "content": {
       "text": "for I am with you, and no one will attack you to harm you, for I have many people in this city.”",
-      "marks": [
-        "woc"
-      ]
+      "marks": ["woc"]
     }
   },
   {
@@ -5939,11 +5897,9 @@
       "In all things I gave you an example, that so laboring you ought to help the weak, and to remember the words of the Lord Jesus, that he himself said,",
       {
         "text": " ‘It is more blessed to give than to receive.’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       },
-      " ”"
+      "”"
     ]
   },
   {
@@ -6293,9 +6249,7 @@
       "I fell to the ground and heard a voice saying to me,",
       {
         "text": " ‘Saul, Saul, why are you persecuting me?’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -6307,9 +6261,7 @@
       "I answered, ‘Who are you, Lord?’ He said to me,",
       {
         "text": " ‘I am Jesus of Nazareth, whom you persecute.’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -6330,9 +6282,7 @@
       "I said, ‘What shall I do, Lord?’ The Lord said to me,",
       {
         "text": " ‘Arise, and go into Damascus. There you will be told about all things which are appointed for you to do.’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -6392,9 +6342,7 @@
       "and saw him saying to me,",
       {
         "text": " ‘Hurry and get out of Jerusalem quickly, because they will not receive testimony concerning me from you.’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -6421,11 +6369,9 @@
       },
       {
         "text": " ‘Depart, for I will send you out far from here to the Gentiles.’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       },
-      " ”"
+      "”"
     ]
   },
   {
@@ -6599,9 +6545,7 @@
       },
       {
         "text": " “Cheer up, Paul, for as you have testified about me at Jerusalem, so you must testify also at Rome.”",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -7268,9 +7212,7 @@
       "When we had all fallen to the earth, I heard a voice saying to me in the Hebrew language,",
       {
         "text": " ‘Saul, Saul, why are you persecuting me? It is hard for you to kick against the goads.’",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -7285,9 +7227,7 @@
       },
       {
         "text": " ‘I am Jesus, whom you are persecuting.",
-        "marks": [
-          "woc"
-        ]
+        "marks": ["woc"]
       }
     ]
   },
@@ -7297,9 +7237,7 @@
     "verse": 16,
     "content": {
       "text": "But arise, and stand on your feet, for I have appeared to you for this purpose: to appoint you a servant and a witness both of the things which you have seen and of the things which I will reveal to you;",
-      "marks": [
-        "woc"
-      ]
+      "marks": ["woc"]
     }
   },
   {
@@ -7308,9 +7246,7 @@
     "verse": 17,
     "content": {
       "text": "delivering you from the people and from the Gentiles, to whom I send you,",
-      "marks": [
-        "woc"
-      ]
+      "marks": ["woc"]
     }
   },
   {
@@ -7319,9 +7255,7 @@
     "verse": 18,
     "content": {
       "text": "to open their eyes, that they may turn from darkness to light and from the power of Satan to God, that they may receive remission of sins and an inheritance among those who are sanctified by faith in me.’",
-      "marks": [
-        "woc"
-      ]
+      "marks": ["woc"]
     }
   },
   {

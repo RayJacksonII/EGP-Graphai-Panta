@@ -30,7 +30,7 @@
 > - <sup>a</sup> 1. “Christ” means “Anointed One”.
 > - <sup>b</sup> 1. or, messenger (here and wherever angel is mentioned)
 > - <sup>c</sup> 6. Exodus 19:6; Isaiah 61:6
-> - <sup>d</sup> 7. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>d</sup> 7. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>e</sup> 8. TR adds “the Beginning and the End”
 > - <sup>f</sup> 8. TR omits “God”
 > - <sup>g</sup> 11. TR adds “I am the Alpha and the Omega, the First and the Last.”

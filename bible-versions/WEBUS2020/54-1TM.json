@@ -207,20 +207,20 @@
           "content": [
             "The word for “not” is the negative particle “",
             {
-              "text": " μη",
+              "text": "μη",
               "script": "G"
             },
-            " ” which denies an expected idea, as opposed to the usual word for “not” (",
+            "” which denies an expected idea, as opposed to the usual word for “not” (",
             {
-              "text": " ου",
+              "text": "ου",
               "script": "G"
             },
-            " ) which denies a fact. Thus “",
+            ") which denies a fact. Thus “",
             {
-              "text": " μη",
+              "text": "μη",
               "script": "G"
             },
-            " ” in this context is denying an expected idea (that women can be properly dressed without good works)."
+            "” in this context is denying an expected idea (that women can be properly dressed without good works)."
           ]
         }
       },
@@ -688,9 +688,7 @@
       " And,",
       {
         "text": " “The laborer is worthy of his wages.”",
-        "marks": [
-          "woc"
-        ],
+        "marks": ["woc"],
         "foot": {
           "type": "xrf",
           "content": "Luke 10:7; Leviticus 19:13"

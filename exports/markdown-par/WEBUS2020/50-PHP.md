@@ -39,7 +39,7 @@
 > - <sup>a</sup> 1. “Christ” means “Anointed One”.
 > - <sup>b</sup> 1. or, superintendents, or bishops
 > - <sup>c</sup> 1. Or, deacons
-> - <sup>d</sup> 5. The word translated “partnership” ( κοινωνίᾳ ) also means “fellowship” and “sharing”.
+> - <sup>d</sup> 5. The word translated “partnership” (κοινωνίᾳ) also means “fellowship” and “sharing”.
 > - <sup>e</sup> 12. The word for “brothers” here and where context allows may also be correctly translated “brothers and sisters” or “siblings.”
 > - <sup>f</sup> 13. or, praetorian
 > - <sup>g</sup> 26. or, rejoicing

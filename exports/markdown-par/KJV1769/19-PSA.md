@@ -59,7 +59,7 @@
 <sup>1</sup> «To the chief Musician on Neginoth upon Sheminith, A Psalm of David.» O LORD, rebuke me not in thine anger, neither chasten me in thy hot displeasure.
 <sup>2</sup> Have mercy upon me, O LORD; for I [am] weak: O LORD, heal me; for my bones are vexed.
 <sup>3</sup> My soul is also sore vexed: but thou, O LORD, how long?
-<sup>4</sup> Return, O LORD, deliver my soul: oh save me for thy mercies ’ sake.
+<sup>4</sup> Return, O LORD, deliver my soul: oh save me for thy mercies’ sake.
 <sup>5</sup> For in death [there is] no remembrance of thee: in the grave who shall give thee thanks?
 <sup>6</sup> I am weary with my groaning; all the night make I my bed to swim; I water my couch with my tears.
 <sup>7</sup> Mine eye is consumed because of grief; it waxeth old because of all mine enemies.
@@ -467,7 +467,7 @@
 <sup>13</sup> For I have heard the slander of many: fear [was] on every side: while they took counsel together against me, they devised to take away my life.
 <sup>14</sup> But I trusted in thee, O LORD: I said, Thou [art] my God.
 <sup>15</sup> My times [are] in thy hand: deliver me from the hand of mine enemies, and from them that persecute me.
-<sup>16</sup> Make thy face to shine upon thy servant: save me for thy mercies ’ sake.
+<sup>16</sup> Make thy face to shine upon thy servant: save me for thy mercies’ sake.
 <sup>17</sup> Let me not be ashamed, O LORD; for I have called upon thee: let the wicked be ashamed, [and] let them be silent in the grave.
 <sup>18</sup> Let the lying lips be put to silence; which speak grievous things proudly and contemptuously against the righteous.
 <sup>19</sup> [Oh] how great [is] thy goodness, which thou hast laid up for them that fear thee; [which] thou hast wrought for them that trust in thee before the sons of men!
@@ -743,7 +743,7 @@
 <sup>23</sup> Awake, why sleepest thou, O Lord? arise, cast [us] not off for ever.
 <sup>24</sup> Wherefore hidest thou thy face, [and] forgettest our affliction and our oppression?
 <sup>25</sup> For our soul is bowed down to the dust: our belly cleaveth unto the earth.
-<sup>26</sup> Arise for our help, and redeem us for thy mercies ’ sake.
+<sup>26</sup> Arise for our help, and redeem us for thy mercies’ sake.
 ## Chapter 45
 
 <sup>1</sup> «To the chief Musician upon Shoshannim, for the sons of Korah, Maschil, A Song of loves.» My heart is inditing a good matter: I speak of the things which I have made touching the king: my tongue [is] the pen of a ready writer.

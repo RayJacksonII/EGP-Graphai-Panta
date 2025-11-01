@@ -100,7 +100,7 @@
 <sup>17</sup> But the wisdom that is from above is first pure, then peaceful, gentle, reasonable, full of mercy and good fruits, without partiality, and without hypocrisy.
 <sup>18</sup> Now the fruit of righteousness is sown in peace by those who make peace.
 
-> - <sup>a</sup> 4. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>a</sup> 4. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>b</sup> 6. or, Hell
 
 ## Chapter 4

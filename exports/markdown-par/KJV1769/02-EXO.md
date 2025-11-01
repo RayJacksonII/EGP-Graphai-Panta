@@ -714,7 +714,7 @@
 <sup>1</sup> And the LORD spake unto Moses, saying,
 <sup>2</sup> Speak unto the children of Israel, that they bring me an offering: of every man that giveth it willingly with his heart ye shall take my offering.
 <sup>3</sup> And this [is] the offering which ye shall take of them; gold, and silver, and brass,
-<sup>4</sup> And blue, and purple, and scarlet, and fine linen, and goats ’ [hair],
+<sup>4</sup> And blue, and purple, and scarlet, and fine linen, and goats’ [hair],
 <sup>5</sup> And rams ’ skins dyed red, and badgers ’ skins, and shittim wood,
 <sup>6</sup> Oil for the light, spices for anointing oil, and for sweet incense,
 <sup>7</sup> Onyx stones, and stones to be set in the ephod, and in the breastplate.
@@ -1048,7 +1048,7 @@
 <sup>16</sup> And thou take of their daughters unto thy sons, and their daughters go a whoring after their gods, and make thy sons go a whoring after their gods.
 <sup>17</sup> Thou shalt make thee no molten gods.
 <sup>18</sup> The feast of unleavened bread shalt thou keep. Seven days thou shalt eat unleavened bread, as I commanded thee, in the time of the month Abib: for in the month Abib thou camest out from Egypt.
-<sup>19</sup> All that openeth the matrix [is] mine; and every firstling among thy cattle, [whether] ox or sheep, [that is male ].
+<sup>19</sup> All that openeth the matrix [is] mine; and every firstling among thy cattle, [whether] ox or sheep, [that is male].
 <sup>20</sup> But the firstling of an ass thou shalt redeem with a lamb: and if thou redeem [him] not, then shalt thou break his neck. All the firstborn of thy sons thou shalt redeem. And none shall appear before me empty.
 <sup>21</sup> Six days thou shalt work, but on the seventh day thou shalt rest: in earing time and in harvest thou shalt rest.
 <sup>22</sup> And thou shalt observe the feast of weeks, of the firstfruits of wheat harvest, and the feast of ingathering at the year’s end.
@@ -1072,7 +1072,7 @@
 <sup>3</sup> Ye shall kindle no fire throughout your habitations upon the sabbath day.
 <sup>4</sup> And Moses spake unto all the congregation of the children of Israel, saying, This [is] the thing which the LORD commanded, saying,
 <sup>5</sup> Take ye from among you an offering unto the LORD: whosoever [is] of a willing heart, let him bring it, an offering of the LORD; gold, and silver, and brass,
-<sup>6</sup> And blue, and purple, and scarlet, and fine linen, and goats ’ [hair],
+<sup>6</sup> And blue, and purple, and scarlet, and fine linen, and goats’ [hair],
 <sup>7</sup> And rams ’ skins dyed red, and badgers ’ skins, and shittim wood,
 <sup>8</sup> And oil for the light, and spices for anointing oil, and for the sweet incense,
 <sup>9</sup> And onyx stones, and stones to be set for the ephod, and for the breastplate.
@@ -1092,7 +1092,7 @@
 <sup>23</sup> And every man, with whom was found blue, and purple, and scarlet, and fine linen, and goats ’ [hair], and red skins of rams, and badgers ’ skins, brought [them].
 <sup>24</sup> Every one that did offer an offering of silver and brass brought the LORD’S offering: and every man, with whom was found shittim wood for any work of the service, brought [it].
 <sup>25</sup> And all the women that were wise hearted did spin with their hands, and brought that which they had spun, [both] of blue, and of purple, [and] of scarlet, and of fine linen.
-<sup>26</sup> And all the women whose heart stirred them up in wisdom spun goats ’ [hair].
+<sup>26</sup> And all the women whose heart stirred them up in wisdom spun goats’ [hair].
 <sup>27</sup> And the rulers brought onyx stones, and stones to be set, for the ephod, and for the breastplate;
 <sup>28</sup> And spice, and oil for the light, and for the anointing oil, and for the sweet incense.
 <sup>29</sup> The children of Israel brought a willing offering unto the LORD, every man and woman, whose heart made them willing to bring for all manner of work, which the LORD had commanded to be made by the hand of Moses.

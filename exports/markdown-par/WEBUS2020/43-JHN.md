@@ -53,7 +53,7 @@
 
 <sup>39</sup> He said to them, “Come and see.” They came and saw where he was staying, and they stayed with him that day. It was about the tenth hour.<sup>h</sup>
 <sup>40</sup> One of the two who heard John and followed him was Andrew, Simon Peter’s brother.
-<sup>41</sup> He first found his own brother, Simon, and said to him, “We have found the Messiah!” (which is, being interpreted, Christ<sup>i</sup> ).
+<sup>41</sup> He first found his own brother, Simon, and said to him, “We have found the Messiah!” (which is, being interpreted, Christ<sup>i</sup>).
 <sup>42</sup> He brought him to Jesus. Jesus looked at him and said, “You are Simon the son of Jonah. You shall be called Cephas” (which is by interpretation, Peter).<sup>j</sup>
 
 <sup>43</sup> On the next day, he was determined to go out into Galilee, and he found Philip. Jesus said to him, “Follow me.”
@@ -71,13 +71,13 @@
 <sup>50</sup> Jesus answered him, “Because I told you, ‘I saw you underneath the fig tree,’ do you believe? You will see greater things than these!”
 <sup>51</sup> He said to him, “Most certainly, I tell you all, hereafter you will see heaven opened, and the angels of God ascending and descending on the Son of Man.”
 
-> - <sup>a</sup> 5. The word translated “overcome” ( κατέλαβεν ) can also be translated “comprehended.” It refers to getting a grip on an enemy to defeat him.
-> - <sup>b</sup> 14. The phrase “only born” is from the Greek word “ μονογενους ”, which is sometimes translated “only begotten” or “one and only”.
+> - <sup>a</sup> 5. The word translated “overcome” (κατέλαβεν) can also be translated “comprehended.” It refers to getting a grip on an enemy to defeat him.
+> - <sup>b</sup> 14. The phrase “only born” is from the Greek word “μονογενους”, which is sometimes translated “only begotten” or “one and only”.
 > - <sup>c</sup> 17. “Christ” means “Anointed One”.
-> - <sup>d</sup> 18. The phrase “only born” is from the Greek word “ μονογενη ”, which is sometimes translated “only begotten” or “one and only”.
+> - <sup>d</sup> 18. The phrase “only born” is from the Greek word “μονογενη”, which is sometimes translated “only begotten” or “one and only”.
 > - <sup>e</sup> 18. NU reads “God”
 > - <sup>f</sup> 23. Isaiah 40:3
-> - <sup>g</sup> 29. “Behold”, from “ ἰδοὺ ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
+> - <sup>g</sup> 29. “Behold”, from “ἰδοὺ”, means look at, take notice, observe, see, or gaze at. It is often used as an interjection.
 > - <sup>h</sup> 39. 4:00 p.m.
 > - <sup>i</sup> 41. “Messiah” (Hebrew) and “Christ” (Greek) both mean “Anointed One”.
 > - <sup>j</sup> 42. “Cephas” (Aramaic) and “Peter” (Greek) both mean “Rock”.
@@ -169,9 +169,9 @@
 <sup>35</sup> The Father loves the Son, and has given all things into his hand.
 <sup>36</sup> One who believes in the Son has eternal life, but one who disobeys<sup>d</sup> the Son won’t see life, but the wrath of God remains on him.”
 
-> - <sup>a</sup> 3. The word translated “anew” here and in John 3:7 ( ἄνωθεν ) also means “again” and “from above”.
-> - <sup>b</sup> 8. The same Greek word ( πνεῦμα ) means wind, breath, and spirit.
-> - <sup>c</sup> 16. The phrase “only born” is from the Greek word “ μονογενη ”, which is sometimes translated “only begotten” or “one and only”.
+> - <sup>a</sup> 3. The word translated “anew” here and in John 3:7 (ἄνωθεν) also means “again” and “from above”.
+> - <sup>b</sup> 8. The same Greek word (πνεῦμα) means wind, breath, and spirit.
+> - <sup>c</sup> 16. The phrase “only born” is from the Greek word “μονογενη”, which is sometimes translated “only begotten” or “one and only”.
 > - <sup>d</sup> 36. The same word can be translated “disobeys” or “disbelieves” in this context.
 
 ## Chapter 4
@@ -272,7 +272,7 @@
 <sup>9</sup> Immediately, the man was made well, and took up his mat and walked. Now that day was a Sabbath.
 <sup>10</sup> So the Jews said to him who was cured, “It is the Sabbath. It is not lawful for you to carry the mat.”
 
-<sup>11</sup> He answered them, “He who made me well said to me, ‘Take up your mat and walk.’ ”
+<sup>11</sup> He answered them, “He who made me well said to me, ‘Take up your mat and walk.’”
 
 <sup>12</sup> Then they asked him, “Who is the man who said to you, ‘Take up your mat and walk’?”
 
