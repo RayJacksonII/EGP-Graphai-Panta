@@ -11,6 +11,7 @@ This suite transforms the rich, structured JSON Bible data from the main project
 ```
 panta/
 ├── functions/           # Core transformation functions
+│   ├── convertGraphaiToBB.ts    # Converts Graphai format to BB format
 ```
 
 ## Integration with Main Project
