@@ -17,9 +17,9 @@ EGP Graphai establishes a free, open JSON schema for Bible resources that priori
 
 ### JSON Schema
 
-- **Bible Versions Schema** - Registry of Bible versions with metadata and licensing
+- **Bible Versions Schema** - Registry of Bible versions with metadata, licensing, and per-version book ordering
 - **Bible Verses Schema** - Structured verse content with lexical annotations
-- **Book Metadata Schema** - Canonical book information and ordering
+- **Book Metadata Schema** - Canonical book information and alternate names
 
 ### Rich Content Structure
 
@@ -42,14 +42,14 @@ npm install
 # Validate JSON schemas and data integrity
 npm run validate
 
-# Convert Bible JSON to text/markdown formats
+# Convert Bible JSON to text/markdown formats (all versions)
 npm run export
+
+# Convert specific version and book (e.g., WEBUS2020 Genesis)
+npx ts-node utils/exportContent.ts WEBUS2020 GEN
 
 # Run tests
 npm run test
-
-# Display book names (optional orderType for canonical ordering)
-npx ts-node utils/list-bible-books.ts [orderType]
 ```
 
 ## Project Structure
@@ -72,11 +72,9 @@ npx ts-node utils/list-bible-books.ts [orderType]
 ├── types/                 # TypeScript type definitions
 │ ├── Book.ts
 │ ├── Footnote.ts
-│ ├── Node.ts
 │ ├── Verse.ts
 │ └── VerseSchema.ts
 ├── utils/                 # Utility scripts
-│ ├── list-bible-books.ts  # Script to display book names
 │ └── exportContent.ts     # Main content export script
 ├── AGENTS.md              # AI agent instructions
 ├── package.json
@@ -91,7 +89,7 @@ npx ts-node utils/list-bible-books.ts [orderType]
 
 ```json
 {
-  "book": "John",
+  "book": "JHN",
   "chapter": 1,
   "verse": 1,
   "content": [
@@ -134,7 +132,7 @@ npx ts-node utils/list-bible-books.ts [orderType]
 ### Adding New Bible Versions
 
 1. Add version metadata to `bible-versions/bible-versions.json`
-2. Add verses by book to `bible-versions/{version}/{book}.json`
+2. Add verses by book to `bible-versions/{version}/{order}-{book}.json` (e.g., `01-GEN.json`, `66-REV.json`)
 3. Validate: `npm run validate`
 4. Export: `npm run export`
 
