@@ -1,9 +1,13 @@
 import { describe, it, expect } from "vitest";
-import { convertGraphaiToBB } from "../convertGraphaiToBB";
+import { convertBBToGraphai } from "../convertBBToGraphai";
 
-describe("convertGraphaiToBB", () => {
-  it("should convert Graphai format to BB format", () => {
-    const input = [
+describe("convertBBToGraphai", () => {
+  it("should convert BB format to Graphai format", () => {
+    const input = {
+      text: '[greek]Ἰούδας[/greek] [strongs id="g2455" m="N-NSM" /] [greek]δὲ[/greek] [strongs id="g1161" m="CONJ" /] [greek]ἐγέννησεν[/greek] [strongs id="g1080" m="V-AAI-3S" /] [greek]τὸν[/greek] [strongs id="g3588" m="T-ASM" /] [greek]Φαρὲς[/greek] [strongs id="g5329" m="N-PRI" /] [greek]καὶ[/greek] [strongs id="g2532" m="CONJ" /] [greek]τὸν[/greek] [strongs id="g3588" m="T-ASM" /] [greek]Ζαρὰ[/greek] [strongs id="g2196" m="N-PRI" /] [greek]ἐκ[/greek] [strongs id="g1537" m="PREP" /] [greek]τῆς[/greek] [strongs id="g3588" m="T-GSF" /] [greek]Θάμαρ·[/greek] [strongs id="g2283" m="N-PRI" /] [greek]Φαρὲς[/greek] [strongs id="g5329" m="N-PRI" /] [greek]δὲ[/greek] [strongs id="g1161" m="CONJ" /] [greek]ἐγέννησεν[/greek] [strongs id="g1080" m="V-AAI-3S" /] [greek]τὸν[/greek] [strongs id="g3588" m="T-ASM" /] [greek]Ἑσρώμ·[/greek] [strongs id="g2074" m="N-PRI" /] [greek]Ἑσρὼμ[/greek] [strongs id="g2074" m="N-PRI" /] [greek]δὲ[/greek] [strongs id="g1161" m="CONJ" /] [greek]ἐγέννησεν[/greek] [strongs id="g1080" m="V-AAI-3S" /] [greek]τὸν[/greek] [strongs id="g3588" m="T-ASM" /] [greek]Ἀράμ·[/greek] [strongs id="g689" m="N-PRI" /]',
+    };
+
+    const expected = [
       {
         text: "Ἰούδας",
         script: "G",
@@ -11,140 +15,146 @@ describe("convertGraphaiToBB", () => {
         morph: "N-NSM",
       },
       {
-        text: " δὲ",
+        text: "δὲ",
         script: "G",
         strong: "G1161",
         morph: "CONJ",
       },
       {
-        text: " ἐγέννησεν",
+        text: "ἐγέννησεν",
         script: "G",
         strong: "G1080",
         morph: "V-AAI-3S",
       },
       {
-        text: " τὸν",
+        text: "τὸν",
         script: "G",
         strong: "G3588",
         morph: "T-ASM",
       },
       {
-        text: " Φαρὲς",
+        text: "Φαρὲς",
         script: "G",
         strong: "G5329",
         morph: "N-PRI",
       },
       {
-        text: " καὶ",
+        text: "καὶ",
         script: "G",
         strong: "G2532",
         morph: "CONJ",
       },
       {
-        text: " τὸν",
+        text: "τὸν",
         script: "G",
         strong: "G3588",
         morph: "T-ASM",
       },
       {
-        text: " Ζαρὰ",
+        text: "Ζαρὰ",
         script: "G",
         strong: "G2196",
         morph: "N-PRI",
       },
       {
-        text: " ἐκ",
+        text: "ἐκ",
         script: "G",
         strong: "G1537",
         morph: "PREP",
       },
       {
-        text: " τῆς",
+        text: "τῆς",
         script: "G",
         strong: "G3588",
         morph: "T-GSF",
       },
       {
-        text: " Θάμαρ·",
+        text: "Θάμαρ·",
         script: "G",
         strong: "G2283",
         morph: "N-PRI",
       },
       {
-        text: " Φαρὲς",
+        text: "Φαρὲς",
         script: "G",
         strong: "G5329",
         morph: "N-PRI",
       },
       {
-        text: " δὲ",
+        text: "δὲ",
         script: "G",
         strong: "G1161",
         morph: "CONJ",
       },
       {
-        text: " ἐγέννησεν",
+        text: "ἐγέννησεν",
         script: "G",
         strong: "G1080",
         morph: "V-AAI-3S",
       },
       {
-        text: " τὸν",
+        text: "τὸν",
         script: "G",
         strong: "G3588",
         morph: "T-ASM",
       },
       {
-        text: " Ἑσρώμ·",
+        text: "Ἑσρώμ·",
         script: "G",
         strong: "G2074",
         morph: "N-PRI",
       },
       {
-        text: " Ἑσρὼμ",
+        text: "Ἑσρὼμ",
         script: "G",
         strong: "G2074",
         morph: "N-PRI",
       },
       {
-        text: " δὲ",
+        text: "δὲ",
         script: "G",
         strong: "G1161",
         morph: "CONJ",
       },
       {
-        text: " ἐγέννησεν",
+        text: "ἐγέννησεν",
         script: "G",
         strong: "G1080",
         morph: "V-AAI-3S",
       },
       {
-        text: " τὸν",
+        text: "τὸν",
         script: "G",
         strong: "G3588",
         morph: "T-ASM",
       },
       {
-        text: " Ἀράμ·",
+        text: "Ἀράμ·",
         script: "G",
         strong: "G689",
         morph: "N-PRI",
       },
     ];
 
-    const expected = {
-      text: '[greek]Ἰούδας[/greek] [strongs id="g2455" m="N-NSM" /] [greek]δὲ[/greek] [strongs id="g1161" m="CONJ" /] [greek]ἐγέννησεν[/greek] [strongs id="g1080" m="V-AAI-3S" /] [greek]τὸν[/greek] [strongs id="g3588" m="T-ASM" /] [greek]Φαρὲς[/greek] [strongs id="g5329" m="N-PRI" /] [greek]καὶ[/greek] [strongs id="g2532" m="CONJ" /] [greek]τὸν[/greek] [strongs id="g3588" m="T-ASM" /] [greek]Ζαρὰ[/greek] [strongs id="g2196" m="N-PRI" /] [greek]ἐκ[/greek] [strongs id="g1537" m="PREP" /] [greek]τῆς[/greek] [strongs id="g3588" m="T-GSF" /] [greek]Θάμαρ·[/greek] [strongs id="g2283" m="N-PRI" /] [greek]Φαρὲς[/greek] [strongs id="g5329" m="N-PRI" /] [greek]δὲ[/greek] [strongs id="g1161" m="CONJ" /] [greek]ἐγέννησεν[/greek] [strongs id="g1080" m="V-AAI-3S" /] [greek]τὸν[/greek] [strongs id="g3588" m="T-ASM" /] [greek]Ἑσρώμ·[/greek] [strongs id="g2074" m="N-PRI" /] [greek]Ἑσρὼμ[/greek] [strongs id="g2074" m="N-PRI" /] [greek]δὲ[/greek] [strongs id="g1161" m="CONJ" /] [greek]ἐγέννησεν[/greek] [strongs id="g1080" m="V-AAI-3S" /] [greek]τὸν[/greek] [strongs id="g3588" m="T-ASM" /] [greek]Ἀράμ·[/greek] [strongs id="g689" m="N-PRI" /]',
-    };
-
-    expect(convertGraphaiToBB(input)).toEqual(expected);
+    expect(convertBBToGraphai(input)).toEqual(expected);
   });
 
   it("should handle paragraphs and footnotes", () => {
-    const input = [
+    const input = {
+      text: "In the beginning, God°  created the heavens and the earth.",
+      paragraphs: [0],
+      footnotes: [
+        {
+          text: "The Hebrew word rendered “God” is “ [hebrew]אֱלֹהִ֑ים[/hebrew] ” (Elohim).",
+        },
+      ],
+    };
+
+    const expected = [
       {
         text: "In the beginning, God",
         foot: {
-          type: "trn",
+          type: "stu",
           content: [
             "The Hebrew word rendered “God” is “",
             {
@@ -156,24 +166,18 @@ describe("convertGraphaiToBB", () => {
         },
         paragraph: true,
       },
-      " created the heavens and the earth.",
+      "created the heavens and the earth.",
     ];
 
-    const expected = {
-      text: "In the beginning, God° created the heavens and the earth.",
-      paragraphs: [0],
-      footnotes: [
-        {
-          text: "The Hebrew word rendered “God” is “[hebrew]אֱלֹהִ֑ים[/hebrew]” (Elohim).",
-        },
-      ],
-    };
-
-    expect(convertGraphaiToBB(input)).toEqual(expected);
+    expect(convertBBToGraphai(input)).toEqual(expected);
   });
 
   it("should handle string context nodes and small caps marks", () => {
-    const input = [
+    const input = {
+      text: 'These [strongs id="h0428" /] [i]are[/i] the generations [strongs id="h8435" /] of the heavens [strongs id="h8064" /] and of the earth [strongs id="h0776" /] when they were created [strongs id="h1254" tvm="8736" /], in the day [strongs id="h3117" /]  that the [sc]Lord[/sc] [strongs id="h3068" /] God [strongs id="h0430" /] made [strongs id="h6213" tvm="8800" /] the earth [strongs id="h0776" /] and the heavens. [strongs id="h8064" /]',
+    };
+
+    const expected = [
       {
         text: "These",
         strong: "H0428",
@@ -229,15 +233,15 @@ describe("convertGraphaiToBB", () => {
       },
     ];
 
-    const expected = {
-      text: 'These [strongs id="h0428" /] [i]are[/i] the generations [strongs id="h8435" /] of the heavens [strongs id="h8064" /] and of the earth [strongs id="h0776" /] when they were created [strongs id="h1254" tvm="8736" /], in the day [strongs id="h3117" /] that the [sc]Lord[/sc] [strongs id="h3068" /] God [strongs id="h0430" /] made [strongs id="h6213" tvm="8800" /] the earth [strongs id="h0776" /] and the heavens. [strongs id="h8064" /]',
-    };
-
-    expect(convertGraphaiToBB(input)).toEqual(expected);
+    expect(convertBBToGraphai(input)).toEqual(expected);
   });
 
   it("should handle bold and word of Christ marks", () => {
-    const input = [
+    const input = {
+      text: "Jesus turned and saw them following, and said to them, [red]“What are you looking for?”[/red] They said to him, “Rabbi” (which is to say, being interpreted, Teacher), “where are [b]you[/b] staying?”",
+    };
+
+    const expected = [
       "Jesus turned and saw them following, and said to them, ",
       {
         text: "“What are you looking for?”",
@@ -248,15 +252,16 @@ describe("convertGraphaiToBB", () => {
       " staying?”",
     ];
 
-    const expected = {
-      text: "Jesus turned and saw them following, and said to them, [red]“What are you looking for?”[/red] They said to him, “Rabbi” (which is to say, being interpreted, Teacher), “where are [b]you[/b] staying?”",
-    };
-
-    expect(convertGraphaiToBB(input)).toEqual(expected);
+    expect(convertBBToGraphai(input)).toEqual(expected);
   });
 
   it("should handle paragraphs", () => {
-    const input = [
+    const input = {
+      text: "Yahweh God said to the woman, “What have you done?” The woman said, “The serpent deceived me, and I ate.”",
+      paragraphs: [0, 51],
+    };
+
+    const expected = [
       {
         text: "Yahweh God said to the woman, “What have you done?”",
         paragraph: true,
@@ -267,16 +272,16 @@ describe("convertGraphaiToBB", () => {
       },
     ];
 
-    const expected = {
-      text: "Yahweh God said to the woman, “What have you done?” The woman said, “The serpent deceived me, and I ate.”",
-      paragraphs: [0, 51],
-    };
-
-    expect(convertGraphaiToBB(input)).toEqual(expected);
+    expect(convertBBToGraphai(input)).toEqual(expected);
   });
 
   it("should handle line breaks", () => {
-    const input = [
+    const input = {
+      text: "Yahweh God said to the serpent,\n“Because you have done this,\nyou are cursed above all livestock,\nand above every animal of the field.\nYou shall go on your belly\nand you shall eat dust all the days of your life.\n",
+      paragraphs: [0],
+    };
+
+    const expected = [
       {
         text: "Yahweh God said to the serpent,",
         paragraph: true,
@@ -304,11 +309,6 @@ describe("convertGraphaiToBB", () => {
       },
     ];
 
-    const expected = {
-      text: "Yahweh God said to the serpent,\n“Because you have done this,\nyou are cursed above all livestock,\nand above every animal of the field.\nYou shall go on your belly\nand you shall eat dust all the days of your life.\n",
-      paragraphs: [0],
-    };
-
-    expect(convertGraphaiToBB(input)).toEqual(expected);
+    expect(convertBBToGraphai(input)).toEqual(expected);
   });
 });

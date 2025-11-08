@@ -15,10 +15,14 @@ export function convertGraphaiToBB(content: any): BBResult {
     let offset = 0;
     for (const item of content) {
       const result = convertGraphaiToBB(item);
-      text += result.text.replace(/\[(greek|hebrew)\] /g, " [$1]");
+      const leadingSpaces = result.text.length - result.text.trimStart().length;
+      const trimmedText = result.text;
+      const addSpace = offset > 0 && item.paragraph ? 1 : 0;
       paragraphs.push(...(result.paragraphs || []).map((p) => p + offset));
+      if (addSpace) text += " ";
+      text += trimmedText.replace(/\[(greek|hebrew)\] /g, " [$1]");
+      offset += addSpace + trimmedText.length;
       footnotes.push(...(result.footnotes || []));
-      offset += result.text.length;
     }
     if (paragraphs.length === 0 && footnotes.length === 0) {
       return { text };
