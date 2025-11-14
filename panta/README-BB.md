@@ -119,37 +119,44 @@ Person-Number-Gender-Case patterns:
 - **Foreign:** `HEB`, `ARAM`
 - **Other:** `K-NPM`, `F-2GSM`, `F-3ASM`, `I-NSM`, `X-NSM`
 
-**Spacing Rules Around Strong's Tags:**
+**Strong's Tag Placement:**
 
-KJVS pattern (English + Strong's):
+Strong's tags appear after the word they reference. Spaces are just part of the normal text flow.
+
+KJVS example (English):
 
 ```
-word [strongs id="g1234" /] nextword
-^    ^                    ^ ^
-|    |                    | |
-|    Space before tag     | Space after tag
-Text                      Close
+In [strongs id="g1722" /] the beginning [strongs id="g746" /]
 ```
 
-BYZ pattern (Greek text + Strong's):
+This becomes in Graphai:
+
+```javascript
+[
+  { text: "In", strong: "G1722" },
+  { text: " the beginning", strong: "G746" },
+];
+```
+
+BYZ example (Greek + Strong's):
 
 ```
 [greek]λόγος,[/greek] [strongs id="g3056" m="N-NSM" /]
-                    ^ ^                             ^
-                    | |                             |
-                    | Space before Strong's        (followed by next word/tag)
-                    Space after [/greek]
 ```
 
-**Multiple Consecutive Strong's Tags:**
+This becomes in Graphai:
 
-Sometimes multiple Strong's appear without intervening text:
+```javascript
+{ text: "λόγος,", script: "G", strong: "G3056", morph: "N-NSM" }
+```
+
+**Multiple Consecutive Strong's:**
 
 ```
 the Benjamite [strongs id="h1121" /] [strongs id="h1145" /]
 ```
 
-In Graphai, the second one gets an empty string or single space as text.
+In Graphai, both get merged with available text or become separate elements.
 
 #### 4. **Subtitle Markers** (Psalm Inscriptions)
 
@@ -342,28 +349,27 @@ Greek text with Strong's numbers and detailed Robinson morphology codes.
 | **Headings**            | ❌ Not supported                      | `{ heading: [...] }`               | Graphai-only feature                      |
 | **Supplied Words**      | `[was]` literal brackets              | `"[was]"` in text string           | Preserved as-is                           |
 
-**CRITICAL SPACING DIFFERENCES:**
+**Key Concept: Spaces in Text Elements**
 
-In Graphai, Greek/Hebrew text has a **leading space** to separate it from preceding English text:
+Spaces aren't special - they're just part of the text. Tags wrap their content, and adjacent spaces belong to the plain text elements.
 
 ```javascript
 // BB
-"In [greek]ἀρχῇ[/greek] was"[
-  // Graphai (INCORRECT - no spaces)
-  ("In", { text: "ἀρχῇ", script: "G" }, "was")
-][
-  // Graphai (CORRECT - note the leading space!)
-  ("In", { text: " ἀρχῇ", script: "G" }, " was")
+"word [greek]Λόγος[/greek] word"[
+  // Graphai - spaces are in the plain text elements
+  ("word ", // Ends with space
+  { text: "Λόγος", script: "G" }, // No spaces
+  " word") // Starts with space
 ];
 ```
 
-Similarly, text with Strong's numbers needs spaces:
+Same principle for Strong's tags:
 
 ```javascript
 // BB
 "In [strongs id="g1722" /] the beginning"
 
-// Graphai (CORRECT spacing - note leading space in second element)
+// Graphai - second element starts with space
 [
   { text: "In", strong: "G1722" },
   { text: " the beginning", strong: "G746" }
@@ -557,11 +563,11 @@ Critical decision based on version type:
 - If morph has mixed case: `PresActInd`, `Aor2MidDepInd` - it's TVM
 - If morph is 4 digits: `8804` - it's Hebrew TVM
 
-### Spacing Reconstruction
+### Text Reconstruction
 
-**CRITICAL:** BB format requires specific spacing around tags.
+Building BB text from Graphai is straightforward - concatenate text and wrap tagged content:
 
-For KJVS/WEBP (English + Strong's):
+For English with Strong's:
 
 ```javascript
 // Graphai
@@ -570,28 +576,21 @@ For KJVS/WEBP (English + Strong's):
   { text: " the beginning", strong: "G746" },
 ];
 
-// BB (note space BEFORE [strongs], next element has leading space)
+// BB - just concatenate, adding Strong's tags after each text
 ('In [strongs id="g1722" /] the beginning [strongs id="g746" /]');
 ```
 
-For BYZ (Greek + Strong's):
+For Greek with Strong's:
 
 ```javascript
-// Graphai (leading space in Greek text!)
-{ text: " Οὗτος", script: "G", strong: "G3778", morph: "D-NSM" }
+// Graphai
+{ text: "Οὗτος", script: "G", strong: "G3778", morph: "D-NSM" }
 
-// BB (space AFTER [/greek], before [strongs])
+// BB - wrap Greek text in script tag, add Strong's tag after
 "[greek]Οὗτος[/greek] [strongs id=\"g3778\" m=\"D-NSM\" /]"
 ```
 
-**Algorithm:**
-
-1. For each element with `strong` attribute:
-   - If has `script` (Greek/Hebrew): Output `[greek/hebrew]TEXT[/greek/hebrew] [strongs ...] /]`
-   - If no `script`: Output `TEXT [strongs ...] /]`
-2. For plain text: Output as-is
-3. Trim leading space from Greek/Hebrew text before placing in `[greek]` tag
-4. Ensure space after `[/greek]` before `[strongs`
+**Simple rule:** Tags wrap their content. Spaces are just part of the text being concatenated.
 
 ### Footnote Externalization
 
@@ -658,11 +657,27 @@ Must calculate character indices for `paragraphs` array based on PLAIN TEXT posi
 
 ## Known Quirks & Edge Cases
 
-### 1. **Spacing Around Greek/Hebrew Tags**
+### 1. **Script Tags Are Just Wrappers**
 
-BB: `word [greek]Λόγος[/greek] word`
+Script tags (`[greek]...[/greek]`, `[hebrew]...[/hebrew]`) simply wrap the Greek/Hebrew text - nothing more.
 
-The space BEFORE `[greek]` and AFTER `[/greek]` must be handled correctly during merging.
+**Example BB:**
+
+```
+word [greek]Λόγος[/greek] word
+```
+
+**In Graphai (3 separate elements):**
+
+```javascript
+[
+  "word ", // Plain text ending with space
+  { text: "Λόγος", script: "G" }, // Greek text (no spaces)
+  " word", // Plain text starting with space
+];
+```
+
+**Key point:** Spaces are part of the surrounding plain text elements, not special spacing rules. The tag wraps exactly what's Greek/Hebrew, nothing more.
 
 ### 2. **Strong's Tags Without Preceding Text**
 
