@@ -389,5 +389,25 @@ describe("convertGraphaiToBB", () => {
       };
       expect(convertGraphaiToBB(input)).toEqual(expected);
     });
+
+    it("should convert paragraphs to BB format", () => {
+      const input = [
+        { text: "First sentence.", paragraph: true },
+        { text: "Second sentence.", paragraph: true },
+      ];
+      const expected = {
+        text: "First sentence. Second sentence.",
+        paragraphs: [0, 15],
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should convert line breaks to BB format", () => {
+      const input = [{ text: "First line", break: true }, "Second line"];
+      const expected = {
+        text: "First line\nSecond line",
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
   });
 });

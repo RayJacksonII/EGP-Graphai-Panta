@@ -137,4 +137,42 @@ describe("convertBBToGraphai", () => {
       ]);
     });
   });
+
+  describe("Structural Features", () => {
+    describe("Paragraphs", () => {
+      it("should handle paragraph position 0", () => {
+        const bb = {
+          text: "In the beginning was the Word",
+          paragraphs: [0],
+        };
+        const graphai = convertBBToGraphai(bb);
+        expect(graphai).toEqual([
+          { text: "In the beginning was the Word", paragraph: true },
+        ]);
+      });
+
+      it("should handle non-zero paragraph positions", () => {
+        const bb = {
+          text: "First sentence. Second sentence.",
+          paragraphs: [0, 15],
+        };
+        const graphai = convertBBToGraphai(bb);
+        expect(graphai).toEqual([
+          { text: "First sentence.", paragraph: true },
+          { text: "Second sentence.", paragraph: true },
+        ]);
+      });
+
+      it("should handle line breaks", () => {
+        const bb = {
+          text: "First line\nSecond line",
+        };
+        const graphai = convertBBToGraphai(bb);
+        expect(graphai).toEqual([
+          { text: "First line", break: true },
+          "Second line",
+        ]);
+      });
+    });
+  });
 });
