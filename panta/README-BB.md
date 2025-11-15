@@ -491,13 +491,17 @@ This means:
 
 ### TVM2 Handling
 
-**IMPORTANT DECISION:** TVM2 is rare and indicates morphological ambiguity. Options:
+TVM2 attributes indicate morphological ambiguity where a word form could be parsed multiple ways. Both codes are preserved by concatenating with "/" separator in the `morph` field.
 
-1. **Store only tvm (lose tvm2)** - Simpler, but loses data
-2. **Store tvm2 in a separate field** - Requires extending Graphai schema
-3. **Concatenate:** `morph: "PresMidInd|PresMidImpr"` - Preserves data, compatible
+**Example:**
 
-**Recommendation:** Use option 1 for now (store `tvm` only), document as known limitation.
+```javascript
+// BB with TVM2
+[strongs id="g2476" tvm="ImpfActInd" tvm2="PerfActInd" /]
+
+// Graphai
+{ text: "there standeth one", strong: "G2476", morph: "ImpfActInd/PerfActInd" }
+```
 
 ---
 
@@ -861,6 +865,41 @@ This multi-pass approach handles complex interactions between tags, whitespace, 
 4. Convert marks array to nested BB tags
 5. Normalize Strong's numbers to lowercase
 6. Choose correct morphology attribute (m vs tvm)
+
+---
+
+## Known Limitations & Edge Cases
+
+### Round-Trip Fidelity Issues
+
+1. **Strong's Number Leading Zeros**
+
+   - **Issue:** BB export strips leading zeros from Strong's numbers (e.g., `g0746` → `g746`)
+   - **Impact:** Round-trip `BB → Graphai → BB` will normalize Strong's numbers without leading zeros
+   - **Rationale:** Matches target BB format specification for cleaner output
+   - **Workaround:** None required - this is intentional normalization
+
+2. **Unsupported Graphai Features**
+   - **Issue:** Headings, subtitles, and other Graphai-only features are silently dropped on BB export
+   - **Impact:** Information loss when exporting advanced Graphai content to BB
+   - **Rationale:** BB format doesn't support these features
+   - **Workaround:** Use Graphai format for advanced features
+
+### Edge Cases Handled
+
+1. **Supplied Words as Literal Text**
+
+   - Words in brackets like `[was]`, `[it]` are treated as literal text, not tags
+   - Preserves original text appearance in round-trip
+
+2. **Unknown Tags**
+
+   - Unrecognized bracketed content is preserved as literal text
+   - Prevents data loss from future BB format extensions
+
+3. **Malformed Tags**
+   - Missing closing tags or invalid syntax doesn't crash conversion
+   - Content is preserved as plain text
 
 ---
 

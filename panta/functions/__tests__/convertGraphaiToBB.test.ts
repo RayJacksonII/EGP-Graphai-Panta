@@ -231,7 +231,7 @@ describe("convertGraphaiToBB", () => {
     ];
 
     const expected = {
-      text: 'These [strongs id="h0428" /] [i]are[/i] the generations [strongs id="h8435" /] of the heavens [strongs id="h8064" /] and of the earth [strongs id="h0776" /] when they were created [strongs id="h1254" tvm="8736" /], in the day [strongs id="h3117" /] that the [sc]Lord[/sc] [strongs id="h3068" /] God [strongs id="h0430" /] made [strongs id="h6213" tvm="8800" /] the earth [strongs id="h0776" /] and the heavens. [strongs id="h8064" /]',
+      text: 'These [strongs id="h428" /] [i]are[/i] the generations [strongs id="h8435" /] of the heavens [strongs id="h8064" /] and of the earth [strongs id="h776" /] when they were created [strongs id="h1254" tvm="8736" /], in the day [strongs id="h3117" /] that the [sc]Lord[/sc] [strongs id="h3068" /] God [strongs id="h430" /] made [strongs id="h6213" tvm="8800" /] the earth [strongs id="h776" /] and the heavens. [strongs id="h8064" /]',
     };
 
     expect(convertGraphaiToBB(input)).toEqual(expected);
@@ -336,5 +336,48 @@ describe("convertGraphaiToBB", () => {
     };
 
     expect(convertGraphaiToBB(input)).toEqual(expected);
+  });
+
+  describe("KJVS Strong's and TVM", () => {
+    it("should convert Strong's with leading zeros and TVM", () => {
+      const input = [
+        { text: "the beginning", strong: "G0746" },
+        { text: " was", strong: "G2258", morph: "ImpfInd" },
+      ];
+      const expected = {
+        text: 'the beginning [strongs id="g746" /] was [strongs id="g2258" tvm="ImpfInd" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should convert Hebrew Strong's with numeric TVM", () => {
+      const input = [{ text: "sang", strong: "H7891", morph: "8804" }];
+      const expected = {
+        text: 'sang [strongs id="h7891" tvm="8804" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should concatenate text elements", () => {
+      const input = [
+        "In the beginning ",
+        { text: "was", strong: "G2258", morph: "ImpfInd" },
+        " the Word",
+      ];
+      const expected = {
+        text: 'In the beginning was [strongs id="g2258" tvm="ImpfInd" /] the Word',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should handle TVM2 morphology codes", () => {
+      const input = [
+        { text: "word", strong: "G0373", morph: "PresMidInd/PresMidImpr" },
+      ];
+      const expected = {
+        text: 'word [strongs id="g373" tvm="PresMidInd" tvm2="PresMidImpr" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
   });
 });

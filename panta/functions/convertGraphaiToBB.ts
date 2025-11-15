@@ -55,13 +55,26 @@ export function convertGraphaiToBB(content: any): BBResult {
       let paragraphs: number[] = [];
       let footnotes: { text: string }[] = [];
       if (content.strong && content.morph) {
-        const script =
-          content.script || (content.strong.startsWith("H") ? "H" : "G");
-        const morphAttr =
-          script === "H" ? `tvm="${content.morph}"` : `m="${content.morph}"`;
-        resultText += ` [strongs id="${content.strong.toLowerCase()}" ${morphAttr} /]`;
+        let morphParts = content.morph.split("/");
+        let morphAttr: string;
+        if (content.script === "G") {
+          morphAttr = `m="${morphParts[0]}"`;
+        } else if (/^\d+$/.test(morphParts[0])) {
+          morphAttr = `tvm="${morphParts[0]}"`;
+          if (morphParts[1]) morphAttr += ` tvm2="${morphParts[1]}"`;
+        } else {
+          morphAttr = `tvm="${morphParts[0]}"`;
+          if (morphParts[1]) morphAttr += ` tvm2="${morphParts[1]}"`;
+        }
+        resultText += ` [strongs id="${content.strong
+          .toLowerCase()
+          .replace(/^g0+/, "g")
+          .replace(/^h0+/, "h")}" ${morphAttr} /]`;
       } else if (content.strong) {
-        resultText += ` [strongs id="${content.strong.toLowerCase()}" /]`;
+        resultText += ` [strongs id="${content.strong
+          .toLowerCase()
+          .replace(/^g0+/, "g")
+          .replace(/^h0+/, "h")}" /]`;
       }
       if (content.foot) {
         resultText += "°";

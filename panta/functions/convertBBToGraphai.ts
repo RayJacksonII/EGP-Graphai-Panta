@@ -251,6 +251,17 @@ function cleanupElements(
     }
   }
 
+  // Merge consecutive strings
+  for (let k = elements.length - 1; k > 0; k--) {
+    if (
+      typeof elements[k] === "string" &&
+      typeof elements[k - 1] === "string"
+    ) {
+      elements[k - 1] += elements[k];
+      elements.splice(k, 1);
+    }
+  }
+
   return elements;
 }
 
@@ -278,8 +289,12 @@ function parseBBText(
       if (tag.startsWith("strongs")) {
         const obj: any = { strong: attrs.id.toUpperCase() };
         if (attrs.m) obj.morph = attrs.m;
-        if (attrs.tvm) obj.morph = attrs.tvm;
+        if (attrs.tvm)
+          obj.morph = attrs.tvm + (attrs.tvm2 ? "/" + attrs.tvm2 : "");
         elements.push(obj);
+      } else {
+        // Unknown self-closing tag, treat as literal text
+        elements.push(match[0]);
       }
     } else {
       // Opening tag with closing tag
@@ -307,8 +322,14 @@ function parseBBText(
         } else if (tag === "footnote") {
           const footElements = parseBBText(innerText, []);
           elements.push({ foot: { type: "stu", content: footElements } });
+        } else {
+          // Unknown opening tag, treat as literal text
+          elements.push(match[0]);
         }
         tagRegex.lastIndex = closeIndex + closeTag.length;
+      } else {
+        // No closing tag, treat as literal text
+        elements.push(match[0]);
       }
     }
     lastIndex = tagRegex.lastIndex;
