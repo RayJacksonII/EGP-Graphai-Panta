@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "byz-204001001",
+    "version": "byz",
+    "chapter": "john-1",
+    "sequence": "204001001",
+    "number": 1,
+    "text": "[greek]Ἐν[/greek] [strongs id=\"g1722\" m=\"PREP\" /] [greek]ἀρχῇ[/greek] [strongs id=\"g746\" m=\"N-DSF\" /] [greek]ἦν[/greek] [strongs id=\"g1510\" m=\"V-IAI-3S\" /] [greek]ὁ[/greek] [strongs id=\"g3588\" m=\"T-NSM\" /] [greek]λόγος,[/greek] [strongs id=\"g3056\" m=\"N-NSM\" /] [greek]καὶ[/greek] [strongs id=\"g2532\" m=\"CONJ\" /] [greek]ὁ[/greek] [strongs id=\"g3588\" m=\"T-NSM\" /] [greek]λόγος[/greek] [strongs id=\"g3056\" m=\"N-NSM\" /] [greek]ἦν[/greek] [strongs id=\"g1510\" m=\"V-IAI-3S\" /] [greek]πρὸς[/greek] [strongs id=\"g4314\" m=\"PREP\" /] [greek]τὸν[/greek] [strongs id=\"g3588\" m=\"T-ASM\" /] [greek]θεόν,[/greek] [strongs id=\"g2316\" m=\"N-ASM\" /] [greek]καὶ[/greek] [strongs id=\"g2532\" m=\"CONJ\" /] [greek]θεὸς[/greek] [strongs id=\"g2316\" m=\"N-NSM\" /] [greek]ἦν[/greek] [strongs id=\"g1510\" m=\"V-IAI-3S\" /] [greek]ὁ[/greek] [strongs id=\"g3588\" m=\"T-NSM\" /] [greek]λόγος.[/greek] [strongs id=\"g3056\" m=\"N-NSM\" /]",
+    "paragraphs": [0]
+  },
+  {
+    "_id": "byz-204001002",
+    "version": "byz",
+    "chapter": "john-1",
+    "sequence": "204001002",
+    "number": 2,
+    "text": "[greek]Οὗτος[/greek] [strongs id=\"g3778\" m=\"D-NSM\" /] [greek]ἦν[/greek] [strongs id=\"g1510\" m=\"V-IAI-3S\" /] [greek]ἐν[/greek] [strongs id=\"g1722\" m=\"PREP\" /] [greek]ἀρχῇ[/greek] [strongs id=\"g746\" m=\"N-DSF\" /] [greek]πρὸς[/greek] [strongs id=\"g4314\" m=\"PREP\" /] [greek]τὸν[/greek] [strongs id=\"g3588\" m=\"T-ASM\" /] [greek]θεόν.[/greek] [strongs id=\"g2316\" m=\"N-ASM\" /]"
+  },
+  {
+    "_id": "byz-204001005",
+    "version": "byz",
+    "chapter": "john-1",
+    "sequence": "204001005",
+    "number": 5,
+    "text": "[greek]καὶ[/greek] [strongs id=\"g2532\" m=\"CONJ\" /] [greek]τὸ[/greek] [strongs id=\"g3588\" m=\"T-NSN\" /] [greek]φῶς[/greek] [strongs id=\"g5457\" m=\"N-NSN\" /] [greek]ἐν[/greek] [strongs id=\"g1722\" m=\"PREP\" /] [greek]τῇ[/greek] [strongs id=\"g3588\" m=\"T-DSF\" /] [greek]σκοτίᾳ[/greek] [strongs id=\"g4653\" m=\"N-DSF\" /] [greek]φαίνει,[/greek] [strongs id=\"g5316\" m=\"V-PAI-3S\" /] [greek]καὶ[/greek] [strongs id=\"g2532\" m=\"CONJ\" /] [greek]ἡ[/greek] [strongs id=\"g3588\" m=\"T-NSF\" /] [greek]σκοτία[/greek] [strongs id=\"g4653\" m=\"N-NSF\" /] [greek]αὐτὸ[/greek] [strongs id=\"g846\" m=\"P-ASN\" /] [greek]οὐ[/greek] [strongs id=\"g3756\" m=\"PRT-N\" /] [greek]κατέλαβεν.[/greek] [strongs id=\"g2638\" m=\"V-2AAI-3S\" /]"
+  }
+]

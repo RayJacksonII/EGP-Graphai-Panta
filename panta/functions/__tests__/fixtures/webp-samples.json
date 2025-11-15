@@ -1,0 +1,95 @@
+[
+  {
+    "_id": "webp-204001001",
+    "version": "webp",
+    "chapter": "john-1",
+    "sequence": "204001001",
+    "number": 1,
+    "text": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+    "paragraphs": [0]
+  },
+  {
+    "_id": "webp-204001005",
+    "version": "webp",
+    "chapter": "john-1",
+    "sequence": "204001005",
+    "number": 5,
+    "text": "The light shines in the darkness, and the darkness hasn’t overcome° it.",
+    "footnotes": [
+      {
+        "type": "trn",
+        "text": "The word translated “overcome” ([greek]κατέλαβεν[/greek]) can also be translated “comprehended.” It refers to getting a grip on an enemy to defeat him."
+      }
+    ]
+  },
+  {
+    "_id": "webp-204001014",
+    "version": "webp",
+    "chapter": "john-1",
+    "sequence": "204001014",
+    "number": 14,
+    "text": "The Word became flesh and lived among us. We saw his glory, such glory as of the only born° Son of the Father, full of grace and truth.",
+    "footnotes": [
+      {
+        "type": "trn",
+        "text": "The phrase “only born” is from the Greek word “[greek]μονογενους[/greek]”, which is sometimes translated “only begotten” or “one and only”."
+      }
+    ],
+    "paragraphs": [0]
+  },
+  {
+    "_id": "webp-204001017",
+    "version": "webp",
+    "chapter": "john-1",
+    "sequence": "204001017",
+    "number": 17,
+    "text": "For the law was given through Moses. Grace and truth were realized through Jesus Christ.°",
+    "footnotes": [
+      {
+        "text": "“Christ” means “Anointed One”."
+      }
+    ]
+  },
+  {
+    "_id": "webp-204001018",
+    "version": "webp",
+    "chapter": "john-1",
+    "sequence": "204001018",
+    "number": 18,
+    "text": "No one has seen God at any time. The only born° Son,° who is in the bosom of the Father, has declared him.",
+    "footnotes": [
+      {
+        "type": "trn",
+        "text": "The phrase “only born” is from the Greek word “[greek]μονογενη[/greek]”, which is sometimes translated “only begotten” or “one and only”."
+      },
+      {
+        "type": "var",
+        "text": "NU reads “God”"
+      }
+    ]
+  },
+  {
+    "_id": "webp-204001021",
+    "version": "webp",
+    "chapter": "john-1",
+    "sequence": "204001021",
+    "number": 21,
+    "text": "They asked him, “What then? Are you Elijah?” He said, “I am not.” “Are you the prophet?” He answered, “No.”",
+    "paragraphs": [0, 44, 65, 88]
+  },
+  {
+    "_id": "webp-204001023",
+    "version": "webp",
+    "chapter": "john-1",
+    "sequence": "204001023",
+    "number": 23,
+    "text": "He said, “I am the voice of one crying in the wilderness, ‘Make straight the way of the Lord,’° as Isaiah the prophet said.”",
+    "footnotes": [
+      {
+        "type": "xrf",
+        "text": "Isaiah 40:3"
+      }
+    ],
+    "paragraphs": [0]
+  }
+]
