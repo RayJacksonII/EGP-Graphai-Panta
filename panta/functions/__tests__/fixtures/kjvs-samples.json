@@ -53,7 +53,7 @@
     "chapter": "john-1",
     "sequence": "204001026",
     "number": 26,
-    "text": "John [strongs id=\"g2491\" /] answered [strongs id=\"g0611\" m=\"AorMidDepInd\" /] them [strongs id=\"g0846\" /], saying [strongs id=\"g3004\" m=\"PresActPtc\" /], I [strongs id=\"g1473\" /] baptize [strongs id=\"g0907\" m=\"PresActInd\" /] with [strongs id=\"g1722\" /] water [strongs id=\"g5204\" /]: but [strongs id=\"g1161\" /] there standeth one [strongs id=\"g2476\" tvm=\"ImpfActInd\" tvm2=\"PerfActInd\" /] among [strongs id=\"g3319\" /] you [strongs id=\"g5216\" /], whom [strongs id=\"g3739\" /] ye [strongs id=\"g5210\" /] know [strongs id=\"g1492\" m=\"PerfActInd\" /] not [strongs id=\"g3756\" /];"
+    "text": "John [strongs id=\"g2491\" /] answered [strongs id=\"g0611\" tvm=\"AorMidDepInd\" /] them [strongs id=\"g0846\" /], saying [strongs id=\"g3004\" tvm=\"PresActPtc\" /], I [strongs id=\"g1473\" /] baptize [strongs id=\"g0907\" tvm=\"PresActInd\" /] with [strongs id=\"g1722\" /] water [strongs id=\"g5204\" /]: but [strongs id=\"g1161\" /] there standeth one [strongs id=\"g2476\" tvm=\"ImpfActInd\" tvm2=\"PerfActInd\" /] among [strongs id=\"g3319\" /] you [strongs id=\"g5216\" /], whom [strongs id=\"g3739\" /] ye [strongs id=\"g5210\" /] know [strongs id=\"g1492\" tvm=\"PerfActInd\" /] not [strongs id=\"g3756\" /];"
   },
   {
     "_id": "kjvs-119007001",

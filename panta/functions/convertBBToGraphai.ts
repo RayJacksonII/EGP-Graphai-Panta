@@ -4,282 +4,18 @@ export function convertBBToGraphai(bb: {
   footnotes?: { type?: string; text: string }[];
 }): any[] {
   const footnotes = bb.footnotes ? [...bb.footnotes] : [];
-  const elements = parseBBText(bb.text, footnotes);
-  return cleanupElements(elements, bb.paragraphs);
-}
+  let elements = parseBBText(bb.text, footnotes);
 
-function cleanupElements(
-  elements: any[],
-  paragraphPositions: number[] = []
-): any[] {
-  // Pass 1: Convert non-whitespace plain text strings that directly precede strongs into text objects
-  for (let k = 0; k < elements.length - 1; k++) {
-    if (
-      typeof elements[k] === "string" &&
-      !/^\s+$/.test(elements[k]) && // Not just whitespace
-      typeof elements[k + 1] === "object" &&
-      elements[k + 1].strong &&
-      !elements[k + 1].text
-    ) {
-      // Convert to object so it can be merged with strongs
-      elements[k] = { text: elements[k] };
-    }
-  }
+  // Merge script tags with following Strong's tags
+  elements = mergeScriptAndStrongs(elements);
 
-  // Pass 2: Remove whitespace-only strings that come before strongs-only objects
-  for (let k = elements.length - 1; k >= 0; k--) {
-    if (
-      k + 1 < elements.length &&
-      typeof elements[k + 1] === "object" &&
-      elements[k + 1].strong &&
-      !elements[k + 1].text &&
-      typeof elements[k] === "string" &&
-      /^\s+$/.test(elements[k])
-    ) {
-      elements.splice(k, 1);
-    }
-  }
-
-  // Pass 3: Trim trailing spaces from text before script/strong tags (but not marks)
-  for (let k = 0; k < elements.length - 1; k++) {
-    const nextEl = elements[k + 1];
-    // If next element is a script or strong object (not marks)
-    if (
-      typeof nextEl === "object" &&
-      (nextEl.script || nextEl.strong) &&
-      !nextEl.marks
-    ) {
-      if (
-        typeof elements[k] === "object" &&
-        elements[k].text &&
-        typeof elements[k].text === "string"
-      ) {
-        elements[k].text = elements[k].text.replace(/\s+$/, "");
-      } else if (typeof elements[k] === "string") {
-        elements[k] = elements[k].replace(/\s+$/, "");
-        if (elements[k].length === 0) {
-          elements.splice(k, 1);
-          k--;
-        }
-      }
-    }
-  }
-
-  // Pass 3b: Trim leading spaces from strings after script tags (but not after marks)
-  for (let k = 1; k < elements.length; k++) {
-    const prevEl = elements[k - 1];
-    if (
-      typeof elements[k] === "string" &&
-      typeof prevEl === "object" &&
-      prevEl.script &&
-      !prevEl.marks &&
-      elements[k].startsWith(" ")
-    ) {
-      elements[k] = elements[k].replace(/^\s+/, "");
-      if (elements[k].length === 0) {
-        elements.splice(k, 1);
-        k--;
-      }
-    }
-  }
-
-  // Pass 3c: Trim leading spaces from text objects with strong attributes
-  // These are created when plain text that precedes a strong tag is converted to an object
-  // DISABLED: This was breaking paragraph splitting by removing spaces from split elements
-  // for (let k = 0; k < elements.length; k++) {
-  //   ...
-  // }
-
-  // Pass 4: Merge strongs into preceding text objects
-  for (let k = 0; k < elements.length - 1; k++) {
-    if (
-      typeof elements[k] === "object" &&
-      elements[k].text &&
-      !elements[k].strong &&
-      typeof elements[k + 1] === "object" &&
-      elements[k + 1].strong &&
-      !elements[k + 1].text
-    ) {
-      // Merge strongs data into the text object
-      elements[k].strong = elements[k + 1].strong;
-      if (elements[k + 1].morph) elements[k].morph = elements[k + 1].morph;
-      elements.splice(k + 1, 1);
-      k--;
-    }
-  }
-
-  // Pass 4b: Merge strongs into preceding script objects (for BYZ format)
-  for (let k = 0; k < elements.length - 1; k++) {
-    if (
-      typeof elements[k] === "object" &&
-      elements[k].script &&
-      elements[k].text &&
-      !elements[k].strong &&
-      typeof elements[k + 1] === "object" &&
-      elements[k + 1].strong &&
-      !elements[k + 1].text
-    ) {
-      // Merge strongs data into the script object
-      elements[k].strong = elements[k + 1].strong;
-      if (elements[k + 1].morph) elements[k].morph = elements[k + 1].morph;
-      elements.splice(k + 1, 1);
-      k--;
-    }
-  }
-
-  // Pass 6: Normalize spaces: collapse multiple consecutive spaces to single space
-  for (let k = 0; k < elements.length; k++) {
-    if (typeof elements[k] === "string") {
-      elements[k] = elements[k].replace(/  +/g, " ");
-    } else if (typeof elements[k] === "object" && elements[k].text) {
-      elements[k].text = elements[k].text.replace(/  +/g, " ");
-    }
-  }
-
-  // Pass 7: Remove whitespace-only elements between two objects that both have strong attributes
-  for (let k = elements.length - 1; k >= 1; k--) {
-    if (typeof elements[k] === "string" && /^\s+$/.test(elements[k])) {
-      const prev = elements[k - 1];
-      const next = k + 1 < elements.length ? elements[k + 1] : null;
-      const prevHasStrong = typeof prev === "object" && prev.strong;
-      const nextHasStrong = typeof next === "object" && next.strong;
-
-      // Remove space between two strongs
-      if (prevHasStrong && nextHasStrong) {
-        elements.splice(k, 1);
-      }
-    }
-  }
-
-  // Pass 8: NOTE: Removed - was too aggressive. The real issues need to be fixed at parsing level
-
-  // Pass 6: Trim leading spaces from plain text after footnotes
-  for (let k = 1; k < elements.length; k++) {
-    if (
-      typeof elements[k] === "string" &&
-      typeof elements[k - 1] === "object" &&
-      elements[k - 1].foot
-    ) {
-      elements[k] = elements[k].replace(/^\s{2,}/, " ");
-      if (elements[k].length === 0) {
-        elements.splice(k, 1);
-        k--;
-      }
-    }
-  }
-
-  // Recursively clean up footnote content
-  for (let k = 0; k < elements.length; k++) {
-    if (typeof elements[k] === "object" && elements[k].foot) {
-      elements[k].foot.content = cleanupElements(elements[k].foot.content, []);
-    }
-  }
-
-  // Handle paragraphs - split elements at paragraph positions and mark them
-  if (paragraphPositions.length > 0) {
-    // Build a list of (position, element_index) for where to split
-    const splitPoints: {
-      pos: number;
-      elemIndex: number;
-      offsetInElem: number;
-    }[] = [];
-
-    for (const pos of paragraphPositions) {
-      let currentPos = 0;
-      for (let k = 0; k < elements.length; k++) {
-        const el = elements[k];
-        const len = typeof el === "string" ? el.length : el.text.length;
-        if (currentPos <= pos && pos < currentPos + len) {
-          let offsetInElem = pos - currentPos;
-          // Adjust split position to include leading space in the next paragraph
-          if (offsetInElem > 0) {
-            const text = typeof el === "string" ? el : el.text;
-            if (text[offsetInElem] !== " " && text[offsetInElem - 1] === " ") {
-              offsetInElem -= 1;
-            }
-          }
-          splitPoints.push({ pos, elemIndex: k, offsetInElem });
-          break;
-        }
-        currentPos += len;
-      }
-    }
-
-    // Split elements at marked positions (iterate backwards to maintain indices)
-    for (let s = splitPoints.length - 1; s >= 0; s--) {
-      const { elemIndex, offsetInElem } = splitPoints[s];
-      const el = elements[elemIndex];
-
-      if (offsetInElem > 0 && typeof el === "string") {
-        // Split string element
-        const part1 = el.substring(0, offsetInElem);
-        const part2 = el.substring(offsetInElem);
-        elements[elemIndex] = part1;
-        if (part2.length > 0) {
-          elements.splice(elemIndex + 1, 0, part2);
-        }
-      } else if (offsetInElem > 0 && typeof el === "object" && el.text) {
-        // Split object element
-        const text = el.text;
-        const part1Text = text.substring(0, offsetInElem);
-        const part2Text = text.substring(offsetInElem);
-        el.text = part1Text;
-        const part2Obj: any = { text: part2Text };
-        if (el.script) part2Obj.script = el.script;
-        if (el.marks) part2Obj.marks = el.marks;
-        if (el.strong) part2Obj.strong = el.strong;
-        if (el.morph) part2Obj.morph = el.morph;
-        elements.splice(elemIndex + 1, 0, part2Obj);
-      }
-    }
-
-    // Now mark paragraph elements and trim spaces at split boundaries
-    const paragraphIndices = new Set<number>();
-    for (const pos of paragraphPositions) {
-      let currentPos = 0;
-      for (let k = 0; k < elements.length; k++) {
-        const el = elements[k];
-        const len = typeof el === "string" ? el.length : el.text.length;
-        if (currentPos <= pos && pos < currentPos + len) {
-          paragraphIndices.add(k);
-          break;
-        }
-        currentPos += len;
-      }
-    }
-
-    // Apply paragraph markers and trim spaces at boundaries
-    for (const k of paragraphIndices) {
-      if (typeof elements[k] === "object") {
-        elements[k].paragraph = true;
-        // Trim trailing space
-        if (elements[k].text && typeof elements[k].text === "string") {
-          elements[k].text = elements[k].text.replace(/\s+$/, "");
-        }
-        // Trim leading spaces
-        if (elements[k].text && typeof elements[k].text === "string") {
-          elements[k].text = elements[k].text.replace(/^\s+/, "");
-        }
-      } else if (typeof elements[k] === "string") {
-        elements[k] = { text: elements[k], paragraph: true };
-        // Trim trailing space
-        elements[k].text = elements[k].text.replace(/\s+$/, "");
-        // Trim leading spaces
-        elements[k].text = elements[k].text.replace(/^\s+/, "");
-      }
-    }
+  // Handle paragraphs
+  if (bb.paragraphs && bb.paragraphs.length > 0) {
+    elements = applyParagraphMarkers(elements, bb.paragraphs);
   }
 
   // Merge consecutive strings
-  for (let k = elements.length - 1; k > 0; k--) {
-    if (
-      typeof elements[k] === "string" &&
-      typeof elements[k - 1] === "string"
-    ) {
-      elements[k - 1] += elements[k];
-      elements.splice(k, 1);
-    }
-  }
+  elements = mergeConsecutiveStrings(elements);
 
   return elements;
 }
@@ -294,37 +30,67 @@ function parseBBText(
   let match;
 
   while ((match = tagRegex.exec(text)) !== null) {
-    // Plain text before
+    // Add plain text before tag
     if (match.index > lastIndex) {
-      const plain = text.substring(lastIndex, match.index);
-      addPlainText(plain, elements, footnotes);
+      const plainText = text.substring(lastIndex, match.index);
+      addPlainText(plainText, elements, footnotes);
     }
 
     const tagContent = match[1];
+
+    // Self-closing tag (ends with /)
     if (tagContent.endsWith("/")) {
-      // Self-closing tag
-      const tag = tagContent.slice(0, -1).trim();
-      const attrs = parseAttributes(tag);
-      if (tag.startsWith("strongs")) {
-        const obj: any = { strong: attrs.id.toUpperCase() };
-        if (attrs.m) obj.morph = attrs.m;
-        if (attrs.tvm)
-          obj.morph = attrs.tvm + (attrs.tvm2 ? "/" + attrs.tvm2 : "");
-        elements.push(obj);
+      const tagStr = tagContent.slice(0, -1).trim();
+      if (tagStr.startsWith("strongs ")) {
+        const attrs = parseAttributes(tagStr);
+        const strongObj: any = {};
+
+        // Normalize Strong's: uppercase, strip leading zeros
+        if (attrs.id) {
+          const prefix = attrs.id[0].toUpperCase();
+          const num = parseInt(attrs.id.slice(1), 10);
+          strongObj.strong = prefix + num;
+        }
+
+        // Morphology
+        if (attrs.m) {
+          strongObj.morph = attrs.m;
+        } else if (attrs.tvm) {
+          strongObj.morph = attrs.tvm + (attrs.tvm2 ? "/" + attrs.tvm2 : "");
+        }
+
+        // Merge with previous element if it's a text string
+        if (elements.length > 0) {
+          const prev = elements[elements.length - 1];
+          if (typeof prev === "string" && prev.trim().length > 0) {
+            // Trim trailing space from previous string
+            const trimmed = prev.trimEnd();
+            elements[elements.length - 1] = { text: trimmed, ...strongObj };
+          } else if (typeof prev === "object" && prev.text && !prev.strong) {
+            // Merge into existing text object
+            Object.assign(prev, strongObj);
+          } else {
+            elements.push(strongObj);
+          }
+        } else {
+          elements.push(strongObj);
+        }
       } else {
         // Unknown self-closing tag, treat as literal text
         elements.push(match[0]);
       }
     } else {
-      // Opening tag with closing tag
+      // Opening tag
       const tag = tagContent.trim();
       const closeTag = `[/${tag}]`;
       const closeIndex = text.indexOf(closeTag, match.index + match[0].length);
+
       if (closeIndex !== -1) {
         const innerText = text.substring(
           match.index + match[0].length,
           closeIndex
         );
+
         if (tag === "greek" || tag === "hebrew") {
           elements.push({
             text: innerText,
@@ -337,91 +103,330 @@ function parseBBText(
           tag === "red"
         ) {
           const mark = tag === "red" ? "woc" : tag;
-          elements.push({ text: innerText, marks: [mark] });
-        } else if (tag === "footnote") {
-          const footElements = parseBBText(innerText, []);
-          elements.push({ foot: { type: "stu", content: footElements } });
+
+          // Check for nested marks
+          if (elements.length > 0) {
+            const prev = elements[elements.length - 1];
+            if (
+              typeof prev === "object" &&
+              prev.text === innerText &&
+              prev.marks
+            ) {
+              // Nested marks
+              prev.marks.push(mark);
+            } else {
+              elements.push({ text: innerText, marks: [mark] });
+            }
+          } else {
+            elements.push({ text: innerText, marks: [mark] });
+          }
         } else {
-          // Unknown opening tag, treat as literal text
+          // Unknown tag, treat as literal text
           elements.push(match[0]);
         }
+
         tagRegex.lastIndex = closeIndex + closeTag.length;
       } else {
         // No closing tag, treat as literal text
         elements.push(match[0]);
       }
     }
+
     lastIndex = tagRegex.lastIndex;
   }
 
-  // Plain text after
+  // Add remaining plain text
   if (lastIndex < text.length) {
-    const plain = text.substring(lastIndex);
-    addPlainText(plain, elements, footnotes);
+    const plainText = text.substring(lastIndex);
+    addPlainText(plainText, elements, footnotes);
   }
 
   return elements;
 }
 
 function addPlainText(
-  plain: string,
+  text: string,
   elements: any[],
   footnotes: { type?: string; text: string }[]
-) {
-  const lines = plain.split("\n");
-  for (let l = 0; l < lines.length; l++) {
-    let line = lines[l];
-    // Trim leading space from lines that are not the first line
-    if (l > 0) {
-      line = line.replace(/^\s+/, "");
-    }
+): void {
+  // Handle line breaks
+  const lines = text.split("\n");
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Handle footnotes (° markers)
     const parts = line.split("°");
-    for (let p = 0; p < parts.length; p++) {
-      const part = parts[p];
-      // Push parts as-is (including spaces)
-      if (part.length > 0) {
-        elements.push(part);
+
+    for (let j = 0; j < parts.length; j++) {
+      if (parts[j]) {
+        elements.push(parts[j]);
       }
-      if (p < parts.length - 1 && footnotes.length > 0) {
-        const foot = footnotes.shift()!;
-        const footElements = parseBBText(foot.text, []);
-        const footObj: any = {
-          foot: { content: footElements },
-        };
-        if (foot.type) footObj.foot.type = foot.type;
-        // Attach to the last element
-        const lastIndex = elements.length - 1;
-        const last = elements[lastIndex];
-        if (typeof last === "string") {
-          elements[lastIndex] = { text: last, ...footObj };
-        } else {
-          Object.assign(last, footObj);
+
+      // Add footnote after this part
+      if (j < parts.length - 1 && footnotes.length > 0) {
+        const footnote = footnotes.shift()!;
+        const footContent = parseBBText(footnote.text, []);
+        const footObj: any = { foot: { content: footContent } };
+        if (footnote.type) {
+          footObj.foot.type = footnote.type;
+        }
+
+        // Attach footnote to last element
+        const lastIdx = elements.length - 1;
+        if (lastIdx >= 0) {
+          if (typeof elements[lastIdx] === "string") {
+            elements[lastIdx] = { text: elements[lastIdx], ...footObj };
+          } else {
+            Object.assign(elements[lastIdx], footObj);
+          }
         }
       }
     }
-    if (l < lines.length - 1) {
-      // Add break to the last element
-      if (elements.length > 0) {
-        const last = elements[elements.length - 1];
-        if (typeof last === "object") {
-          last.break = true;
-        } else if (typeof last === "string") {
-          // Convert to object and add break
-          elements[elements.length - 1] = { text: last, break: true };
+
+    // Add line break (except after last line)
+    if (i < lines.length - 1) {
+      const lastIdx = elements.length - 1;
+      if (lastIdx >= 0) {
+        if (typeof elements[lastIdx] === "string") {
+          elements[lastIdx] = { text: elements[lastIdx], break: true };
+        } else {
+          elements[lastIdx].break = true;
         }
       }
     }
   }
 }
 
-function parseAttributes(tag: string): any {
-  const attrs: any = {};
-  const parts = tag.split(" ");
-  for (const part of parts.slice(1)) {
-    if (part.includes("=")) {
-      const [key, value] = part.split("=");
-      attrs[key] = value.replace(/"/g, "");
+function mergeScriptAndStrongs(elements: any[]): any[] {
+  let result: any[] = [];
+
+  for (let i = 0; i < elements.length; i++) {
+    const elem = elements[i];
+
+    // Check if this is a script element followed by space and Strong's
+    if (typeof elem === "object" && elem.script && elem.text) {
+      const next = i + 1 < elements.length ? elements[i + 1] : null;
+      const nextNext = i + 2 < elements.length ? elements[i + 2] : null;
+
+      // Pattern: [greek]text[/greek] [strongs...]
+      // next is " ", nextNext is {strong:...}
+      if (
+        next &&
+        typeof next === "string" &&
+        next.trim() === "" &&
+        nextNext &&
+        typeof nextNext === "object" &&
+        nextNext.strong &&
+        !nextNext.text
+      ) {
+        // Merge script + strong + morph
+        result.push({
+          ...elem,
+          strong: nextNext.strong,
+          ...(nextNext.morph && { morph: nextNext.morph }),
+        });
+        i += 2; // Skip next two elements
+      } else {
+        result.push(elem);
+      }
+    } else {
+      result.push(elem);
     }
   }
+
+  // Remove whitespace-only strings between two Strong's-only objects
+  result = result.filter((elem, i) => {
+    if (typeof elem === "string" && elem.trim() === "") {
+      const prev = i > 0 ? result[i - 1] : null;
+      const next = i < result.length - 1 ? result[i + 1] : null;
+
+      // Drop space between two strong-only objects
+      if (
+        prev &&
+        typeof prev === "object" &&
+        prev.strong &&
+        next &&
+        typeof next === "object" &&
+        next.strong &&
+        !next.text
+      ) {
+        return false;
+      }
+    }
+    return true;
+  });
+
+  return result;
+}
+
+function applyParagraphMarkers(elements: any[], positions: number[]): any[] {
+  // Build cumulative text string to map positions
+  let currentPos = 0;
+  const elemMap: { elem: any; start: number; end: number }[] = [];
+
+  for (const elem of elements) {
+    const text = typeof elem === "string" ? elem : elem.text || "";
+    const start = currentPos;
+    const end = currentPos + text.length;
+    elemMap.push({ elem, start, end });
+    currentPos = end;
+  }
+
+  const result: any[] = [];
+
+  for (let i = 0; i < elemMap.length; i++) {
+    const { elem, start, end } = elemMap[i];
+    const text = typeof elem === "string" ? elem : elem.text || "";
+
+    // Check if this element starts at position 0 and position 0 is marked
+    if (start === 0 && positions.includes(0)) {
+      // Don't return yet - check if there are also inner positions
+      const innerPositions = positions.filter(
+        (pos) => pos > 0 && pos >= start && pos < end
+      );
+
+      if (innerPositions.length === 0) {
+        // Just mark as paragraph and continue
+        if (typeof elem === "string") {
+          result.push({ text: elem, paragraph: true });
+        } else {
+          result.push({ ...elem, paragraph: true });
+        }
+        continue;
+      }
+
+      // There are inner positions too, so split
+      let lastOffset = 0;
+      const firstPart: any = {};
+
+      for (let j = 0; j < innerPositions.length; j++) {
+        const pos = innerPositions[j];
+        const offset = pos - start;
+
+        // Text before the space
+        const beforeText = text.substring(lastOffset, offset);
+        if (beforeText.length > 0) {
+          if (j === 0) {
+            // First part gets paragraph marker
+            if (typeof elem === "string") {
+              result.push({ text: beforeText, paragraph: true });
+            } else {
+              result.push({ ...elem, text: beforeText, paragraph: true });
+            }
+          } else {
+            // Subsequent parts also get paragraph markers
+            if (typeof elem === "string") {
+              result.push({ text: beforeText, paragraph: true });
+            } else {
+              result.push({ ...elem, text: beforeText, paragraph: true });
+            }
+          }
+        }
+
+        // Skip the space at offset (it gets dropped)
+        lastOffset = offset + 1;
+      }
+
+      // Add remaining text with paragraph marker
+      const afterText = text.substring(lastOffset);
+      if (afterText.length > 0) {
+        if (typeof elem === "string") {
+          result.push({ text: afterText, paragraph: true });
+        } else {
+          result.push({ ...elem, text: afterText, paragraph: true });
+        }
+      }
+
+      continue;
+    }
+
+    // Find paragraph positions within this element's range (excluding position 0)
+    const innerPositions = positions.filter(
+      (pos) => pos > 0 && pos >= start && pos < end
+    );
+
+    if (innerPositions.length === 0) {
+      result.push(elem);
+    } else {
+      // Split this element at paragraph positions
+      let lastOffset = 0;
+
+      for (let j = 0; j < innerPositions.length; j++) {
+        const pos = innerPositions[j];
+        const offset = pos - start;
+
+        // Text before the space
+        const beforeText = text.substring(lastOffset, offset);
+
+        if (beforeText.length > 0) {
+          if (j === 0) {
+            // First piece - no paragraph marker
+            if (typeof elem === "string") {
+              result.push(beforeText);
+            } else {
+              result.push({ ...elem, text: beforeText });
+            }
+          } else {
+            // Subsequent pieces - they start a new paragraph
+            if (typeof elem === "string") {
+              const obj = { text: beforeText, paragraph: true };
+              result.push(obj);
+            } else {
+              result.push({ ...elem, text: beforeText, paragraph: true });
+            }
+          }
+        }
+
+        // Skip the space at offset (it gets dropped)
+        lastOffset = offset + 1;
+      }
+
+      // Add remaining text with paragraph marker
+      const afterText = text.substring(lastOffset);
+      if (afterText.length > 0) {
+        if (typeof elem === "string") {
+          result.push({ text: afterText, paragraph: true });
+        } else {
+          result.push({ ...elem, text: afterText, paragraph: true });
+        }
+      }
+    }
+  }
+
+  return result;
+}
+
+function mergeConsecutiveStrings(elements: any[]): any[] {
+  const result: any[] = [];
+
+  for (const elem of elements) {
+    if (
+      typeof elem === "string" &&
+      result.length > 0 &&
+      typeof result[result.length - 1] === "string"
+    ) {
+      result[result.length - 1] += elem;
+    } else {
+      result.push(elem);
+    }
+  }
+
+  return result;
+}
+
+function parseAttributes(tagStr: string): Record<string, string> {
+  const attrs: Record<string, string> = {};
+  const parts = tagStr.split(/\s+/);
+
+  for (const part of parts.slice(1)) {
+    const eqIndex = part.indexOf("=");
+    if (eqIndex !== -1) {
+      const key = part.substring(0, eqIndex);
+      const value = part.substring(eqIndex + 1).replace(/^["']|["']$/g, "");
+      attrs[key] = value;
+    }
+  }
+
   return attrs;
 }

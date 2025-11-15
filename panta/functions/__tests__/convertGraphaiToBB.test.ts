@@ -459,5 +459,99 @@ describe("convertGraphaiToBB", () => {
       };
       expect(convertGraphaiToBB(input)).toEqual(expected);
     });
+
+    it("should strip leading zeros from Strong's numbers", () => {
+      const input = [{ text: "word", strong: "G0746" }];
+      const expected = {
+        text: 'word [strongs id="g746" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should handle single-digit Strong's numbers", () => {
+      const input = [{ text: "word", strong: "G1" }];
+      const expected = {
+        text: 'word [strongs id="g1" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should preserve punctuation inside script tags", () => {
+      const input = [{ text: "λόγος,", script: "G" }];
+      const expected = {
+        text: "[greek]λόγος,[/greek]",
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should handle consecutive Strong's tags (no text on second)", () => {
+      const input = [
+        { text: "the Benjamite", strong: "H1121" },
+        { strong: "H1145" },
+      ];
+      const expected = {
+        text: 'the Benjamite [strongs id="h1121" /] [strongs id="h1145" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should handle Strong's at start (no text)", () => {
+      const input = [{ strong: "G1722" }, " the beginning"];
+      const expected = {
+        text: '[strongs id="g1722" /] the beginning',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should preserve supplied words as literal text", () => {
+      const input = ["He [was] in the world"];
+      const expected = {
+        text: "He [was] in the world",
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should preserve curly quotes", () => {
+      const input = ["\u201cWhat have you done?\u201d"];
+      const expected = {
+        text: "\u201cWhat have you done?\u201d",
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should recursively convert footnote content", () => {
+      const input = [
+        {
+          text: "word",
+          foot: {
+            content: [
+              "The Greek word ",
+              { text: "κατέλαβεν", script: "G" },
+              " means...",
+            ],
+          },
+        },
+      ];
+      const expected = {
+        text: "word°",
+        footnotes: [
+          { text: "The Greek word [greek]κατέλαβεν[/greek] means..." },
+        ],
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should handle multiple footnotes with types", () => {
+      const input = [
+        { text: "word1", foot: { content: ["note1"] } },
+        { text: " word2", foot: { type: "var", content: ["note2"] } },
+        " word3",
+      ];
+      const expected = {
+        text: "word1° word2° word3",
+        footnotes: [{ text: "note1" }, { type: "var", text: "note2" }],
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
   });
 });
