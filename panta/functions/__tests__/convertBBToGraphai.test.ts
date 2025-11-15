@@ -141,20 +141,21 @@ describe("convertBBToGraphai", () => {
 
   it("should handle paragraphs and footnotes", () => {
     const input = {
-      text: "In the beginning, God°  created the heavens and the earth.",
-      paragraphs: [0],
+      text: "In the beginning, God° created the heavens and the earth.",
       footnotes: [
         {
-          text: "The Hebrew word rendered “God” is “ [hebrew]אֱלֹהִ֑ים[/hebrew] ” (Elohim).",
+          type: "trn",
+          text: "The Hebrew word rendered “God” is “[hebrew]אֱלֹהִ֑ים[/hebrew]” (Elohim).",
         },
       ],
+      paragraphs: [0],
     };
 
     const expected = [
       {
         text: "In the beginning, God",
         foot: {
-          type: "stu",
+          type: "trn",
           content: [
             "The Hebrew word rendered “God” is “",
             {
@@ -166,7 +167,7 @@ describe("convertBBToGraphai", () => {
         },
         paragraph: true,
       },
-      "created the heavens and the earth.",
+      " created the heavens and the earth.",
     ];
 
     expect(convertBBToGraphai(input)).toEqual(expected);
@@ -307,6 +308,96 @@ describe("convertBBToGraphai", () => {
         text: "and you shall eat dust all the days of your life.",
         break: true,
       },
+    ];
+
+    expect(convertBBToGraphai(input)).toEqual(expected);
+  });
+
+  it("should handle plain text only (WEBP)", () => {
+    const input = { text: "In the beginning was the Word." };
+
+    const expected = ["In the beginning was the Word."];
+
+    expect(convertBBToGraphai(input)).toEqual(expected);
+  });
+
+  it("should handle paragraphs array (WEBP)", () => {
+    const input = { text: "In the beginning was the Word.", paragraphs: [0] };
+
+    const expected = [
+      { text: "In the beginning was the Word.", paragraph: true },
+    ];
+
+    expect(convertBBToGraphai(input)).toEqual(expected);
+  });
+
+  it("should handle footnote markers with types (WEBP)", () => {
+    const input = {
+      text: "The light shines° in the darkness.",
+      footnotes: [
+        {
+          type: "trn",
+          text: "Translation note here.",
+        },
+      ],
+    };
+
+    const expected = [
+      {
+        text: "The light shines",
+        foot: {
+          type: "trn",
+          content: ["Translation note here."],
+        },
+      },
+      " in the darkness.",
+    ];
+
+    expect(convertBBToGraphai(input)).toEqual(expected);
+  });
+
+  it("should handle footnote types var and xrf (WEBP)", () => {
+    const input = {
+      text: "No one has seen God° at any time. The only born° Son,° who is in the bosom of the Father, has declared him.",
+      footnotes: [
+        {
+          type: "var",
+          text: "NU reads “God”",
+        },
+        {
+          type: "trn",
+          text: "Translation note.",
+        },
+        {
+          type: "xrf",
+          text: "Isaiah 40:3",
+        },
+      ],
+    };
+
+    const expected = [
+      {
+        text: "No one has seen God",
+        foot: {
+          type: "var",
+          content: ["NU reads “God”"],
+        },
+      },
+      {
+        text: " at any time. The only born",
+        foot: {
+          type: "trn",
+          content: ["Translation note."],
+        },
+      },
+      {
+        text: " Son,",
+        foot: {
+          type: "xrf",
+          content: ["Isaiah 40:3"],
+        },
+      },
+      " who is in the bosom of the Father, has declared him.",
     ];
 
     expect(convertBBToGraphai(input)).toEqual(expected);

@@ -1,9 +1,9 @@
 export function convertBBToGraphai(bb: {
   text: string;
   paragraphs?: number[];
-  footnotes?: { text: string }[];
+  footnotes?: { type?: string; text: string }[];
 }): any[] {
-  const footnotes = bb.footnotes || [];
+  const footnotes = bb.footnotes ? [...bb.footnotes] : [];
   const elements = parseBBText(bb.text, footnotes);
   return cleanupElements(elements, bb.paragraphs);
 }
@@ -141,7 +141,7 @@ function cleanupElements(
       typeof elements[k - 1] === "object" &&
       elements[k - 1].foot
     ) {
-      elements[k] = elements[k].replace(/^\s+/, "");
+      elements[k] = elements[k].replace(/^\s{2,}/, " ");
       if (elements[k].length === 0) {
         elements.splice(k, 1);
         k--;
@@ -254,7 +254,10 @@ function cleanupElements(
   return elements;
 }
 
-function parseBBText(text: string, footnotes: { text: string }[]): any[] {
+function parseBBText(
+  text: string,
+  footnotes: { type?: string; text: string }[]
+): any[] {
   const elements: any[] = [];
   const tagRegex = /\[([^\]]+)\]/g;
   let lastIndex = 0;
@@ -323,7 +326,7 @@ function parseBBText(text: string, footnotes: { text: string }[]): any[] {
 function addPlainText(
   plain: string,
   elements: any[],
-  footnotes: { text: string }[]
+  footnotes: { type?: string; text: string }[]
 ) {
   const lines = plain.split("\n");
   for (let l = 0; l < lines.length; l++) {
@@ -342,7 +345,10 @@ function addPlainText(
       if (p < parts.length - 1 && footnotes.length > 0) {
         const foot = footnotes.shift()!;
         const footElements = parseBBText(foot.text, []);
-        const footObj = { foot: { type: "stu", content: footElements } };
+        const footObj: any = {
+          foot: { content: footElements },
+        };
+        if (foot.type) footObj.foot.type = foot.type;
         // Attach to the last element
         const lastIndex = elements.length - 1;
         const last = elements[lastIndex];

@@ -164,6 +164,7 @@ describe("convertGraphaiToBB", () => {
       paragraphs: [0],
       footnotes: [
         {
+          type: "trn",
           text: "The Hebrew word rendered “God” is “[hebrew]אֱלֹהִ֑ים[/hebrew]” (Elohim).",
         },
       ],
@@ -307,6 +308,31 @@ describe("convertGraphaiToBB", () => {
     const expected = {
       text: "Yahweh God said to the serpent,\n“Because you have done this,\nyou are cursed above all livestock,\nand above every animal of the field.\nYou shall go on your belly\nand you shall eat dust all the days of your life.\n",
       paragraphs: [0],
+    };
+
+    expect(convertGraphaiToBB(input)).toEqual(expected);
+  });
+
+  it("should handle footnotes with types (WEBP)", () => {
+    const input = [
+      {
+        text: "The light shines",
+        foot: {
+          type: "trn",
+          content: ["Translation note here."],
+        },
+      },
+      "in the darkness.",
+    ];
+
+    const expected = {
+      text: "The light shines°in the darkness.",
+      footnotes: [
+        {
+          type: "trn",
+          text: "Translation note here.",
+        },
+      ],
     };
 
     expect(convertGraphaiToBB(input)).toEqual(expected);

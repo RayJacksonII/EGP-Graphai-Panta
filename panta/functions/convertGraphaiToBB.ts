@@ -1,7 +1,7 @@
 interface BBResult {
   text: string;
   paragraphs?: number[];
-  footnotes?: { text: string }[];
+  footnotes?: { type?: string; text: string }[];
 }
 
 export function convertGraphaiToBB(content: any): BBResult {
@@ -66,7 +66,9 @@ export function convertGraphaiToBB(content: any): BBResult {
       if (content.foot) {
         resultText += "°";
         const footResult = convertGraphaiToBB(content.foot.content);
-        footnotes.push({ text: footResult.text });
+        const footObj: any = { text: footResult.text };
+        if (content.foot.type) footObj.type = content.foot.type;
+        footnotes.push(footObj);
       }
       if (content.paragraph) {
         paragraphs.push(0);
