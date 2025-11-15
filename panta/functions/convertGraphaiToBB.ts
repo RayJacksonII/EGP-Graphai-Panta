@@ -45,11 +45,10 @@ export function convertGraphaiToBB(content: any): BBResult {
         inner = `[${tag}]${content.text}[/${tag}]`;
       }
       if (content.marks) {
-        if (content.marks.includes("i")) inner = `[i]${inner}[/i]`;
-        if (content.marks.includes("b")) inner = `[b]${inner}[/b]`;
-        if (content.marks.includes("sc")) inner = `[sc]${inner}[/sc]`;
-        if (content.marks.includes("woc")) inner = `[red]${inner}[/red]`;
-        // Add more if needed
+        for (const mark of content.marks.slice().reverse()) {
+          const tag = mark === "woc" ? "red" : mark;
+          inner = `[${tag}]${inner}[/${tag}]`;
+        }
       }
       let resultText = inner;
       let paragraphs: number[] = [];
@@ -95,7 +94,8 @@ export function convertGraphaiToBB(content: any): BBResult {
       return result;
     }
     if (content.heading) {
-      return convertGraphaiToBB(content.heading);
+      // Drop headings as they are not supported in BB format
+      return { text: "" };
     }
     if (content.paragraph) {
       return convertGraphaiToBB(content.paragraph);

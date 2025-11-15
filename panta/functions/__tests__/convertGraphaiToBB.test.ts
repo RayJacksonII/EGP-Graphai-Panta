@@ -256,6 +256,21 @@ describe("convertGraphaiToBB", () => {
     expect(convertGraphaiToBB(input)).toEqual(expected);
   });
 
+  it("should handle nested marks", () => {
+    const input = [
+      {
+        text: "important bold text",
+        marks: ["i", "b"],
+      },
+    ];
+
+    const expected = {
+      text: "[i][b]important bold text[/b][/i]",
+    };
+
+    expect(convertGraphaiToBB(input)).toEqual(expected);
+  });
+
   it("should handle paragraphs", () => {
     const input = [
       {
@@ -380,6 +395,30 @@ describe("convertGraphaiToBB", () => {
       expect(convertGraphaiToBB(input)).toEqual(expected);
     });
 
+    it("should convert Strong's case without removing leading zeros", () => {
+      const input = [
+        { text: "beginning", strong: "G0746" },
+        " ",
+        { text: "word", strong: "G0001" },
+      ];
+      const expected = {
+        text: 'beginning [strongs id="g746" /] word [strongs id="g1" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should select morphology attributes based on format", () => {
+      const input = [
+        { text: "greek", script: "G", strong: "G3056", morph: "N-NSM" }, // hyphenated → m
+        { text: "hebrew", script: "H", strong: "H01234", morph: "8675" }, // numeric → tvm
+        { text: "tvm", strong: "G373", morph: "PresMidInd" }, // mixed case → tvm
+      ];
+      const expected = {
+        text: '[greek]greek[/greek] [strongs id="g3056" m="N-NSM" /][hebrew]hebrew[/hebrew] [strongs id="h1234" tvm="8675" /]tvm [strongs id="g373" tvm="PresMidInd" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
     it("should convert Greek text with Strong's to BB format", () => {
       const input = [
         { text: "λόγος", script: "G", strong: "G3056", morph: "N-NSM" },
@@ -406,6 +445,17 @@ describe("convertGraphaiToBB", () => {
       const input = [{ text: "First line", break: true }, "Second line"];
       const expected = {
         text: "First line\nSecond line",
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should drop unsupported features like headings", () => {
+      const input = [
+        { heading: [{ text: "Chapter 1" }] },
+        { text: "Some content" },
+      ];
+      const expected = {
+        text: "Some content",
       };
       expect(convertGraphaiToBB(input)).toEqual(expected);
     });
