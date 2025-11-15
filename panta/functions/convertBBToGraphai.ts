@@ -108,6 +108,25 @@ function cleanupElements(
     }
   }
 
+  // Pass 4b: Merge strongs into preceding script objects (for BYZ format)
+  for (let k = 0; k < elements.length - 1; k++) {
+    if (
+      typeof elements[k] === "object" &&
+      elements[k].script &&
+      elements[k].text &&
+      !elements[k].strong &&
+      typeof elements[k + 1] === "object" &&
+      elements[k + 1].strong &&
+      !elements[k + 1].text
+    ) {
+      // Merge strongs data into the script object
+      elements[k].strong = elements[k + 1].strong;
+      if (elements[k + 1].morph) elements[k].morph = elements[k + 1].morph;
+      elements.splice(k + 1, 1);
+      k--;
+    }
+  }
+
   // Pass 6: Normalize spaces: collapse multiple consecutive spaces to single space
   for (let k = 0; k < elements.length; k++) {
     if (typeof elements[k] === "string") {

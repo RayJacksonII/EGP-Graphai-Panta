@@ -87,4 +87,54 @@ describe("convertBBToGraphai", () => {
       ]);
     });
   });
+
+  describe("BYZ Greek text tags", () => {
+    it("should parse Greek text tags", () => {
+      const bb = {
+        text: "[greek]Οὗτος[/greek]",
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([{ text: "Οὗτος", script: "G" }]);
+    });
+
+    it("should preserve punctuation inside Greek tags", () => {
+      const bb = {
+        text: "[greek]λόγος,[/greek]",
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([{ text: "λόγος,", script: "G" }]);
+    });
+
+    it("should parse morphology codes from m attribute", () => {
+      const bb = {
+        text: 'word [strongs id="g3056" m="N-NSM" /]',
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        { text: "word", strong: "G3056", morph: "N-NSM" },
+      ]);
+    });
+
+    it("should handle Greek text and Strong's as separate elements", () => {
+      const bb = {
+        text: '[greek]λόγος[/greek] [strongs id="g3056" m="N-NSM" /]',
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        { text: "λόγος", script: "G", strong: "G3056", morph: "N-NSM" },
+      ]);
+    });
+
+    it("should handle consecutive Strong's tags", () => {
+      const bb = {
+        text: 'text [strongs id="h1121" /] [strongs id="h1145" /] more',
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        { text: "text", strong: "H1121" },
+        { strong: "H1145" },
+        " more",
+      ]);
+    });
+  });
 });

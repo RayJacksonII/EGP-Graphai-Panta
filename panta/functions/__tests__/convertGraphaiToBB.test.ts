@@ -379,5 +379,15 @@ describe("convertGraphaiToBB", () => {
       };
       expect(convertGraphaiToBB(input)).toEqual(expected);
     });
+
+    it("should convert Greek text with Strong's to BB format", () => {
+      const input = [
+        { text: "λόγος", script: "G", strong: "G3056", morph: "N-NSM" },
+      ];
+      const expected = {
+        text: '[greek]λόγος[/greek] [strongs id="g3056" m="N-NSM" /]',
+      };
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
   });
 });
