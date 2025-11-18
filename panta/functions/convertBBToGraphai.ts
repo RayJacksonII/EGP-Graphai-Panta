@@ -5,10 +5,8 @@ export function convertBBToGraphai(bb: {
 }): any[] {
   const footnotes = bb.footnotes ? [...bb.footnotes] : [];
 
-  // Preprocess: move spaces before script tags to inside the tags
-  let processedText = bb.text.replace(/ \[(greek|hebrew)\]/g, "[$1] ");
-
-  let elements = parseBBText(processedText, footnotes);
+  let processedText = preprocessBBText(bb.text);
+  let elements = parseBBText(processedText, footnotes, true);
 
   // Merge script tags with following Strong's tags
   elements = mergeScriptAndStrongs(elements);
@@ -24,11 +22,53 @@ export function convertBBToGraphai(bb: {
   return elements;
 }
 
+function preprocessBBText(text: string): string {
+  // Bugfixes for Greek punctuation
+  let processed = text.replace(/(.)\[\/greek\]̈\[greek\]/g, "̈$1");
+  processed = processed.replace(/(.)\[\/greek\]̈/g, "̈$1[/greek]");
+  processed = processed.replace(/\[\/greek\]’ \[greek\]/g, "’ ");
+
+  // Handle escaped brackets FIRST: [[tag]...[/tag]]
+  // Replace [[greek] with ◄LBRACKET◄[greek]
+  // Replace [/greek]] with [/greek]◄RBRACKET◄
+  processed = processed.replace(/\[\[(greek|hebrew)\]/g, "◄LBRACKET◄[$1]");
+  processed = processed.replace(/\[\/(greek|hebrew)\]\]/g, "[/$1]◄RBRACKET◄");
+
+  // Move spaces into script tags ONLY when the space follows a strongs tag
+  // Pattern: [strongs...] [greek] becomes [strongs...][greek]
+  processed = processed.replace(
+    /(\[strongs[^\]]*\]) \[(greek|hebrew)\]/g,
+    "$1[$2] "
+  );
+
+  return processed;
+}
+
+function restoreLiteralBrackets(elements: any[]): any[] {
+  return elements.map((elem) => {
+    if (typeof elem === "string") {
+      return elem.replace(/◄LBRACKET◄/g, "[").replace(/◄RBRACKET◄/g, "]");
+    } else if (typeof elem === "object") {
+      // Recursively restore in nested structures (like footnote content, text property)
+      if (elem.text && typeof elem.text === "string") {
+        elem.text = elem.text
+          .replace(/◄LBRACKET◄/g, "[")
+          .replace(/◄RBRACKET◄/g, "]");
+      }
+      if (elem.foot && Array.isArray(elem.foot.content)) {
+        elem.foot.content = restoreLiteralBrackets(elem.foot.content);
+      }
+    }
+    return elem;
+  });
+}
+
 function parseBBText(
   text: string,
-  footnotes: { type?: string; text: string }[]
+  footnotes: { type?: string; text: string }[],
+  restoreBrackets = false
 ): any[] {
-  const elements: any[] = [];
+  let elements: any[] = [];
   const tagRegex = /\[([^\]]+)\]/g;
   let lastIndex = 0;
   let match;
@@ -145,6 +185,11 @@ function parseBBText(
     addPlainText(plainText, elements, footnotes);
   }
 
+  // Restore literal brackets if requested
+  if (restoreBrackets) {
+    elements = restoreLiteralBrackets(elements);
+  }
+
   return elements;
 }
 
@@ -170,7 +215,8 @@ function addPlainText(
       // Add footnote after this part
       if (j < parts.length - 1 && footnotes.length > 0) {
         const footnote = footnotes.shift()!;
-        const footContent = parseBBText(footnote.text, []);
+        const preprocessedFootnote = preprocessBBText(footnote.text);
+        const footContent = parseBBText(preprocessedFootnote, [], true);
         const footObj: any = {
           foot: {
             ...(footnote.type && { type: footnote.type }),

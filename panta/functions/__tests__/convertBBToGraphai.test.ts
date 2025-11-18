@@ -132,8 +132,38 @@ describe("convertBBToGraphai", () => {
       const graphai = convertBBToGraphai(bb);
       expect(graphai).toEqual([
         { text: "text", strong: "H1121" },
-        { strong: "H1145" },
+        { text: "", strong: "H1145" },
         " more",
+      ]);
+    });
+  });
+
+  describe("Footnotes", () => {
+    it("should parse footnote content with Greek tags inside brackets", () => {
+      const bb = {
+        text: "text°",
+        footnotes: [
+          {
+            type: "var",
+            text: "N [greek]καὶ[/greek] ⇒ [[greek]καὶ[/greek]]",
+          },
+        ],
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        {
+          text: "text",
+          foot: {
+            type: "var",
+            content: [
+              "N ",
+              { text: "καὶ", script: "G" },
+              " ⇒ [",
+              { text: "καὶ", script: "G" },
+              "]",
+            ],
+          },
+        },
       ]);
     });
   });
