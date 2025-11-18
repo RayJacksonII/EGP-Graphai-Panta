@@ -12,9 +12,25 @@ const bookRegistry: Array<{ _id: string; name: string }> = JSON.parse(
   readFileSync("./bible-books/bible-books.json", "utf-8")
 );
 
+// Load version registry for book order lookup
+const versionRegistry: Array<{
+  _id: string;
+  books: Array<{ _id: string; order: number }>;
+}> = JSON.parse(readFileSync("./bible-versions/bible-versions.json", "utf-8"));
+
 function getBookName(bookId: string): string {
   const book = bookRegistry.find((b) => b._id === bookId);
   return book ? book.name : bookId;
+}
+
+function getBookOrderInVersion(
+  versionId: string,
+  bookId: string
+): number | null {
+  const version = versionRegistry.find((v) => v._id === versionId);
+  if (!version) return null;
+  const book = version.books.find((b) => b._id === bookId);
+  return book ? book.order : null;
 }
 
 function main() {
@@ -138,11 +154,14 @@ function migrateSingleBook(
         footnotes: verse.footnotes,
       });
 
+      // If content has only one element, unwrap it from the array
+      const contentValue = content.length === 1 ? content[0] : content;
+
       graphaiVerses.push({
         book: metadata.book,
         chapter: metadata.chapter,
         verse: metadata.verse,
-        content,
+        content: contentValue,
       });
     }
   }
@@ -160,10 +179,16 @@ function migrateSingleBook(
   }
 
   // Write book file
-  const orderPadded = bookInfo.order.toString().padStart(2, "0");
+  const bookOrder = getBookOrderInVersion(graphaiVersionId, bookInfo._id);
+  if (bookOrder === null) {
+    throw new Error(
+      `Book ${bookInfo._id} not found in version ${graphaiVersionId}`
+    );
+  }
+  const orderPadded = bookOrder.toString().padStart(2, "0");
   const outputPath = `${outputDir}/${orderPadded}-${bookInfo._id}.json`;
 
-  writeFileSync(outputPath, JSON.stringify(graphaiVerses, null, 2));
+  writeFileSync(outputPath, JSON.stringify(graphaiVerses, null, 2) + "\n");
   console.log(`Processing ${getBookName(bookInfo._id)}... Done`);
 }
 
@@ -231,11 +256,14 @@ function migrateFullVersion(bbVerses: Array<any>, graphaiVersionId: string) {
           footnotes: verse.footnotes,
         });
 
+        // If content has only one element, unwrap it from the array
+        const contentValue = content.length === 1 ? content[0] : content;
+
         graphaiVerses.push({
           book: metadata.book,
           chapter: metadata.chapter,
           verse: metadata.verse,
-          content,
+          content: contentValue,
         });
       }
     }
@@ -247,10 +275,16 @@ function migrateFullVersion(bbVerses: Array<any>, graphaiVersionId: string) {
     });
 
     // Write book file
-    const orderPadded = bookInfo.order.toString().padStart(2, "0");
+    const bookOrder = getBookOrderInVersion(graphaiVersionId, bookInfo._id);
+    if (bookOrder === null) {
+      throw new Error(
+        `Book ${bookInfo._id} not found in version ${graphaiVersionId}`
+      );
+    }
+    const orderPadded = bookOrder.toString().padStart(2, "0");
     const outputPath = `${outputDir}/${orderPadded}-${bookInfo._id}.json`;
 
-    writeFileSync(outputPath, JSON.stringify(graphaiVerses, null, 2));
+    writeFileSync(outputPath, JSON.stringify(graphaiVerses, null, 2) + "\n");
     console.log(`Processing ${getBookName(bookInfo._id)}... Done`);
 
     totalBooks++;

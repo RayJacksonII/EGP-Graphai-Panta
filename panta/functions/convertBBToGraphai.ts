@@ -4,7 +4,11 @@ export function convertBBToGraphai(bb: {
   footnotes?: { type?: string; text: string }[];
 }): any[] {
   const footnotes = bb.footnotes ? [...bb.footnotes] : [];
-  let elements = parseBBText(bb.text, footnotes);
+
+  // Preprocess: move spaces before script tags to inside the tags
+  let processedText = bb.text.replace(/ \[(greek|hebrew)\]/g, "[$1] ");
+
+  let elements = parseBBText(processedText, footnotes);
 
   // Merge script tags with following Strong's tags
   elements = mergeScriptAndStrongs(elements);
@@ -167,10 +171,12 @@ function addPlainText(
       if (j < parts.length - 1 && footnotes.length > 0) {
         const footnote = footnotes.shift()!;
         const footContent = parseBBText(footnote.text, []);
-        const footObj: any = { foot: { content: footContent } };
-        if (footnote.type) {
-          footObj.foot.type = footnote.type;
-        }
+        const footObj: any = {
+          foot: {
+            ...(footnote.type && { type: footnote.type }),
+            content: footContent,
+          },
+        };
 
         // Attach footnote to last element
         const lastIdx = elements.length - 1;
@@ -236,6 +242,7 @@ function mergeScriptAndStrongs(elements: any[]): any[] {
   }
 
   // Remove whitespace-only strings between two Strong's-only objects
+  // AND ensure all objects have text property
   result = result.filter((elem, i) => {
     if (typeof elem === "string" && elem.trim() === "") {
       const prev = i > 0 ? result[i - 1] : null;
@@ -255,6 +262,20 @@ function mergeScriptAndStrongs(elements: any[]): any[] {
       }
     }
     return true;
+  });
+
+  // Add empty text property to objects that don't have one
+  result = result.map((elem) => {
+    if (
+      typeof elem === "object" &&
+      !elem.text &&
+      !elem.heading &&
+      !elem.paragraph &&
+      !elem.subtitle
+    ) {
+      return { text: "", ...elem };
+    }
+    return elem;
   });
 
   return result;
