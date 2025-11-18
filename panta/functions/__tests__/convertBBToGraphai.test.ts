@@ -139,6 +139,28 @@ describe("convertBBToGraphai", () => {
   });
 
   describe("Footnotes", () => {
+    it("should parse simple footnote content as string", () => {
+      const bb = {
+        text: "text°",
+        footnotes: [
+          {
+            type: "var",
+            text: "N 14.24--26 ⇒ ~",
+          },
+        ],
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        {
+          text: "text",
+          foot: {
+            type: "var",
+            content: "N 14.24--26 ⇒ ~",
+          },
+        },
+      ]);
+    });
+
     it("should parse footnote content with Greek tags inside brackets", () => {
       const bb = {
         text: "text°",

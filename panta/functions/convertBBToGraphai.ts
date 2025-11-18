@@ -27,12 +27,19 @@ function preprocessBBText(text: string): string {
   let processed = text.replace(/(.)\[\/greek\]̈\[greek\]/g, "̈$1");
   processed = processed.replace(/(.)\[\/greek\]̈/g, "̈$1[/greek]");
   processed = processed.replace(/\[\/greek\]’ \[greek\]/g, "’ ");
+  processed = processed.replace(/\[\/greek\]’/g, "’[/greek]");
+  processed = processed.replace(/\[\/greek\] \[greek\]/g, " ");
 
-  // Handle escaped brackets FIRST: [[tag]...[/tag]]
-  // Replace [[greek] with ◄LBRACKET◄[greek]
-  // Replace [/greek]] with [/greek]◄RBRACKET◄
+  // Handle escaped brackets for script tags: [[greek]...[/greek]]
+  // Replace [[greek] with ◄LBRACKET◄[greek] (literal [ before the tag)
+  // Replace [/greek]] with [/greek]◄RBRACKET◄ (literal ] after the tag)
   processed = processed.replace(/\[\[(greek|hebrew)\]/g, "◄LBRACKET◄[$1]");
   processed = processed.replace(/\[\/(greek|hebrew)\]\]/g, "[/$1]◄RBRACKET◄");
+
+  // Handle OTHER double brackets (not for script tags) as literal brackets
+  // These are just plain [[...]] that should remain as literal text
+  processed = processed.replace(/\[\[/g, "◄LBRACKET◄◄LBRACKET◄");
+  processed = processed.replace(/\]\]/g, "◄RBRACKET◄◄RBRACKET◄");
 
   // Move spaces into script tags ONLY when the space follows a strongs tag
   // Pattern: [strongs...] [greek] becomes [strongs...][greek]
@@ -217,10 +224,17 @@ function addPlainText(
         const footnote = footnotes.shift()!;
         const preprocessedFootnote = preprocessBBText(footnote.text);
         const footContent = parseBBText(preprocessedFootnote, [], true);
+
+        // If footnote content is just a single string, use it directly
+        const content =
+          footContent.length === 1 && typeof footContent[0] === "string"
+            ? footContent[0]
+            : mergeConsecutiveStrings(footContent);
+
         const footObj: any = {
           foot: {
             ...(footnote.type && { type: footnote.type }),
-            content: footContent,
+            content,
           },
         };
 
