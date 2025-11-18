@@ -23,23 +23,18 @@ export function convertBBToGraphai(bb: {
 }
 
 function preprocessBBText(text: string): string {
+  let processed = text;
+
+  // Remove alternate verse numbering
+  processed = processed.replace(/\[verse\](.*?)\[\/verse\] /g, "");
+
   // Bugfixes for Greek punctuation
-  let processed = text.replace(/(.)\[\/greek\]̈\[greek\]/g, "̈$1");
-  processed = processed.replace(/(.)\[\/greek\]̈/g, "̈$1[/greek]");
-  processed = processed.replace(/\[\/greek\]’ \[greek\]/g, "’ ");
-  processed = processed.replace(/\[\/greek\]’/g, "’[/greek]");
-  processed = processed.replace(/\[\/greek\] \[greek\]/g, " ");
-
-  // Handle escaped brackets for script tags: [[greek]...[/greek]]
-  // Replace [[greek] with ◄LBRACKET◄[greek] (literal [ before the tag)
-  // Replace [/greek]] with [/greek]◄RBRACKET◄ (literal ] after the tag)
-  processed = processed.replace(/\[\[(greek|hebrew)\]/g, "◄LBRACKET◄[$1]");
-  processed = processed.replace(/\[\/(greek|hebrew)\]\]/g, "[/$1]◄RBRACKET◄");
-
-  // Handle OTHER double brackets (not for script tags) as literal brackets
-  // These are just plain [[...]] that should remain as literal text
-  processed = processed.replace(/\[\[/g, "◄LBRACKET◄◄LBRACKET◄");
-  processed = processed.replace(/\]\]/g, "◄RBRACKET◄◄RBRACKET◄");
+  processed = processed
+    .replace(/(.)\[\/greek\]̈\[greek\]/g, "̈$1")
+    .replace(/(.)\[\/greek\]̈/g, "̈$1[/greek]")
+    .replace(/\[\/greek\]’ \[greek\]/g, "’ ")
+    .replace(/\[\/greek\]’/g, "’[/greek]")
+    .replace(/\[\/greek\] \[greek\]/g, " ");
 
   // Move spaces into script tags ONLY when the space follows a strongs tag
   // Pattern: [strongs...] [greek] becomes [strongs...][greek]
@@ -47,6 +42,19 @@ function preprocessBBText(text: string): string {
     /(\[strongs[^\]]*\]) \[(greek|hebrew)\]/g,
     "$1[$2] "
   );
+
+  // Handle escaped brackets for script tags: [[greek]...[/greek]]
+  // Replace [[greek] with ◄LBRACKET◄[greek] (literal [ before the tag)
+  // Replace [/greek]] with [/greek]◄RBRACKET◄ (literal ] after the tag)
+  processed = processed
+    .replace(/\[\[(greek|hebrew)\]/g, "◄LBRACKET◄[$1]")
+    .replace(/\[\/(greek|hebrew)\]\]/g, "[/$1]◄RBRACKET◄");
+
+  // Handle OTHER double brackets (not for script tags) as literal brackets
+  // These are just plain [[...]] that should remain as literal text
+  processed = processed
+    .replace(/\[\[/g, "◄LBRACKET◄◄LBRACKET◄")
+    .replace(/\]\]/g, "◄RBRACKET◄◄RBRACKET◄");
 
   return processed;
 }
@@ -479,15 +487,96 @@ function applyParagraphMarkers(elements: any[], positions: number[]): any[] {
 }
 
 function mergeConsecutiveStrings(elements: any[]): any[] {
-  const result: any[] = [];
-
+  // First pass: merge consecutive strings
+  const afterStringMerge = [];
   for (const elem of elements) {
     if (
       typeof elem === "string" &&
-      result.length > 0 &&
-      typeof result[result.length - 1] === "string"
+      afterStringMerge.length > 0 &&
+      typeof afterStringMerge[afterStringMerge.length - 1] === "string"
     ) {
-      result[result.length - 1] += elem;
+      afterStringMerge[afterStringMerge.length - 1] += elem;
+    } else {
+      afterStringMerge.push(elem);
+    }
+  }
+
+  // Second pass: merge text objects with paragraph markers + strings + strong-tagged text objects
+  const afterParagraphMerge = [];
+  for (let i = 0; i < afterStringMerge.length; i++) {
+    const elem = afterStringMerge[i];
+
+    // Check for pattern: {text, paragraph} + string + {text, strong}
+    if (
+      typeof elem === "object" &&
+      elem.text &&
+      elem.paragraph &&
+      !elem.strong &&
+      !elem.script &&
+      i + 2 < afterStringMerge.length
+    ) {
+      const next1 = afterStringMerge[i + 1];
+      const next2 = afterStringMerge[i + 2];
+
+      // Check if next1 is a string and next2 has strong
+      if (
+        typeof next1 === "string" &&
+        typeof next2 === "object" &&
+        next2.text &&
+        next2.strong
+      ) {
+        // Merge all three: paragraph text + string + strong text
+        next2.text = elem.text + next1 + next2.text;
+        next2.paragraph = true;
+        i += 2; // Skip both next elements
+        afterParagraphMerge.push(next2);
+        continue;
+      }
+    }
+
+    // Check for pattern: {text, paragraph} + {text, strong}
+    if (
+      typeof elem === "object" &&
+      elem.text &&
+      elem.paragraph &&
+      !elem.strong &&
+      !elem.script &&
+      i + 1 < afterStringMerge.length
+    ) {
+      const next = afterStringMerge[i + 1];
+      if (typeof next === "object" && next.text && next.strong) {
+        // Merge text object with paragraph marker with following strong-tagged text object
+        next.text = elem.text + next.text;
+        next.paragraph = true;
+        i++; // Skip the next element since we merged it
+        afterParagraphMerge.push(next);
+        continue;
+      }
+    }
+
+    afterParagraphMerge.push(elem);
+  }
+
+  // Third pass: merge strings with following text objects that have strong numbers
+  const result = [];
+  for (let i = 0; i < afterParagraphMerge.length; i++) {
+    const elem = afterParagraphMerge[i];
+    if (typeof elem === "string" && i + 1 < afterParagraphMerge.length) {
+      const next = afterParagraphMerge[i + 1];
+      if (
+        typeof next === "object" &&
+        next.hasOwnProperty("text") &&
+        next.strong
+      ) {
+        // Merge string with following text object that has a strong number
+        // Trim trailing space from the string if the next text is empty/whitespace
+        const stringToMerge = next.text.trim() === "" ? elem.trimEnd() : elem;
+        next.text = stringToMerge + next.text;
+        i++; // Skip the next element since we merged it
+        result.push(next);
+      } else {
+        result.push(elem);
+      }
     } else {
       result.push(elem);
     }

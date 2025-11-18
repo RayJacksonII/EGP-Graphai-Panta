@@ -57,6 +57,33 @@ describe("convertBBToGraphai", () => {
       expect(graphai).toEqual(["whose name [was] John"]);
     });
 
+    it("should merge bracketed text with following Strong's tagged text", () => {
+      const bb = {
+        text: 'Now these [are] the generations [strongs id="h8435" /]',
+        paragraphs: [0],
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        {
+          text: "Now these [are] the generations",
+          strong: "H8435",
+          paragraph: true,
+        },
+      ]);
+    });
+
+    it("should merge bracketed text with Strong's having empty text", () => {
+      const bb = {
+        text: 'of Siddim [strongs id="h7708" /] [was full of] [strongs id="h0875" /] slimepits',
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        { text: "of Siddim", strong: "H7708" },
+        { text: " [was full of]", strong: "H875" },
+        " slimepits",
+      ]);
+    });
+
     it("should convert John 1:26 KJVS with TVM2 morphology", () => {
       const bb = {
         text: 'John [strongs id="g2491" /] answered [strongs id="g0611" m="AorMidDepInd" /] them [strongs id="g0846" /], saying [strongs id="g3004" m="PresActPtc" /], I [strongs id="g1473" /] baptize [strongs id="g0907" m="PresActInd" /] with [strongs id="g1722" /] water [strongs id="g5204" /]: but [strongs id="g1161" /] there standeth one [strongs id="g2476" tvm="ImpfActInd" tvm2="PerfActInd" /] among [strongs id="g3319" /] you [strongs id="g5216" /], whom [strongs id="g3739" /] ye [strongs id="g5210" /] know [strongs id="g1492" m="PerfActInd" /] not [strongs id="g3756" /];',

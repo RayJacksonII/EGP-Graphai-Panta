@@ -12,7 +12,7 @@ export function crosswalkVersionID(bbVersionID: string): string {
   const versionMap: Record<string, string> = {
     asv: "ASV1901",
     byz: "BYZ2018",
-    clv: "CLV1880",
+    vul: "CLV1880",
     kjv: "KJV1769",
     webp: "WEBUS2020",
     ylt: "YLT1898",
