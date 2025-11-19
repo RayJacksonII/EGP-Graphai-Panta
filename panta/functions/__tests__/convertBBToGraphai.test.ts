@@ -215,6 +215,28 @@ describe("convertBBToGraphai", () => {
         },
       ]);
     });
+
+    it("should handle verses with only footnote markers", () => {
+      const bb = {
+        text: "°",
+        footnotes: [
+          {
+            text: "Some Greek manuscripts add: “Two will be in the field: the one taken, and the other left.”",
+          },
+        ],
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        {
+          text: "",
+          foot: {
+            type: "stu",
+            content:
+              "Some Greek manuscripts add: “Two will be in the field: the one taken, and the other left.”",
+          },
+        },
+      ]);
+    });
   });
 
   describe("Structural Features", () => {

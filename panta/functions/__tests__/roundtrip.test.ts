@@ -15,7 +15,12 @@ describe("Round-trip conversion", () => {
       // Only compare the BB fields, omitting undefined
       const originalBB: any = { text: sample.text };
       if (sample.paragraphs) originalBB.paragraphs = sample.paragraphs;
-      if (sample.footnotes) originalBB.footnotes = sample.footnotes;
+      if (sample.footnotes) {
+        originalBB.footnotes = sample.footnotes.map((f: any) => ({
+          ...f,
+          type: f.type || "stu",
+        }));
+      }
 
       expect(bb).toEqual(originalBB);
     }
@@ -103,7 +108,14 @@ describe("Round-trip conversion", () => {
       };
       const graphai = convertBBToGraphai(input);
       const bb = convertGraphaiToBB(graphai);
-      expect(bb).toEqual(input);
+      expect(bb).toEqual({
+        text: "word1° word2° word3°",
+        footnotes: [
+          { text: "note1", type: "stu" },
+          { text: "note2", type: "stu" },
+          { text: "note3", type: "stu" },
+        ],
+      });
     });
 
     it("should handle paragraph positions correctly", () => {

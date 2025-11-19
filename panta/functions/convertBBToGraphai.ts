@@ -3,6 +3,34 @@ const OPEN_MARKER = "🔓";
 const CLOSE_MARKER = "🔒";
 const SELF_CLOSE_MARKER = "🔐";
 
+function reorderObjectKeys(obj: any): any {
+  const keyOrder = [
+    "paragraph",
+    "text",
+    "script",
+    "break",
+    "marks",
+    "foot",
+    "strong",
+    "morph",
+    "lemma",
+  ];
+
+  const ordered: any = {};
+  for (const key of keyOrder) {
+    if (obj.hasOwnProperty(key)) {
+      ordered[key] = obj[key];
+    }
+  }
+  // Add any remaining keys
+  for (const key in obj) {
+    if (!ordered.hasOwnProperty(key)) {
+      ordered[key] = obj[key];
+    }
+  }
+  return ordered;
+}
+
 export function convertBBToGraphai(bb: {
   text: string;
   paragraphs?: number[];
@@ -23,6 +51,19 @@ export function convertBBToGraphai(bb: {
 
   // Merge consecutive strings
   elements = mergeConsecutiveStrings(elements);
+
+  // If no elements, return empty string array
+  if (elements.length === 0) {
+    return [""];
+  }
+
+  // Reorder object keys for logical ordering
+  elements = elements.map((elem) => {
+    if (typeof elem === "object" && elem !== null) {
+      return reorderObjectKeys(elem);
+    }
+    return elem;
+  });
 
   return elements;
 }
@@ -280,7 +321,7 @@ function addPlainText(
 
         const footObj: any = {
           foot: {
-            ...(footnote.type && { type: footnote.type }),
+            type: footnote.type || "stu",
             content,
           },
         };
@@ -293,6 +334,8 @@ function addPlainText(
           } else {
             Object.assign(elements[lastIdx], footObj);
           }
+        } else {
+          elements.push({ text: "", ...footObj });
         }
       }
     }
