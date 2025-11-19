@@ -43,7 +43,7 @@ function main() {
     if (!bbVersionId) {
       console.error("Usage: ts-node importFromBB.ts <version> [book-sequence]");
       console.error(
-        "  <version>: BB version ID (asv, byz, clv, kjv, webp, ylt)"
+        "  <version>: BB version ID (asv, byz, kjv, vul, webp, ylt)"
       );
       console.error(
         "  [book-sequence]: Optional BB book sequence (101-139 OT, 201-227 NT) for single-book migration"

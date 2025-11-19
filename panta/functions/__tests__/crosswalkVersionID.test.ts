@@ -11,8 +11,8 @@ describe("crosswalkVersionID", () => {
       expect(crosswalkVersionID("byz")).toBe("BYZ2018");
     });
 
-    it("should map 'clv' to 'CLV1880'", () => {
-      expect(crosswalkVersionID("clv")).toBe("CLV1880");
+    it("should map 'vul' to 'CLV1880'", () => {
+      expect(crosswalkVersionID("vul")).toBe("CLV1880");
     });
 
     it("should map 'kjv' to 'KJV1769'", () => {
@@ -56,7 +56,7 @@ describe("crosswalkVersionID", () => {
 
     it("should include supported versions in error message", () => {
       expect(() => crosswalkVersionID("unknown")).toThrow(
-        /Supported versions: asv, byz, clv, kjv, webp, ylt/
+        /Supported versions: asv, byz, vul, kjv, webp, ylt/
       );
     });
   });

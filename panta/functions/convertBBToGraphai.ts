@@ -1,3 +1,8 @@
+// Use unique Unicode placeholders that won't appear in Bible text
+const OPEN_MARKER = "🔓";
+const CLOSE_MARKER = "🔒";
+const SELF_CLOSE_MARKER = "🔐";
+
 export function convertBBToGraphai(bb: {
   text: string;
   paragraphs?: number[];
@@ -6,7 +11,7 @@ export function convertBBToGraphai(bb: {
   const footnotes = bb.footnotes ? [...bb.footnotes] : [];
 
   let processedText = preprocessBBText(bb.text);
-  let elements = parseBBText(processedText, footnotes, true);
+  let elements = parseBBText(processedText, footnotes);
 
   // Merge script tags with following Strong's tags
   elements = mergeScriptAndStrongs(elements);
@@ -36,6 +41,12 @@ function preprocessBBText(text: string): string {
     .replace(/\[\/greek\]’/g, "’[/greek]")
     .replace(/\[\/greek\] \[greek\]/g, " ");
 
+  // Bugfixes for Hebrew TVM2
+  processed = processed.replace(
+    /(\[strongs id=\"h[0-9]+\" tvm=\"[0-9]+\")( \/\]) \(([0-9]+)\)/g,
+    '$1 tvm2="$3"$2'
+  );
+
   // Move spaces into script tags ONLY when the space follows a strongs tag
   // Pattern: [strongs...] [greek] becomes [strongs...][greek]
   processed = processed.replace(
@@ -43,52 +54,45 @@ function preprocessBBText(text: string): string {
     "$1[$2] "
   );
 
-  // Handle escaped brackets for script tags: [[greek]...[/greek]]
-  // Replace [[greek] with ◄LBRACKET◄[greek] (literal [ before the tag)
-  // Replace [/greek]] with [/greek]◄RBRACKET◄ (literal ] after the tag)
-  processed = processed
-    .replace(/\[\[(greek|hebrew)\]/g, "◄LBRACKET◄[$1]")
-    .replace(/\[\/(greek|hebrew)\]\]/g, "[/$1]◄RBRACKET◄");
+  // Replace BB code brackets with unique placeholders
+  // Handle self-closing tags: [tag .../] -> 🔓tag ...🔐
+  processed = processed.replace(
+    /\[(strongs)\s+([^\]]*?)\/\]/g,
+    `${OPEN_MARKER}$1 $2${SELF_CLOSE_MARKER}`
+  );
+  processed = processed.replace(
+    /\[(strongs)\s*\/\]/g,
+    `${OPEN_MARKER}$1${SELF_CLOSE_MARKER}`
+  );
 
-  // Handle OTHER double brackets (not for script tags) as literal brackets
-  // These are just plain [[...]] that should remain as literal text
-  processed = processed
-    .replace(/\[\[/g, "◄LBRACKET◄◄LBRACKET◄")
-    .replace(/\]\]/g, "◄RBRACKET◄◄RBRACKET◄");
+  // Handle opening tags: [tag] -> 🔓tag🔒
+  processed = processed.replace(
+    /\[(greek|hebrew|i|b|sc|red|verse)\]/g,
+    `${OPEN_MARKER}$1${CLOSE_MARKER}`
+  );
+
+  // Handle closing tags: [/tag] -> 🔓/tag🔒
+  processed = processed.replace(
+    /\[\/(greek|hebrew|i|b|sc|red|verse)\]/g,
+    `${OPEN_MARKER}/$1${CLOSE_MARKER}`
+  );
 
   return processed;
 }
 
-function restoreLiteralBrackets(elements: any[]): any[] {
-  return elements.map((elem) => {
-    if (typeof elem === "string") {
-      return elem.replace(/◄LBRACKET◄/g, "[").replace(/◄RBRACKET◄/g, "]");
-    } else if (typeof elem === "object") {
-      // Recursively restore in nested structures (like footnote content, text property)
-      if (elem.text && typeof elem.text === "string") {
-        elem.text = elem.text
-          .replace(/◄LBRACKET◄/g, "[")
-          .replace(/◄RBRACKET◄/g, "]");
-      }
-      if (elem.foot && Array.isArray(elem.foot.content)) {
-        elem.foot.content = restoreLiteralBrackets(elem.foot.content);
-      }
-    }
-    return elem;
-  });
-}
-
 function parseBBText(
   text: string,
-  footnotes: { type?: string; text: string }[],
-  restoreBrackets = false
+  footnotes: { type?: string; text: string }[]
 ): any[] {
   let elements: any[] = [];
-  const tagRegex = /\[([^\]]+)\]/g;
+  const openRegex = new RegExp(
+    `${OPEN_MARKER}([^${CLOSE_MARKER}${SELF_CLOSE_MARKER}]+?)(?:${CLOSE_MARKER}|${SELF_CLOSE_MARKER})`,
+    "g"
+  );
   let lastIndex = 0;
   let match;
 
-  while ((match = tagRegex.exec(text)) !== null) {
+  while ((match = openRegex.exec(text)) !== null) {
     // Add plain text before tag
     if (match.index > lastIndex) {
       const plainText = text.substring(lastIndex, match.index);
@@ -96,11 +100,12 @@ function parseBBText(
     }
 
     const tagContent = match[1];
+    const isSelfClosing = match[0].endsWith(SELF_CLOSE_MARKER);
 
-    // Self-closing tag (ends with /)
-    if (tagContent.endsWith("/")) {
-      const tagStr = tagContent.slice(0, -1).trim();
-      if (tagStr.startsWith("strongs ")) {
+    // Self-closing tag
+    if (isSelfClosing) {
+      const tagStr = tagContent.trim();
+      if (tagStr.startsWith("strongs ") || tagStr === "strongs") {
         const attrs = parseAttributes(tagStr);
         const strongObj: any = {};
 
@@ -134,14 +139,12 @@ function parseBBText(
         } else {
           elements.push(strongObj);
         }
-      } else {
-        // Unknown self-closing tag, treat as literal text
-        elements.push(match[0]);
       }
+      // Ignore other self-closing tags
     } else {
       // Opening tag
       const tag = tagContent.trim();
-      const closeTag = `[/${tag}]`;
+      const closeTag = `${OPEN_MARKER}/${tag}${CLOSE_MARKER}`;
       const closeIndex = text.indexOf(closeTag, match.index + match[0].length);
 
       if (closeIndex !== -1) {
@@ -163,46 +166,59 @@ function parseBBText(
         ) {
           const mark = tag === "red" ? "woc" : tag;
 
-          // Check for nested marks
-          if (elements.length > 0) {
-            const prev = elements[elements.length - 1];
-            if (
-              typeof prev === "object" &&
-              prev.text === innerText &&
-              prev.marks
-            ) {
-              // Nested marks
-              prev.marks.push(mark);
+          // Check if innerText contains more BB tags (nested tags)
+          const hasNestedTags = innerText.includes(OPEN_MARKER);
+
+          if (hasNestedTags) {
+            // Parse nested content
+            const nestedElements = parseBBText(innerText, []);
+
+            // Apply this mark to all nested elements
+            for (const nested of nestedElements) {
+              if (typeof nested === "string") {
+                elements.push({ text: nested, marks: [mark] });
+              } else if (typeof nested === "object" && nested.text) {
+                // Prepend the outer mark (not append) to maintain tag order
+                const marks = nested.marks ? [mark, ...nested.marks] : [mark];
+                elements.push({ ...nested, marks });
+              } else {
+                elements.push(nested);
+              }
+            }
+          } else {
+            // No nested tags - simple text
+            // Check for nested marks on same text
+            if (elements.length > 0) {
+              const prev = elements[elements.length - 1];
+              if (
+                typeof prev === "object" &&
+                prev.text === innerText &&
+                prev.marks
+              ) {
+                // Nested marks on same text element
+                prev.marks.push(mark);
+              } else {
+                elements.push({ text: innerText, marks: [mark] });
+              }
             } else {
               elements.push({ text: innerText, marks: [mark] });
             }
-          } else {
-            elements.push({ text: innerText, marks: [mark] });
           }
-        } else {
-          // Unknown tag, treat as literal text
-          elements.push(match[0]);
         }
+        // Ignore verse tags and other unknown tags
 
-        tagRegex.lastIndex = closeIndex + closeTag.length;
-      } else {
-        // No closing tag, treat as literal text
-        elements.push(match[0]);
+        openRegex.lastIndex = closeIndex + closeTag.length;
       }
+      // If no closing tag, ignore (it's probably not a valid BB tag)
     }
 
-    lastIndex = tagRegex.lastIndex;
+    lastIndex = openRegex.lastIndex;
   }
 
   // Add remaining plain text
   if (lastIndex < text.length) {
     const plainText = text.substring(lastIndex);
     addPlainText(plainText, elements, footnotes);
-  }
-
-  // Restore literal brackets if requested
-  if (restoreBrackets) {
-    elements = restoreLiteralBrackets(elements);
   }
 
   return elements;
@@ -231,7 +247,7 @@ function addPlainText(
       if (j < parts.length - 1 && footnotes.length > 0) {
         const footnote = footnotes.shift()!;
         const preprocessedFootnote = preprocessBBText(footnote.text);
-        const footContent = parseBBText(preprocessedFootnote, [], true);
+        const footContent = parseBBText(preprocessedFootnote, []);
 
         // If footnote content is just a single string, use it directly
         const content =
@@ -387,7 +403,6 @@ function applyParagraphMarkers(elements: any[], positions: number[]): any[] {
 
       // There are inner positions too, so split
       let lastOffset = 0;
-      const firstPart: any = {};
 
       for (let j = 0; j < innerPositions.length; j++) {
         const pos = innerPositions[j];
@@ -396,20 +411,11 @@ function applyParagraphMarkers(elements: any[], positions: number[]): any[] {
         // Text before the space
         const beforeText = text.substring(lastOffset, offset);
         if (beforeText.length > 0) {
-          if (j === 0) {
-            // First part gets paragraph marker
-            if (typeof elem === "string") {
-              result.push({ text: beforeText, paragraph: true });
-            } else {
-              result.push({ ...elem, text: beforeText, paragraph: true });
-            }
+          // All parts when position 0 is marked get paragraph markers
+          if (typeof elem === "string") {
+            result.push({ text: beforeText, paragraph: true });
           } else {
-            // Subsequent parts also get paragraph markers
-            if (typeof elem === "string") {
-              result.push({ text: beforeText, paragraph: true });
-            } else {
-              result.push({ ...elem, text: beforeText, paragraph: true });
-            }
+            result.push({ ...elem, text: beforeText, paragraph: true });
           }
         }
 
@@ -459,8 +465,7 @@ function applyParagraphMarkers(elements: any[], positions: number[]): any[] {
           } else {
             // Subsequent pieces - they start a new paragraph
             if (typeof elem === "string") {
-              const obj = { text: beforeText, paragraph: true };
-              result.push(obj);
+              result.push({ text: beforeText, paragraph: true });
             } else {
               result.push({ ...elem, text: beforeText, paragraph: true });
             }
@@ -505,6 +510,10 @@ function mergeConsecutiveStrings(elements: any[]): any[] {
   const afterParagraphMerge = [];
   for (let i = 0; i < afterStringMerge.length; i++) {
     const elem = afterStringMerge[i];
+
+    // NOTE: Do NOT drop or move leading paragraph markers
+    // We intentionally keep objects like { text: "", strong: "G1161", paragraph: true }
+    // as their own elements so the first Strong's-only token is preserved.
 
     // Check for pattern: {text, paragraph} + string + {text, strong}
     if (
@@ -580,6 +589,22 @@ function mergeConsecutiveStrings(elements: any[]): any[] {
     } else {
       result.push(elem);
     }
+  }
+
+  // Final pass: if the first element is the special
+  // { text: "", strong: ..., paragraph: true } case,
+  // ensure the second element does NOT also carry paragraph: true.
+  if (
+    result.length >= 2 &&
+    typeof result[0] === "object" &&
+    result[0].paragraph &&
+    result[0].strong &&
+    typeof result[0].text === "string" &&
+    result[0].text === "" &&
+    typeof result[1] === "object" &&
+    result[1].paragraph
+  ) {
+    delete result[1].paragraph;
   }
 
   return result;
