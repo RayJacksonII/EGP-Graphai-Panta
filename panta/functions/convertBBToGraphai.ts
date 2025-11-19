@@ -30,9 +30,6 @@ export function convertBBToGraphai(bb: {
 function preprocessBBText(text: string): string {
   let processed = text;
 
-  // Remove alternate verse numbering
-  processed = processed.replace(/\[verse\](.*?)\[\/verse\] /g, "");
-
   // Bugfixes for Greek punctuation
   processed = processed
     .replace(/(.)\[\/greek\]̈\[greek\]/g, "̈$1")
@@ -158,6 +155,27 @@ function parseBBText(
             text: innerText,
             script: tag === "greek" ? "G" : "H",
           });
+        } else if (tag === "verse") {
+          const foot = {
+            type: "var",
+            content: `Originally verse ${innerText}.`,
+          };
+
+          if (elements.length > 0) {
+            let lastElem = elements[elements.length - 1];
+            if (typeof lastElem === "string") {
+              elements[elements.length - 1] = {
+                text: lastElem,
+                foot: foot,
+              };
+            } else if (typeof lastElem === "object" && !lastElem.foot) {
+              lastElem.foot = foot;
+            } else {
+              elements.push({ text: "", foot: foot });
+            }
+          } else {
+            elements.push({ text: "", foot: foot });
+          }
         } else if (
           tag === "i" ||
           tag === "b" ||
@@ -208,6 +226,11 @@ function parseBBText(
         // Ignore verse tags and other unknown tags
 
         openRegex.lastIndex = closeIndex + closeTag.length;
+
+        // Special handling for verse tag to skip space
+        if (tag === "verse" && text[openRegex.lastIndex] === " ") {
+          openRegex.lastIndex++;
+        }
       }
       // If no closing tag, ignore (it's probably not a valid BB tag)
     }
@@ -379,13 +402,15 @@ function applyParagraphMarkers(elements: any[], positions: number[]): any[] {
   }
 
   const result: any[] = [];
+  let pos0Processed = false;
 
   for (let i = 0; i < elemMap.length; i++) {
     const { elem, start, end } = elemMap[i];
     const text = typeof elem === "string" ? elem : elem.text || "";
 
     // Check if this element starts at position 0 and position 0 is marked
-    if (start === 0 && positions.includes(0)) {
+    if (start === 0 && positions.includes(0) && !pos0Processed) {
+      pos0Processed = true;
       // Don't return yet - check if there are also inner positions
       const innerPositions = positions.filter(
         (pos) => pos > 0 && pos >= start && pos < end

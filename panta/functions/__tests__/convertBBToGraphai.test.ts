@@ -254,4 +254,49 @@ describe("convertBBToGraphai", () => {
       });
     });
   });
+
+  describe("Verse References", () => {
+    it("should convert [verse] tags to footnotes (Mark 4:41 example)", () => {
+      const bb = {
+        text: "[verse]4:40[/verse] et timuerunt magno timore et dicebant ad alterutrum quis putas est iste quia et ventus et mare oboediunt ei",
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        {
+          text: "",
+          foot: {
+            type: "var",
+            content: "Originally verse 4:40.",
+          },
+        },
+        "et timuerunt magno timore et dicebant ad alterutrum quis putas est iste quia et ventus et mare oboediunt ei",
+      ]);
+    });
+
+    it("should handle multiple verse references (Rev 13:1 example)", () => {
+      const bb = {
+        text: "[verse]12:17[/verse] et stetit super harenam maris [verse]13:1[/verse] et vidi de mare bestiam ascendentem habentem capita septem et cornua decem et super cornua eius decem diademata et super capita eius nomina blasphemiae",
+        paragraphs: [0],
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        {
+          text: "",
+          foot: {
+            type: "var",
+            content: "Originally verse 12:17.",
+          },
+          paragraph: true,
+        },
+        {
+          text: "et stetit super harenam maris ",
+          foot: {
+            type: "var",
+            content: "Originally verse 13:1.",
+          },
+        },
+        "et vidi de mare bestiam ascendentem habentem capita septem et cornua decem et super cornua eius decem diademata et super capita eius nomina blasphemiae",
+      ]);
+    });
+  });
 });
