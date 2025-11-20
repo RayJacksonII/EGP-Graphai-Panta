@@ -18,3 +18,9 @@ panta/
 ## Integration with Main Project
 
 The `panta` suite is designed to work alongside the main EGP Graphai project by putting all custom content into the `panta/` folder. This ensures that the main project remains untouched, allowing for easy updates and maintenance.
+
+To pull in the latest changes from the main project, use the following PowerShell command:
+
+```
+. "./panta/utils/git-merge-upstream.ps1"
+```
