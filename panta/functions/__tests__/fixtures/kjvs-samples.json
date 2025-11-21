@@ -1,0 +1,66 @@
+[
+  {
+    "_id": "kjvs-204001001",
+    "version": "kjvs",
+    "chapter": "john-1",
+    "sequence": "204001001",
+    "number": 1,
+    "text": "In [strongs id=\"g1722\" /] the beginning [strongs id=\"g0746\" /] was [strongs id=\"g2258\" tvm=\"ImpfInd\" /] the Word [strongs id=\"g3056\" /], and [strongs id=\"g2532\" /] the Word [strongs id=\"g3056\" /] was [strongs id=\"g2258\" tvm=\"ImpfInd\" /] with [strongs id=\"g4314\" /] God [strongs id=\"g2316\" /], and [strongs id=\"g2532\" /] the Word [strongs id=\"g3056\" /] was [strongs id=\"g2258\" tvm=\"ImpfInd\" /] God [strongs id=\"g2316\" /]."
+  },
+  {
+    "_id": "kjvs-204001005",
+    "version": "kjvs",
+    "chapter": "john-1",
+    "sequence": "204001005",
+    "number": 5,
+    "text": "And [strongs id=\"g2532\" /] the light [strongs id=\"g5457\" /] shineth [strongs id=\"g5316\" tvm=\"PresActInd\" /] in [strongs id=\"g1722\" /] darkness [strongs id=\"g4653\" /]; and [strongs id=\"g2532\" /] the darkness [strongs id=\"g4653\" /] comprehended [strongs id=\"g2638\" tvm=\"Aor2ActInd\" /] it [strongs id=\"g0846\" /] not [strongs id=\"g3756\" /]."
+  },
+  {
+    "_id": "kjvs-204001006",
+    "version": "kjvs",
+    "chapter": "john-1",
+    "sequence": "204001006",
+    "number": 6,
+    "text": "There was [strongs id=\"g1096\" tvm=\"Aor2MidDepInd\" /] a man [strongs id=\"g0444\" /] sent [strongs id=\"g0649\" tvm=\"PerfPasPtc\" /] from [strongs id=\"g3844\" /] God [strongs id=\"g2316\" /], whose [strongs id=\"g0846\" /] name [strongs id=\"g3686\" /] [was] John [strongs id=\"g2491\" /]."
+  },
+  {
+    "_id": "kjvs-204001007",
+    "version": "kjvs",
+    "chapter": "john-1",
+    "sequence": "204001007",
+    "number": 7,
+    "text": "The same [strongs id=\"g3778\" /] came [strongs id=\"g2064\" tvm=\"Aor2ActInd\" /] for [strongs id=\"g1519\" /] a witness [strongs id=\"g3141\" /], to [strongs id=\"g2443\" /] bear witness [strongs id=\"g3140\" tvm=\"AorActSubj\" /] of [strongs id=\"g4012\" /] the Light [strongs id=\"g5457\" /], that [strongs id=\"g2443\" /] all [strongs id=\"g3956\" /] [men] through [strongs id=\"g1223\" /] him [strongs id=\"g0846\" /] might believe [strongs id=\"g4100\" tvm=\"AorActSubj\" /]."
+  },
+  {
+    "_id": "kjvs-204001008",
+    "version": "kjvs",
+    "chapter": "john-1",
+    "sequence": "204001008",
+    "number": 8,
+    "text": "He was [strongs id=\"g2258\" tvm=\"ImpfInd\" /] not [strongs id=\"g3756\" /] that [strongs id=\"g1565\" /] Light [strongs id=\"g5457\" /], but [strongs id=\"g0235\" /] [was sent] to [strongs id=\"g2443\" /] bear witness [strongs id=\"g3140\" tvm=\"AorActSubj\" /] of [strongs id=\"g4012\" /] that Light [strongs id=\"g5457\" /]."
+  },
+  {
+    "_id": "kjvs-204001009",
+    "version": "kjvs",
+    "chapter": "john-1",
+    "sequence": "204001009",
+    "number": 9,
+    "text": "[That] was [strongs id=\"g2258\" tvm=\"ImpfInd\" /] the true [strongs id=\"g0228\" /] Light [strongs id=\"g5457\" /], which [strongs id=\"g3739\" /] lighteth [strongs id=\"g5461\" tvm=\"PresActInd\" /] every man [strongs id=\"g3956\" /] [strongs id=\"g0444\" /] that cometh [strongs id=\"g2064\" tvm=\"PresMidPasDepPtc\" /] into [strongs id=\"g1519\" /] the world [strongs id=\"g2889\" /]."
+  },
+  {
+    "_id": "kjvs-204001026",
+    "version": "kjvs",
+    "chapter": "john-1",
+    "sequence": "204001026",
+    "number": 26,
+    "text": "John [strongs id=\"g2491\" /] answered [strongs id=\"g0611\" tvm=\"AorMidDepInd\" /] them [strongs id=\"g0846\" /], saying [strongs id=\"g3004\" tvm=\"PresActPtc\" /], I [strongs id=\"g1473\" /] baptize [strongs id=\"g0907\" tvm=\"PresActInd\" /] with [strongs id=\"g1722\" /] water [strongs id=\"g5204\" /]: but [strongs id=\"g1161\" /] there standeth one [strongs id=\"g2476\" tvm=\"ImpfActInd\" tvm2=\"PerfActInd\" /] among [strongs id=\"g3319\" /] you [strongs id=\"g5216\" /], whom [strongs id=\"g3739\" /] ye [strongs id=\"g5210\" /] know [strongs id=\"g1492\" tvm=\"PerfActInd\" /] not [strongs id=\"g3756\" /];"
+  },
+  {
+    "_id": "kjvs-119007001",
+    "version": "kjvs",
+    "chapter": "psalm-7",
+    "sequence": "119007001",
+    "number": 1,
+    "text": "«Shiggaion [strongs id=\"h7692\" /] of David [strongs id=\"h1732\" /], which he sang [strongs id=\"h7891\" tvm=\"8804\" /] unto the LORD [strongs id=\"h3068\" /], concerning the words [strongs id=\"h1697\" /] of Cush [strongs id=\"h3568\" /] the Benjamite [strongs id=\"h1121\" /] [strongs id=\"h1145\" /].» O LORD [strongs id=\"h3068\" /] my God [strongs id=\"h0430\" /], in thee do I put my trust [strongs id=\"h2620\" tvm=\"8804\" /]: save [strongs id=\"h3467\" tvm=\"8685\" /] me from all them that persecute [strongs id=\"h7291\" tvm=\"8802\" /] me, and deliver [strongs id=\"h5337\" tvm=\"8685\" /] me:"
+  }
+]
