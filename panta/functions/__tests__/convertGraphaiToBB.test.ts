@@ -554,4 +554,34 @@ describe("convertGraphaiToBB", () => {
       expect(convertGraphaiToBB(input)).toEqual(expected);
     });
   });
+
+  describe("Subtitles", () => {
+    it("should convert subtitle object to BB format", () => {
+      const input = {
+        subtitle: [
+          { text: "A Psalm", strong: "H4210" },
+          { text: " of David", strong: "H1732" },
+          ".",
+        ],
+      };
+
+      const expected = {
+        text: '«A Psalm [strongs id="h4210" /] of David [strongs id="h1732" /].»',
+      };
+
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+
+    it("should convert simple subtitle string to BB format", () => {
+      const input = {
+        subtitle: "A Psalm of David.",
+      };
+
+      const expected = {
+        text: "«A Psalm of David.»",
+      };
+
+      expect(convertGraphaiToBB(input)).toEqual(expected);
+    });
+  });
 });

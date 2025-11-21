@@ -2,9 +2,12 @@
 const OPEN_MARKER = "🔓";
 const CLOSE_MARKER = "🔒";
 const SELF_CLOSE_MARKER = "🔐";
+const PARAGRAPH_SPLIT_MARKER = "\uE001";
 
 function reorderObjectKeys(obj: any): any {
   const keyOrder = [
+    "subtitle",
+    "heading",
     "paragraph",
     "text",
     "script",
@@ -35,26 +38,126 @@ export function convertBBToGraphai(bb: {
   text: string;
   paragraphs?: number[];
   footnotes?: { type?: string; text: string }[];
+  heading?: string;
+  headingFootnote?: { type?: string; text: string };
 }): any[] {
   const footnotes = bb.footnotes ? [...bb.footnotes] : [];
 
-  let processedText = preprocessBBText(bb.text);
-  let elements = parseBBText(processedText, footnotes);
+  // Inject paragraph markers into the text before processing
+  // This avoids issues with indices shifting due to preprocessing or parsing
+  let textWithMarkers = bb.text;
+  let hasFirstParagraph = false;
+
+  if (bb.paragraphs && bb.paragraphs.length > 0) {
+    // Sort paragraphs descending to avoid index shifting during insertion
+    const sortedParagraphs = [...bb.paragraphs].sort((a, b) => b - a);
+
+    for (const pos of sortedParagraphs) {
+      if (pos === 0) {
+        hasFirstParagraph = true;
+      } else if (pos > 0 && pos <= textWithMarkers.length) {
+        // Replace the character at the paragraph position (usually a space) with the marker
+        // If it's at the end, just append
+        if (pos === textWithMarkers.length) {
+          textWithMarkers += PARAGRAPH_SPLIT_MARKER;
+        } else {
+          textWithMarkers =
+            textWithMarkers.substring(0, pos) +
+            PARAGRAPH_SPLIT_MARKER +
+            textWithMarkers.substring(pos + 1);
+        }
+      }
+    }
+  }
+
+  let processedText = preprocessBBText(textWithMarkers);
+  let elements: any[] = [];
+
+  // Extract subtitle if present
+  const subtitleMatch = processedText.match(/^«(.*?)»(?:\s|$)/);
+  if (subtitleMatch) {
+    const subtitleText = subtitleMatch[1];
+    const subtitleContent = parseBBText(subtitleText, []);
+    const mergedSubtitle = mergeConsecutiveStrings(subtitleContent);
+    elements.push({
+      subtitle:
+        mergedSubtitle.length === 1 && typeof mergedSubtitle[0] === "string"
+          ? mergedSubtitle[0]
+          : mergedSubtitle,
+    });
+    // Remove the subtitle from the processed text
+    processedText = processedText.substring(subtitleMatch[0].length);
+  }
+
+  elements = elements.concat(parseBBText(processedText, footnotes));
+
+  // Handle paragraphs by splitting on the injected marker
+  if (bb.paragraphs && bb.paragraphs.length > 0) {
+    elements = applyParagraphMarkers(elements, hasFirstParagraph);
+  }
 
   // Merge script tags with following Strong's tags
   elements = mergeScriptAndStrongs(elements);
 
-  // Handle paragraphs
-  if (bb.paragraphs && bb.paragraphs.length > 0) {
-    elements = applyParagraphMarkers(elements, bb.paragraphs);
-  }
-
   // Merge consecutive strings
   elements = mergeConsecutiveStrings(elements);
 
-  // If no elements, return empty string array
+  // Handle heading if present
+  if (bb.heading) {
+    let headingText = preprocessBBText(bb.heading);
+    // Remove trailing footnote marker if present in heading text (e.g. "Title°")
+    // The actual footnote content is in bb.headingFootnote
+    headingText = headingText.replace(/°$/, "");
+
+    const headingContent = parseBBText(headingText, []);
+    const mergedHeading = mergeConsecutiveStrings(headingContent);
+
+    let headingValue: any =
+      mergedHeading.length === 1 && typeof mergedHeading[0] === "string"
+        ? mergedHeading[0]
+        : mergedHeading;
+
+    if (bb.headingFootnote) {
+      const footText = preprocessBBText(bb.headingFootnote.text);
+      const footContent = parseBBText(footText, []);
+      const footObj = {
+        type: bb.headingFootnote.type || "stu",
+        content:
+          footContent.length === 1 && typeof footContent[0] === "string"
+            ? footContent[0]
+            : mergeConsecutiveStrings(footContent),
+      };
+
+      // Attach footnote to the heading content
+      if (typeof headingValue === "string") {
+        headingValue = { text: headingValue, foot: footObj };
+      } else if (Array.isArray(headingValue)) {
+        // If array, attach to last element
+        const lastIdx = headingValue.length - 1;
+        if (lastIdx >= 0) {
+          if (typeof headingValue[lastIdx] === "string") {
+            headingValue[lastIdx] = {
+              text: headingValue[lastIdx],
+              foot: footObj,
+            };
+          } else {
+            headingValue[lastIdx].foot = footObj;
+          }
+        } else {
+          // Should not happen if heading text exists
+          headingValue.push({ foot: footObj });
+        }
+      } else if (typeof headingValue === "object") {
+        headingValue.foot = footObj;
+      }
+    }
+
+    elements.unshift({ heading: headingValue });
+  }
+
+  // If no elements, return empty array
   if (elements.length === 0) {
-    return [""];
+    return [];
   }
 
   // Reorder object keys for logical ordering
@@ -65,11 +168,32 @@ export function convertBBToGraphai(bb: {
     return elem;
   });
 
+  // Remove empty text properties
+  elements = elements.map((elem) => {
+    if (
+      typeof elem === "object" &&
+      elem !== null &&
+      "text" in elem &&
+      elem.text === ""
+    ) {
+      const { text, ...rest } = elem;
+      return rest;
+    }
+    return elem;
+  });
+
   return elements;
 }
 
 function preprocessBBText(text: string): string {
   let processed = text;
+
+  // Trim spaces inside red tags
+  processed = processed.replace(/\[red\]\s+/g, "[red]");
+  processed = processed.replace(/\s+\[\/red\]/g, "[/red]");
+
+  // Trim leading whitespace from the whole text (preserve trailing for line breaks)
+  processed = processed.trimStart();
 
   // Bugfixes for Greek punctuation
   processed = processed
@@ -212,10 +336,10 @@ function parseBBText(
             } else if (typeof lastElem === "object" && !lastElem.foot) {
               lastElem.foot = foot;
             } else {
-              elements.push({ text: "", foot: foot });
+              elements.push({ foot: foot });
             }
           } else {
-            elements.push({ text: "", foot: foot });
+            elements.push({ foot: foot });
           }
         } else if (
           tag === "i" ||
@@ -330,12 +454,16 @@ function addPlainText(
         const lastIdx = elements.length - 1;
         if (lastIdx >= 0) {
           if (typeof elements[lastIdx] === "string") {
-            elements[lastIdx] = { text: elements[lastIdx], ...footObj };
+            if (elements[lastIdx] === "") {
+              elements[lastIdx] = footObj;
+            } else {
+              elements[lastIdx] = { text: elements[lastIdx], ...footObj };
+            }
           } else {
             Object.assign(elements[lastIdx], footObj);
           }
         } else {
-          elements.push({ text: "", ...footObj });
+          elements.push(footObj);
         }
       }
     }
@@ -431,129 +559,71 @@ function mergeScriptAndStrongs(elements: any[]): any[] {
   return result;
 }
 
-function applyParagraphMarkers(elements: any[], positions: number[]): any[] {
-  // Build cumulative text string to map positions
-  let currentPos = 0;
-  const elemMap: { elem: any; start: number; end: number }[] = [];
+function applyParagraphMarkers(
+  elements: any[],
+  hasFirstParagraph: boolean
+): any[] {
+  const result: any[] = [];
+  let isFirstElement = true;
 
   for (const elem of elements) {
-    const text = typeof elem === "string" ? elem : elem.text || "";
-    const start = currentPos;
-    const end = currentPos + text.length;
-    elemMap.push({ elem, start, end });
-    currentPos = end;
-  }
+    // Skip subtitles
+    if (elem.subtitle !== undefined) {
+      result.push(elem);
+      continue;
+    }
 
-  const result: any[] = [];
-  let pos0Processed = false;
-
-  for (let i = 0; i < elemMap.length; i++) {
-    const { elem, start, end } = elemMap[i];
     const text = typeof elem === "string" ? elem : elem.text || "";
 
-    // Check if this element starts at position 0 and position 0 is marked
-    if (start === 0 && positions.includes(0) && !pos0Processed) {
-      pos0Processed = true;
-      // Don't return yet - check if there are also inner positions
-      const innerPositions = positions.filter(
-        (pos) => pos > 0 && pos >= start && pos < end
-      );
+    // Check if this element contains the paragraph marker
+    if (text.includes(PARAGRAPH_SPLIT_MARKER)) {
+      const parts = text.split(PARAGRAPH_SPLIT_MARKER);
 
-      if (innerPositions.length === 0) {
-        // Just mark as paragraph and continue
+      for (let i = 0; i < parts.length; i++) {
+        const partText = parts[i];
+
+        // Determine if this part should start a new paragraph
+        // The first part starts a paragraph only if hasFirstParagraph is true AND it's the very first element
+        // Subsequent parts always start a new paragraph (because they follow a marker)
+        let isParagraph = false;
+        if (i === 0) {
+          if (isFirstElement && hasFirstParagraph) {
+            isParagraph = true;
+          }
+        } else {
+          isParagraph = true;
+        }
+
+        if (partText.length > 0 || isParagraph) {
+          if (typeof elem === "string") {
+            if (isParagraph) {
+              result.push({ text: partText, paragraph: true });
+            } else {
+              result.push(partText);
+            }
+          } else {
+            const newElem = { ...elem, text: partText };
+            if (isParagraph) {
+              newElem.paragraph = true;
+            }
+            result.push(newElem);
+          }
+        }
+      }
+    } else {
+      // No marker in this element
+      if (isFirstElement && hasFirstParagraph) {
         if (typeof elem === "string") {
           result.push({ text: elem, paragraph: true });
         } else {
           result.push({ ...elem, paragraph: true });
         }
-        continue;
-      }
-
-      // There are inner positions too, so split
-      let lastOffset = 0;
-
-      for (let j = 0; j < innerPositions.length; j++) {
-        const pos = innerPositions[j];
-        const offset = pos - start;
-
-        // Text before the space
-        const beforeText = text.substring(lastOffset, offset);
-        if (beforeText.length > 0) {
-          // All parts when position 0 is marked get paragraph markers
-          if (typeof elem === "string") {
-            result.push({ text: beforeText, paragraph: true });
-          } else {
-            result.push({ ...elem, text: beforeText, paragraph: true });
-          }
-        }
-
-        // Skip the space at offset (it gets dropped)
-        lastOffset = offset + 1;
-      }
-
-      // Add remaining text with paragraph marker
-      const afterText = text.substring(lastOffset);
-      if (afterText.length > 0) {
-        if (typeof elem === "string") {
-          result.push({ text: afterText, paragraph: true });
-        } else {
-          result.push({ ...elem, text: afterText, paragraph: true });
-        }
-      }
-
-      continue;
-    }
-
-    // Find paragraph positions within this element's range (excluding position 0)
-    const innerPositions = positions.filter(
-      (pos) => pos > 0 && pos >= start && pos < end
-    );
-
-    if (innerPositions.length === 0) {
-      result.push(elem);
-    } else {
-      // Split this element at paragraph positions
-      let lastOffset = 0;
-
-      for (let j = 0; j < innerPositions.length; j++) {
-        const pos = innerPositions[j];
-        const offset = pos - start;
-
-        // Text before the space
-        const beforeText = text.substring(lastOffset, offset);
-
-        if (beforeText.length > 0) {
-          if (j === 0) {
-            // First piece - no paragraph marker
-            if (typeof elem === "string") {
-              result.push(beforeText);
-            } else {
-              result.push({ ...elem, text: beforeText });
-            }
-          } else {
-            // Subsequent pieces - they start a new paragraph
-            if (typeof elem === "string") {
-              result.push({ text: beforeText, paragraph: true });
-            } else {
-              result.push({ ...elem, text: beforeText, paragraph: true });
-            }
-          }
-        }
-
-        // Skip the space at offset (it gets dropped)
-        lastOffset = offset + 1;
-      }
-
-      // Add remaining text with paragraph marker
-      const afterText = text.substring(lastOffset);
-      if (afterText.length > 0) {
-        if (typeof elem === "string") {
-          result.push({ text: afterText, paragraph: true });
-        } else {
-          result.push({ ...elem, text: afterText, paragraph: true });
-        }
+      } else {
+        result.push(elem);
       }
     }
+
+    isFirstElement = false;
   }
 
   return result;

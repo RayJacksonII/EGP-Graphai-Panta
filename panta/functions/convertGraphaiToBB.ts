@@ -57,6 +57,11 @@ export function convertGraphaiToBB(content: any): BBResult {
       // Append text
       text += itemResult.text;
 
+      // Add space after subtitle
+      if (itemResult.text && itemResult.text.endsWith("»")) {
+        text += " ";
+      }
+
       // Check if this item ends with a strongs tag
       previousEndsWithStrongs = itemResult.text.trim().endsWith("/]");
 
@@ -77,6 +82,12 @@ export function convertGraphaiToBB(content: any): BBResult {
     // Drop unsupported features
     if (content.heading) {
       return { text: "" };
+    }
+
+    // Handle subtitle
+    if (content.subtitle !== undefined) {
+      const subtitleResult = convertGraphaiToBB(content.subtitle);
+      return { text: `«${subtitleResult.text}»` };
     }
 
     let text = "";

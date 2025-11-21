@@ -159,7 +159,7 @@ describe("convertBBToGraphai", () => {
       const graphai = convertBBToGraphai(bb);
       expect(graphai).toEqual([
         { text: "text", strong: "H1121" },
-        { text: "", strong: "H1145" },
+        { strong: "H1145" },
         " more",
       ]);
     });
@@ -185,6 +185,29 @@ describe("convertBBToGraphai", () => {
             content: "N 14.24--26 ⇒ ~",
           },
         },
+      ]);
+    });
+
+    it("should handle paragraph markers correctly when spaces between Strong's tags are involved", () => {
+      // Original text: " " (between strongs) + " " (before text) + "text"
+      // Index of second space is 1.
+      const bb = {
+        text: '[strongs id="H1" /] [strongs id="H2" /] text',
+        paragraphs: [39], // The space before "text"
+      };
+
+      const graphai = convertBBToGraphai(bb);
+
+      // Expectation:
+      // 1. [strongs H1]
+      // 2. [strongs H2] (space between them removed by mergeScriptAndStrongs)
+      // 3. Paragraph break at the space before "text"
+      // 4. "text" starts new paragraph
+
+      expect(graphai).toEqual([
+        { strong: "H1" },
+        { strong: "H2" },
+        { text: "text", paragraph: true },
       ]);
     });
 
@@ -228,12 +251,24 @@ describe("convertBBToGraphai", () => {
       const graphai = convertBBToGraphai(bb);
       expect(graphai).toEqual([
         {
-          text: "",
           foot: {
             type: "stu",
             content:
               "Some Greek manuscripts add: “Two will be in the field: the one taken, and the other left.”",
           },
+        },
+      ]);
+    });
+
+    it("should handle woc tag with leading/trailing spaces", () => {
+      const bb = {
+        text: " [red]But I told you that you have seen me, and yet you don’t believe. [/red]",
+      };
+      const graphai = convertBBToGraphai(bb);
+      expect(graphai).toEqual([
+        {
+          text: "But I told you that you have seen me, and yet you don’t believe.",
+          marks: ["woc"],
         },
       ]);
     });
@@ -285,7 +320,6 @@ describe("convertBBToGraphai", () => {
       const graphai = convertBBToGraphai(bb);
       expect(graphai).toEqual([
         {
-          text: "",
           foot: {
             type: "var",
             content: "Originally verse 4:40.",
@@ -303,7 +337,6 @@ describe("convertBBToGraphai", () => {
       const graphai = convertBBToGraphai(bb);
       expect(graphai).toEqual([
         {
-          text: "",
           foot: {
             type: "var",
             content: "Originally verse 12:17.",
@@ -318,6 +351,126 @@ describe("convertBBToGraphai", () => {
           },
         },
         "et vidi de mare bestiam ascendentem habentem capita septem et cornua decem et super cornua eius decem diademata et super capita eius nomina blasphemiae",
+      ]);
+    });
+  });
+
+  describe("Subtitles", () => {
+    it("should extract subtitle with Strong's tags as subtitle object", () => {
+      const bb = {
+        text: '«A Psalm [strongs id="h4210" /] of David [strongs id="h1732" /], when he fled [strongs id="h1272" tvm="8800" /] from [strongs id="h6440" /] Absalom [strongs id="h53" /] his son [strongs id="h1121" /].» LORD [strongs id="h3068" /], how are they increased [strongs id="h7231" tvm="8804" /] that trouble [strongs id="h6862" /] me!',
+        paragraphs: [0],
+      };
+
+      const result = convertBBToGraphai(bb);
+
+      expect(result).toEqual([
+        {
+          subtitle: [
+            { text: "A Psalm", strong: "H4210" },
+            { text: " of David", strong: "H1732" },
+            { text: ", when he fled", strong: "H1272", morph: "8800" },
+            { text: " from", strong: "H6440" },
+            { text: " Absalom", strong: "H53" },
+            { text: " his son", strong: "H1121" },
+            ".",
+          ],
+        },
+        { text: "LORD", strong: "H3068", paragraph: true },
+        { text: ", how are they increased", strong: "H7231", morph: "8804" },
+        { text: " that trouble", strong: "H6862" },
+        " me!",
+      ]);
+    });
+
+    it("should handle subtitle without Strong's tags", () => {
+      const bb = {
+        text: "«A Psalm of David.» LORD, how are they increased that trouble me!",
+        paragraphs: [0],
+      };
+
+      const result = convertBBToGraphai(bb);
+
+      expect(result).toEqual([
+        {
+          subtitle: "A Psalm of David.",
+        },
+        {
+          text: "LORD, how are they increased that trouble me!",
+          paragraph: true,
+        },
+      ]);
+    });
+
+    it("should handle verse without subtitle", () => {
+      const bb = {
+        text: 'In the beginning [strongs id="g1722" /] God [strongs id="g2316" /] created [strongs id="g2936" m="V-AAI-3S" /] the heaven [strongs id="g3772" /] and [strongs id="g2532" /] the earth [strongs id="g1093" /].',
+        paragraphs: [0],
+      };
+
+      const result = convertBBToGraphai(bb);
+
+      expect(result).toEqual([
+        { text: "In the beginning", strong: "G1722", paragraph: true },
+        { text: " God", strong: "G2316" },
+        { text: " created", strong: "G2936", morph: "V-AAI-3S" },
+        { text: " the heaven", strong: "G3772" },
+        { text: " and", strong: "G2532" },
+        { text: " the earth", strong: "G1093" },
+        ".",
+      ]);
+    });
+  });
+
+  describe("Headings", () => {
+    it("should handle heading and headingFootnote", () => {
+      const bb = {
+        text: "Lord,° you have been our dwelling place for all generations.",
+        footnotes: [
+          {
+            type: "trn",
+            text: "The word translated “Lord” is “Adonai.”",
+          },
+        ],
+        paragraphs: [0],
+        heading: "A Prayer by Moses, the man of God.°",
+        headingFootnote: {
+          type: "trn",
+          text: "The Hebrew word rendered “God” is “[hebrew]אֱלֹהִ֑ים[/hebrew]” (Elohim).",
+        },
+      };
+
+      const graphai = convertBBToGraphai(bb);
+
+      // Expected output:
+      // 1. Heading element (with footnote attached)
+      // 2. Text element (with paragraph marker and its own footnote)
+      expect(graphai).toEqual([
+        {
+          heading: {
+            text: "A Prayer by Moses, the man of God.",
+            foot: {
+              type: "trn",
+              content: [
+                "The Hebrew word rendered “God” is “",
+                {
+                  text: "אֱלֹהִ֑ים",
+                  script: "H",
+                },
+                "” (Elohim).",
+              ],
+            },
+          },
+        },
+        {
+          text: "Lord,",
+          paragraph: true,
+          foot: {
+            type: "trn",
+            content: "The word translated “Lord” is “Adonai.”",
+          },
+        },
+        " you have been our dwelling place for all generations.",
       ]);
     });
   });

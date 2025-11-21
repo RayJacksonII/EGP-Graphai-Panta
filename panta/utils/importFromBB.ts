@@ -148,10 +148,30 @@ function migrateSingleBook(
 
     for (const verse of chapterVerses) {
       const metadata = convertBBVerseMetadata(verse);
+
+      // Fix for Psalms missing paragraph markers on first verse of each chapter
+      let paragraphs = verse.paragraphs;
+      if (metadata.verse === 1 && (!paragraphs || paragraphs.length === 0)) {
+        paragraphs = [0];
+      }
+
+      // Validate paragraph markers are at spaces for non-zero positions
+      if (paragraphs) {
+        for (const pos of paragraphs) {
+          if (pos > 0 && pos < verse.text.length && verse.text[pos] !== " ") {
+            throw new Error(
+              `Invalid paragraph marker at position ${pos} in ${verse.sequence}: expected space at marker position, found '${verse.text[pos]}'`
+            );
+          }
+        }
+      }
+
       const content = convertBBToGraphai({
         text: verse.text,
-        paragraphs: verse.paragraphs,
+        paragraphs: paragraphs,
         footnotes: verse.footnotes,
+        heading: verse.heading,
+        headingFootnote: verse.headingFootnote,
       });
 
       // If content has only one element, unwrap it from the array
@@ -250,10 +270,30 @@ function migrateFullVersion(bbVerses: Array<any>, graphaiVersionId: string) {
 
       for (const verse of chapterVerses) {
         const metadata = convertBBVerseMetadata(verse);
+
+        // Fix for Psalms missing paragraph markers on first verse of each chapter
+        let paragraphs = verse.paragraphs;
+        if (metadata.verse === 1 && (!paragraphs || paragraphs.length === 0)) {
+          paragraphs = [0];
+        }
+
+        // Validate paragraph markers are at spaces for non-zero positions
+        if (paragraphs) {
+          for (const pos of paragraphs) {
+            if (pos > 0 && pos < verse.text.length && verse.text[pos] !== " ") {
+              throw new Error(
+                `Invalid paragraph marker at position ${pos} in ${verse.sequence}: expected space at marker position, found '${verse.text[pos]}'`
+              );
+            }
+          }
+        }
+
         const content = convertBBToGraphai({
           text: verse.text,
-          paragraphs: verse.paragraphs,
+          paragraphs: paragraphs,
           footnotes: verse.footnotes,
+          heading: verse.heading,
+          headingFootnote: verse.headingFootnote,
         });
 
         // If content has only one element, unwrap it from the array
